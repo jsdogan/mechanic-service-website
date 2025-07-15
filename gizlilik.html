@@ -173,6 +173,70 @@
       box-shadow: 0 4px 16px rgba(67,206,162,0.18);
     }
   </style>
+  <style>
+/* --- Enhanced Mobile Responsiveness --- */
+html, body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+body {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+.header-flex, .main-nav ul, .footer-socials, .service-buttons, .reviews-grid {
+  box-sizing: border-box;
+}
+@media (max-width: 480px) {
+  html, body {
+    font-size: 15px;
+  }
+  .header-flex {
+    padding: 0 2vw;
+    gap: 8px;
+  }
+  .logo-link img {
+    width: 110px;
+    max-width: 38vw;
+  }
+  .main-nav ul li a, .main-nav > a {
+    padding: 10px 8px;
+    font-size: 1em;
+  }
+  .phone-link-dynamic {
+    font-size: 0.98em;
+    padding: 0 10px;
+    height: 40px;
+    max-width: 98vw;
+  }
+  .service-buttons {
+    gap: 8px;
+    margin: 18px 0 10px 0;
+  }
+  .reviews-grid {
+    gap: 8px;
+  }
+  footer nav a {
+    font-size: 0.98em;
+    padding: 8px 6px;
+  }
+  .footer-socials a {
+    width: 32px;
+    height: 32px;
+    font-size: 1.1em;
+  }
+  main {
+    padding: 0.5em;
+  }
+}
+@media (max-width: 350px) {
+  html, body {
+    font-size: 13px;
+  }
+  .logo-link img {
+    width: 80px;
+  }
+}
+</style>
  
 </head>
 <body>
