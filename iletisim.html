@@ -12,65 +12,123 @@
   <meta property="og:image" content="/assets/social.jpg">
   <link rel="icon" href="/favicon.ico">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
   <style>
-    body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
-    header, footer { background: #f0f0f0; padding: 1em; text-align: center; }
-    nav a { margin: 0 10px; text-decoration: none; color: #333; }
-    main { padding: 1em; max-width: 800px; margin: auto; }
-    .footer-note { font-size: 0.85em; color: #777; margin-top: 2em; }
-    .phone-link { display: block; margin-top: 10px; font-weight: bold; color: green; }
-    .phone-link {
-      background-color: green;
-      color: white;
-      padding: 10px 15px;
-      border-radius: 5px;
-      font-size: 1.1em;
-      display: inline-block;
-      text-decoration: none;
-    }
-    form {
-      background: #fafafa;
-      border: 1px solid #ddd;
-      padding: 20px;
-      border-radius: 8px;
-      max-width: 500px;
-      margin: 20px auto;
-    }
-    form label {
+    body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; padding: 0; background: #f8fafc; color: #222; }
+    header, footer { background: linear-gradient(90deg, #00796b 0%, #43cea2 100%); padding: 1em; text-align: center; color: #fff; }
+    nav a { margin: 0 10px; text-decoration: none; color: #fff; font-weight: 500; transition: color 0.2s; }
+    nav a:hover { color: #ffe082; }
+    main { padding: 1em; max-width: 900px; margin: auto; }
+    .footer-note { font-size: 0.85em; color: #e0e0e0; margin-top: 2em; }
+    .phone-link, .phone-link-dynamic {
       display: block;
-      margin-bottom: 6px;
+      margin-top: 10px;
       font-weight: bold;
+      color: #fff;
+      background: #2A9D8F;
+      border-radius: 5px;
+      padding: 10px 15px;
+      text-decoration: none;
+      transition: background 0.2s;
     }
-    form input, form textarea {
-      width: 100%;
-      padding: 8px;
-      margin-bottom: 12px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
+    .phone-link:hover, .phone-link-dynamic:hover {
+      background: #21867a;
+    }
+    .phone-link-dynamic {
+  position: absolute;
+  top: 18px;
+  right: 32px;
+  z-index: 1200;
+  min-width: 0;
+  width: auto;
+  height: 48px;
+  padding: 0 22px;
+  font-size: 1.08em;
+  border-radius: 24px;
+  box-shadow: 0 2px 8px rgba(67,206,162,0.10);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+}
+    .main-info-text {
+      margin-top: 32px;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 2px 12px rgba(67,206,162,0.07);
+      padding: 28px 24px;
+      color: #222;
+    }
+    .main-info-text h2, .main-info-text h3 {
+      color: #00796b;
+      margin-top: 0.7em;
+    }
+    .main-info-text ul { margin-left: 1.2em; }
+    /* Customer Reviews Section */
+    section h2 { color: #00796b; margin-bottom: 18px; }
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 18px;
+      margin-bottom: 10px;
+    }
+    .review-card {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(67,206,162,0.10);
+      padding: 18px 16px 14px 16px;
+      border-left: 5px solid #43cea2;
       font-size: 1em;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      min-height: 110px;
     }
-    form button {
-      background: green;
-      color: white;
+    .review-card strong {
+      color: #00796b;
+      font-size: 1.08em;
+      margin-bottom: 2px;
+    }
+    .review-card hr {
       border: none;
-      padding: 10px 20px;
-      border-radius: 4px;
-      font-size: 1em;
-      cursor: pointer;
+      border-top: 1px solid #e0e0e0;
+      margin: 8px 0 0 0;
     }
-    form button:hover {
-      background: #218838;
+    /* Footer Socials */
+    .footer-socials {
+      margin: 18px 0 8px 0;
+      display: flex;
+      justify-content: center;
+      gap: 18px;
     }
-    .contact-info {
-      text-align: center;
-      margin-top: 30px;
+    .footer-socials a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: #fff;
+      color: #00796b;
+      font-size: 1.3em;
+      text-decoration: none;
+      box-shadow: 0 1px 4px rgba(67,206,162,0.10);
+      transition: background 0.2s, color 0.2s;
+    }
+    .footer-socials a:hover {
+      background: #43cea2;
+      color: #fff;
+    }
+    .footer-socials a i {
+      color: #00796b !important;
     }
   </style>
   <style>
     nav ul li ul {
       display: none;
       position: absolute;
-      background: #fff;
+      background: #43cea2;
       padding: 0;
       margin: 0;
       list-style: none;
@@ -96,6 +154,139 @@
     nav ul li ul li {
       display: block;
     }
+    nav ul li ul li a {
+      color: #fff !important;
+      background: transparent;
+      padding: 10px 18px;
+      font-weight: 500;
+      transition: background 0.2s, color 0.2s;
+    }
+    nav ul li ul li a:hover {
+      background: #00796b;
+      color: #ffe082 !important;
+    }
+    form {
+      background: #fafafa;
+      border: 1px solid #ddd;
+      padding: 28px 28px 18px 28px;
+      border-radius: 12px;
+      max-width: 900px;
+      margin: 32px auto 24px auto;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      gap: 16px;
+      box-shadow: 0 2px 12px rgba(67,206,162,0.07);
+      align-items: flex-end;
+      justify-content: center;
+    }
+    form label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: bold;
+      color: #00796b;
+    }
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      flex: 1 1 180px;
+      min-width: 180px;
+      max-width: 220px;
+    }
+    form textarea.form-input {
+      min-width: 220px;
+      max-width: 260px;
+      resize: vertical;
+    }
+    form input, form textarea {
+      width: 100%;
+      padding: 10px 12px;
+      margin-bottom: 0;
+      border: 1px solid #b2dfdb;
+      border-radius: 6px;
+      font-size: 1em;
+      background: #fff;
+      box-sizing: border-box;
+      transition: border 0.2s;
+    }
+    form input:focus, form textarea:focus {
+      border: 1.5px solid #43cea2;
+      outline: none;
+    }
+    form button {
+      background: #00796b;
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 6px;
+      font-size: 1em;
+      cursor: pointer;
+      font-weight: bold;
+      margin-top: 8px;
+      transition: background 0.2s;
+      align-self: flex-end;
+      height: 44px;
+    }
+    form button:hover {
+      background: #43cea2;
+      color: #fff;
+    }
+    @media (max-width: 900px) {
+      form {
+        flex-direction: column;
+        gap: 12px;
+        align-items: stretch;
+      }
+      .form-group, form textarea.form-input {
+        min-width: 0;
+        max-width: 100%;
+      }
+      form button {
+        width: 100%;
+        align-self: stretch;
+      }
+    }
+  </style>
+  <style>
+    nav {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+    }
+    nav ul {
+      display: flex;
+      gap: 0;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    nav ul li {
+      display: inline-block;
+      position: relative;
+      margin: 0 4px;
+    }
+    nav ul li a, nav > a {
+      display: inline-block;
+      padding: 10px 22px;
+      border-radius: 24px;
+      background: rgba(255,255,255,0.13);
+      color: #fff;
+      font-weight: 600;
+      font-size: 1.08em;
+      text-decoration: none;
+      box-shadow: 0 2px 8px rgba(67,206,162,0.10);
+      transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+      border: 2px solid transparent;
+    }
+    nav ul li a:hover, nav > a:hover, nav ul li.active > a {
+      background: #fff;
+      color: #00796b;
+      border: 2px solid #43cea2;
+      box-shadow: 0 4px 16px rgba(67,206,162,0.18);
+    }
+  </style>
+
   </style>
 </head>
 <body>
@@ -133,39 +324,28 @@
         </td>
       </tr>
     </table>
+    <a class="phone-link-dynamic" href="tel:+905555555555">📞 Hemen Ara: 0555 555 55 55</a>
   </header>
-  <table width="100%">
-    <tr>
-      <td align="right">
-        <a class="phone-link-dynamic" href="tel:+905555555555" style="
-          display: inline-block;
-          background-color: green;
-          color: white;
-          padding: 10px 16px;
-          border-radius: 6px;
-          font-weight: bold;
-          font-size: 1.1em;
-          text-decoration: none;
-          font-family: sans-serif;
-          margin-top: 10px;
-        ">
-          📞 Hemen Ara: 0555 555 55 55
-        </a>
-      </td>
-    </tr>
-  </table>
   <main>
     <h1 align="center">İletişim</h1>
     <p align="center"><strong>Servis talepleriniz ve sorularınız için bize ulaşın.</strong></p>
     <form method="post" action="#">
-      <label for="name">Adınız Soyadınız</label>
-      <input type="text" id="name" name="name" required>
-      <label for="email">E-posta Adresiniz</label>
-      <input type="email" id="email" name="email" required>
-      <label for="phone">Telefon Numaranız</label>
-      <input type="tel" id="phone" name="phone">
-      <label for="message">Mesajınız</label>
-      <textarea id="message" name="message" rows="5" required></textarea>
+      <div class="form-group">
+        <label for="name">Adınız Soyadınız</label>
+        <input type="text" id="name" name="name" required class="form-input">
+      </div>
+      <div class="form-group">
+        <label for="email">E-posta Adresiniz</label>
+        <input type="email" id="email" name="email" required class="form-input">
+      </div>
+      <div class="form-group">
+        <label for="phone">Telefon Numaranız</label>
+        <input type="tel" id="phone" name="phone" class="form-input">
+      </div>
+      <div class="form-group">
+        <label for="message">Mesajınız</label>
+        <textarea id="message" name="message" rows="5" required class="form-input"></textarea>
+      </div>
       <button type="submit">Gönder</button>
     </form>
     <div class="contact-info">
@@ -177,50 +357,52 @@
   </main>
   <section>
     <h2>Yorumlar</h2>
-    <div>
-      <strong>Ayşe K.</strong><br>
-      Hizmetten çok memnun kaldım, hızlı ve güvenilir bir ekip!
-      <hr>
-    </div>
-    <div>
-      <strong>Mehmet D.</strong><br>
-      Sorunum kısa sürede çözüldü, teşekkürler Tamircim!
-      <hr>
-    </div>
-    <div>
-      <strong>Elif T.</strong><br>
-      İletişim çok kolaydı, tekrar tercih edeceğim.
-      <hr>
-    </div>
-    <div>
-      <strong>Caner Y.</strong><br>
-      Uygun fiyat ve kaliteli hizmet, herkese tavsiye ederim.
-      <hr>
-    </div>
-    <div>
-      <strong>Burak S.</strong><br>
-      Ustalar çok ilgiliydi, arızamı hemen giderdiler.
-      <hr>
-    </div>
-    <div>
-      <strong>Fatma A.</strong><br>
-      Telefonla aradım, aynı gün servis geldi. Çok memnun kaldım.
-      <hr>
-    </div>
-    <div>
-      <strong>Serkan M.</strong><br>
-      Parça değişimi hızlı ve uygun fiyatlıydı.
-      <hr>
-    </div>
-    <div>
-      <strong>Gülşah T.</strong><br>
-      Kombi bakımı için başvurdum, çok profesyonellerdi.
-      <hr>
-    </div>
-    <div>
-      <strong>Yusuf E.</strong><br>
-      Buzdolabım için çözüm buldular, tekrar arayacağım.
-      <hr>
+    <div class="reviews-grid">
+      <div class="review-card">
+        <strong>Ayşe K.</strong><br>
+        Hizmetten çok memnun kaldım, hızlı ve güvenilir bir ekip!
+        <hr>
+      </div>
+      <div class="review-card">
+        <strong>Mehmet D.</strong><br>
+        Sorunum kısa sürede çözüldü, teşekkürler Tamircim!
+        <hr>
+      </div>
+      <div class="review-card">
+        <strong>Elif T.</strong><br>
+        İletişim çok kolaydı, tekrar tercih edeceğim.
+        <hr>
+      </div>
+      <div class="review-card">
+        <strong>Caner Y.</strong><br>
+        Uygun fiyat ve kaliteli hizmet, herkese tavsiye ederim.
+        <hr>
+      </div>
+      <div class="review-card">
+        <strong>Burak S.</strong><br>
+        Ustalar çok ilgiliydi, arızamı hemen giderdiler.
+        <hr>
+      </div>
+      <div class="review-card">
+        <strong>Fatma A.</strong><br>
+        Telefonla aradım, aynı gün servis geldi. Çok memnun kaldım.
+        <hr>
+      </div>
+      <div class="review-card">
+        <strong>Serkan M.</strong><br>
+        Parça değişimi hızlı ve uygun fiyatlıydı.
+        <hr>
+      </div>
+      <div class="review-card">
+        <strong>Gülşah T.</strong><br>
+        Kombi bakımı için başvurdum, çok profesyonellerdi.
+        <hr>
+      </div>
+      <div class="review-card">
+        <strong>Yusuf E.</strong><br>
+        Buzdolabım için çözüm buldular, tekrar arayacağım.
+        <hr>
+      </div>
     </div>
   </section>
   <footer>
@@ -232,6 +414,11 @@
       <a href="/gizlilik">Gizlilik Politikası</a>
       <a href="/kvkk">KVKK</a>
     </nav>
+    <div class="footer-socials">
+      <a id="footer-facebook" href="#" target="_blank" aria-label="Facebook"><i class="fa fa-facebook"></i></a>
+      <a id="footer-instagram" href="#" target="_blank" aria-label="Instagram"><i class="fa fa-instagram"></i></a>
+      <a id="footer-twitter" href="#" target="_blank" aria-label="Twitter"><i class="fa fa-twitter"></i></a>
+    </div>
     <p>Bu site, yalnızca garantisi olmayan cihazlara özel servis hizmeti sunar. Tamircim resmi yetkili servis değildir.</p>
     <p>© 2025 Tamircim | Mersin</p>
   </footer>
@@ -269,6 +456,12 @@
         el.textContent = window.siteConfig.email;
         if (el.tagName === 'A') el.setAttribute('href', 'mailto:' + window.siteConfig.email);
       });
+      // Socials dynamic links
+      var email = window.siteConfig.email || "info@tamircim.com";
+      var username = email.split('@')[0];
+      document.getElementById('footer-facebook').href = 'mailto:' + email;
+      document.getElementById('footer-instagram').href = 'https://instagram.com/' + username;
+      document.getElementById('footer-twitter').href = 'https://twitter.com/' + username;
     }
   </script>
 </body>

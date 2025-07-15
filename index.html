@@ -15,36 +15,150 @@
 
   <link rel="icon" href="/favicon.ico">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
   <style>
-    body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
-    header, footer { background: #f0f0f0; padding: 1em; text-align: center; }
-    nav a { margin: 0 10px; text-decoration: none; color: #333; }
-    main { padding: 1em; max-width: 800px; margin: auto; }
-    .footer-note { font-size: 0.85em; color: #777; margin-top: 2em; }
-    .phone-link { display: block; margin-top: 10px; font-weight: bold; color: green; }
+    body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; padding: 0; background: #f8fafc; color: #222; }
+    header, footer { background: linear-gradient(90deg, #00796b 0%, #43cea2 100%); padding: 1em; text-align: center; color: #fff; }
+    nav a { margin: 0 10px; text-decoration: none; color: #fff; font-weight: 500; transition: color 0.2s; }
+    nav a:hover { color: #ffe082; }
+    main { padding: 1em; max-width: 900px; margin: auto; }
+    .footer-note { font-size: 0.85em; color: #e0e0e0; margin-top: 2em; }
+    .phone-link, .phone-link-dynamic {
+      display: block;
+      margin-top: 10px;
+      font-weight: bold;
+      color: #fff;
+      background: #2A9D8F;
+      border-radius: 5px;
+      padding: 10px 15px;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+    .phone-link:hover, .phone-link-dynamic:hover {
+      background: #21867a;
+    }
+    .phone-link-dynamic {
+  position: absolute;
+  top: 18px;
+  right: 32px;
+  z-index: 1200;
+  min-width: 0;
+  width: auto;
+  height: 48px;
+  padding: 0 22px;
+  font-size: 1.08em;
+  border-radius: 24px;
+  box-shadow: 0 2px 8px rgba(67,206,162,0.10);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+}
     .service-buttons {
       display: flex;
       flex-wrap: wrap;
       gap: 16px;
       justify-content: center;
-      margin: 32px 0;
+      margin: 32px 0 16px 0;
     }
     .service-button {
-      background: #00796b;
-      color: #fff;
-      border: none;
-      border-radius: 8px;
-      padding: 16px 28px;
+      background: #fff;
+      color: #00796b;
+      border: 2px solid #43cea2;
+      border-radius: 10px;
+      padding: 16px 28px 16px 18px;
       font-size: 1.1em;
       font-weight: bold;
       cursor: pointer;
       text-decoration: none;
-      transition: background 0.2s;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+      transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+      box-shadow: 0 2px 8px rgba(67,206,162,0.07);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      position: relative;
     }
     .service-button:hover {
-      background: #004d40;
+      background: #43cea2;
+      color: #fff;
+      box-shadow: 0 4px 16px rgba(67,206,162,0.15);
+    }
+    .service-button .icon {
+      font-size: 1.3em;
+      display: inline-block;
+      margin-right: 6px;
+    }
+    .main-info-text {
+      margin-top: 32px;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 2px 12px rgba(67,206,162,0.07);
+      padding: 28px 24px;
+      color: #222;
+    }
+    .main-info-text h2, .main-info-text h3 {
+      color: #00796b;
+      margin-top: 0.7em;
+    }
+    .main-info-text ul { margin-left: 1.2em; }
+    /* Customer Reviews Section */
+    section h2 { color: #00796b; margin-bottom: 18px; }
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 18px;
+      margin-bottom: 10px;
+    }
+    .review-card {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(67,206,162,0.10);
+      padding: 18px 16px 14px 16px;
+      border-left: 5px solid #43cea2;
+      font-size: 1em;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      min-height: 110px;
+    }
+    .review-card strong {
+      color: #00796b;
+      font-size: 1.08em;
+      margin-bottom: 2px;
+    }
+    .review-card hr {
+      border: none;
+      border-top: 1px solid #e0e0e0;
+      margin: 8px 0 0 0;
+    }
+    /* Footer Socials */
+    .footer-socials {
+      margin: 18px 0 8px 0;
+      display: flex;
+      justify-content: center;
+      gap: 18px;
+    }
+    .footer-socials a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: #fff;
+      color: #00796b;
+      font-size: 1.3em;
+      text-decoration: none;
+      box-shadow: 0 1px 4px rgba(67,206,162,0.10);
+      transition: background 0.2s, color 0.2s;
+    }
+    .footer-socials a:hover {
+      background: #43cea2;
+      color: #fff;
+    }
+    .footer-socials a i {
+      color: #00796b !important;
     }
   </style>
 
@@ -52,10 +166,11 @@
   nav ul li ul {
     display: none;
     position: absolute;
-    background: #fff;
+    background: #43cea2;
     padding: 0;
     margin: 0;
     list-style: none;
+    z-index: 1002;
   }
 
   nav ul li:hover ul {
@@ -82,6 +197,56 @@
 
   nav ul li ul li {
     display: block;
+  }
+
+  nav ul li ul li a {
+    color: #fff !important;
+    background: transparent;
+    padding: 10px 18px;
+    font-weight: 500;
+    transition: background 0.2s, color 0.2s;
+  }
+  nav ul li ul li a:hover {
+    background: #00796b;
+    color: #ffe082 !important;
+  }
+
+  nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+  }
+  nav ul {
+    display: flex;
+    gap: 0;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  nav ul li {
+    display: inline-block;
+    position: relative;
+    margin: 0 4px;
+  }
+  nav ul li a, nav > a {
+    display: inline-block;
+    padding: 10px 22px;
+    border-radius: 24px;
+    background: rgba(255,255,255,0.13);
+    color: #fff;
+    font-weight: 600;
+    font-size: 1.08em;
+    text-decoration: none;
+    box-shadow: 0 2px 8px rgba(67,206,162,0.10);
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+    border: 2px solid transparent;
+  }
+  nav ul li a:hover, nav > a:hover, nav ul li.active > a {
+    background: #fff;
+    color: #00796b;
+    border: 2px solid #43cea2;
+    box-shadow: 0 4px 16px rgba(67,206,162,0.18);
   }
 
   </style>
@@ -117,7 +282,7 @@
 </head>
 <body>
   <header>
-    <table width="100%">
+    <table width="100%" style="position:relative;">
       <tr>
         <td align="left" style="vertical-align: middle;">
           <a href="/">
@@ -150,42 +315,22 @@
         </td>
       </tr>
     </table>
+    <a class="phone-link-dynamic" href="tel:+905555555555">📞 Hemen Ara: 0555 555 55 55</a>
   </header>
-  
-  <table width="100%">
-    <tr>
-      <td align="right">
-        <a href="tel:+905555555555" style="
-          display: inline-block;
-          background-color: green;
-          color: white;
-          padding: 10px 16px;
-          border-radius: 6px;
-          font-weight: bold;
-          font-size: 1.1em;
-          text-decoration: none;
-          font-family: sans-serif;
-          margin-top: 10px;
-        ">
-          📞 Hemen Ara: 0555 555 55 55
-        </a>
-      </td>
-    </tr>
-  </table>
   
   
   <main>
     <h1>Hoş geldiniz</h1>
     <p>Tamircim olarak garantisi bitmiş cihazlara servis hizmeti sunuyoruz.</p>
     <div class="service-buttons">
-      <a class="service-button" href="hizmet.html?service=Beyaz+Eşya+Servisi">Beyaz Eşya Servisi</a>
-      <a class="service-button" href="hizmet.html?service=Buzdolabı">Buzdolabı</a>
-      <a class="service-button" href="hizmet.html?service=Çamaşır+Makinesi">Çamaşır Makinesi</a>
-      <a class="service-button" href="hizmet.html?service=Bulaşık+Makinesi">Bulaşık Makinesi</a>
-      <a class="service-button" href="hizmet.html?service=Fırın">Fırın</a>
-      <a class="service-button" href="hizmet.html?service=Klima">Klima</a>
-      <a class="service-button" href="hizmet.html?service=Kombi">Kombi</a>
-      <a class="service-button" href="hizmet.html?service=Televizyon">Televizyon</a>
+      <a class="service-button" href="hizmet.html?service=Beyaz+Eşya+Servisi"><span class="icon">🛠️</span>Beyaz Eşya Servisi</a>
+      <a class="service-button" href="hizmet.html?service=Buzdolabı"><span class="icon">🧊</span>Buzdolabı</a>
+      <a class="service-button" href="hizmet.html?service=Çamaşır+Makinesi"><span class="icon">🧺</span>Çamaşır Makinesi</a>
+      <a class="service-button" href="hizmet.html?service=Bulaşık+Makinesi"><span class="icon">🍽️</span>Bulaşık Makinesi</a>
+      <a class="service-button" href="hizmet.html?service=Fırın"><span class="icon">🔥</span>Fırın</a>
+      <a class="service-button" href="hizmet.html?service=Klima"><span class="icon">❄️</span>Klima</a>
+      <a class="service-button" href="hizmet.html?service=Kombi"><span class="icon">♨️</span>Kombi</a>
+      <a class="service-button" href="hizmet.html?service=Televizyon"><span class="icon">📺</span>Televizyon</a>
     </div>
     <div class="main-info-text" style="margin-top:32px;">
       <h2>Beyaz Eşyalarınız İçin Güvenilir Çözümler: Bakım ve Onarımda Uzman Desteği</h2>
@@ -230,50 +375,52 @@
   </main>
   <section>
     <h2>Yorumlar</h2>
-    <div>
-      <strong>Ayşe K.</strong><br>
-      Hizmetten çok memnun kaldım, hızlı ve güvenilir bir ekip!
-      <hr>
-    </div>
-    <div>
-      <strong>Mehmet D.</strong><br>
-      Sorunum kısa sürede çözüldü, teşekkürler Tamircim!
-      <hr>
-    </div>
-    <div>
-      <strong>Elif T.</strong><br>
-      İletişim çok kolaydı, tekrar tercih edeceğim.
-      <hr>
-    </div>
-    <div>
-      <strong>Caner Y.</strong><br>
-      Uygun fiyat ve kaliteli hizmet, herkese tavsiye ederim.
-      <hr>
-    </div>
-    <div>
-      <strong>Burak S.</strong><br>
-      Ustalar çok ilgiliydi, arızamı hemen giderdiler.
-      <hr>
-    </div>
-    <div>
-      <strong>Fatma A.</strong><br>
-      Telefonla aradım, aynı gün servis geldi. Çok memnun kaldım.
-      <hr>
-    </div>
-    <div>
-      <strong>Serkan M.</strong><br>
-      Parça değişimi hızlı ve uygun fiyatlıydı.
-      <hr>
-    </div>
-    <div>
-      <strong>Gülşah T.</strong><br>
-      Kombi bakımı için başvurdum, çok profesyonellerdi.
-      <hr>
-    </div>
-    <div>
-      <strong>Yusuf E.</strong><br>
-      Buzdolabım için çözüm buldular, tekrar arayacağım.
-      <hr>
+    <div class="reviews-grid">
+      <div class="review-card">
+        <strong>Ayşe K.</strong><br>
+        Hizmetten çok memnun kaldım, hızlı ve güvenilir bir ekip!
+        <hr>
+      </div>
+      <div class="review-card">
+        <strong>Mehmet D.</strong><br>
+        Sorunum kısa sürede çözüldü, teşekkürler Tamircim!
+        <hr>
+      </div>
+      <div class="review-card">
+        <strong>Elif T.</strong><br>
+        İletişim çok kolaydı, tekrar tercih edeceğim.
+        <hr>
+      </div>
+      <div class="review-card">
+        <strong>Caner Y.</strong><br>
+        Uygun fiyat ve kaliteli hizmet, herkese tavsiye ederim.
+        <hr>
+      </div>
+      <div class="review-card">
+        <strong>Burak S.</strong><br>
+        Ustalar çok ilgiliydi, arızamı hemen giderdiler.
+        <hr>
+      </div>
+      <div class="review-card">
+        <strong>Fatma A.</strong><br>
+        Telefonla aradım, aynı gün servis geldi. Çok memnun kaldım.
+        <hr>
+      </div>
+      <div class="review-card">
+        <strong>Serkan M.</strong><br>
+        Parça değişimi hızlı ve uygun fiyatlıydı.
+        <hr>
+      </div>
+      <div class="review-card">
+        <strong>Gülşah T.</strong><br>
+        Kombi bakımı için başvurdum, çok profesyonellerdi.
+        <hr>
+      </div>
+      <div class="review-card">
+        <strong>Yusuf E.</strong><br>
+        Buzdolabım için çözüm buldular, tekrar arayacağım.
+        <hr>
+      </div>
     </div>
   </section>
 
@@ -286,6 +433,11 @@
       <a href="/gizlilik">Gizlilik Politikası</a>
       <a href="/kvkk">KVKK</a>
     </nav>
+    <div class="footer-socials">
+      <a id="footer-facebook" href="#" target="_blank" aria-label="Facebook"><i class="fa fa-facebook"></i></a>
+      <a id="footer-instagram" href="#" target="_blank" aria-label="Instagram"><i class="fa fa-instagram"></i></a>
+      <a id="footer-twitter" href="#" target="_blank" aria-label="Twitter"><i class="fa fa-twitter"></i></a>
+    </div>
     <p><strong>Firma Bilgileri:</strong></p>
 <ul>
   <li>Firma Adı: <span class="company-name"></span></li>
@@ -321,6 +473,12 @@
         link.setAttribute('href', 'tel:' + window.siteConfig.phoneNumber);
         link.textContent = '📞 Hemen Ara: ' + window.siteConfig.phoneNumber;
       });
+      // Socials dynamic links
+      var email = window.siteConfig.email || "info@tamircim.com";
+      var username = email.split('@')[0];
+      document.getElementById('footer-facebook').href = 'mailto:' + email;
+      document.getElementById('footer-instagram').href = 'https://instagram.com/' + username;
+      document.getElementById('footer-twitter').href = 'https://twitter.com/' + username;
     }
   </script>
 </body>
