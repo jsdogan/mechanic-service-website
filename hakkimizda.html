@@ -229,54 +229,177 @@ nav ul li a:hover, nav > a:hover, nav ul li.active > a {
 /* Header table için relative */
 header > table { position: relative; }
 
+/* HEADER FLEXBOX LAYOUT */
+.header-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  flex-wrap: wrap;
+}
+.logo-link { flex-shrink: 0; }
+.main-nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.main-nav ul li {
+  display: inline-block;
+  position: relative;
+  margin: 0 4px;
+}
+.main-nav ul li ul.dropdown {
+  display: none;
+  position: absolute;
+  background: #43cea2;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  z-index: 1002;
+  left: 0;
+  top: 100%;
+  min-width: 180px;
+  border-radius: 0 0 12px 12px;
+  box-shadow: 0 2px 8px rgba(67,206,162,0.10);
+}
+.main-nav ul li.has-dropdown:hover ul.dropdown {
+  display: block;
+}
+.main-nav ul li ul.dropdown li { display: block; }
+.main-nav ul li ul.dropdown li a {
+  color: #fff !important;
+  background: transparent;
+  padding: 10px 18px;
+  font-weight: 500;
+  transition: background 0.2s, color 0.2s;
+  border-radius: 0;
+}
+.main-nav ul li ul.dropdown li a:hover {
+  background: #00796b;
+  color: #ffe082 !important;
+}
+.phone-link-dynamic {
+  position: static;
+  min-width: 0;
+  width: auto;
+  height: 48px;
+  padding: 0 22px;
+  font-size: 1.08em;
+  border-radius: 24px;
+  box-shadow: 0 2px 8px rgba(67,206,162,0.10);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 0 0 16px;
+  white-space: nowrap;
+  max-width: 100%;
+}
+@media (max-width: 1024px) {
+  .header-flex { padding: 0 12px; }
+}
+@media (max-width: 768px) {
+  .header-flex {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+    padding: 0 6px;
+  }
+  .main-nav ul {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+  }
+  .main-nav ul li {
+    display: block;
+    margin: 0;
+  }
+  .main-nav ul li a, .main-nav > a {
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 18px;
+    margin-bottom: 4px;
+  }
+  .main-nav ul li ul.dropdown {
+    position: static;
+    min-width: 0;
+    box-shadow: none;
+    border-radius: 0 0 12px 12px;
+  }
+  .phone-link-dynamic {
+    margin: 10px 0 0 0;
+    width: 100%;
+    max-width: 340px;
+    font-size: 1em;
+    align-self: center;
+    justify-content: center;
+    white-space: normal;
+  }
+}
+/* SERVICE BUTTONS & REVIEWS GRID IMPROVEMENT */
+.service-buttons {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 16px;
+  justify-content: center;
+  margin: 32px 0 16px 0;
+}
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 18px;
+  margin-bottom: 10px;
+}
+@media (max-width: 768px) {
+  .service-buttons {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .reviews-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+}
 </style>
 </head>
 
 <body>
 
  <header>
-    <table width="100%">
-      <tr>
-        <td align="left" style="vertical-align: middle;">
-          <a href="/">
-            <img src="/apple-touch-icon.png" alt="Tamircim Logo" width="150">
-          </a>
-        </td>
-        <td align="middle" style="vertical-align: middle;">
-          <nav>
-            <ul>
-              <li><a href="/">Ana Sayfa</a></li>
-              <li>
-                <a href="/hizmet.html">Hizmetlerimiz</a>
-                <ul>
-                  <li><a href="/hizmet?service=Beyaz+Eşya+Servisi">Beyaz Eşya Servisi</a></li>
-                  <li><a href="/hizmet?service=Buzdolabı">Buzdolabı</a></li>
-                  <li><a href="/hizmet?service=Çamaşır+Makinesi">Çamaşır Makinesi</a></li>
-                  <li><a href="/hizmet?service=Bulaşık+Makinesi">Bulaşık Makinesi</a></li>
-                  <li><a href="/hizmet?service=Fırın">Fırın</a></li>
-                  <li><a href="/hizmet?service=Klima">Klima</a></li>
-                  <li><a href="/hizmet?service=Kombi">Kombi</a></li>
-                  <li><a href="/hizmet?service=Televizyon">Televizyon</a></li>
-                </ul>
-              </li>
-              <li><a href="/hakkimizda.html">Hakkımızda</a></li>
-              <li><a href="/iletisim.html">İletişim</a></li>
-              <li><a href="/gizlilik.html">Gizlilik Politikası</a></li>
-              <li><a href="/kvkk.html">KVKK</a></li>
+    <div class="header-flex">
+      <a href="/" class="logo-link">
+        <img src="/apple-touch-icon.png" alt="Tamircim Logo" width="150">
+      </a>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="/">Ana Sayfa</a></li>
+          <li class="has-dropdown">
+            <a href="/hizmet.html?service=Hizmetlerimiz">Hizmetlerimiz</a>
+            <ul class="dropdown">
+              <li><a href="/hizmet.html?service=Beyaz+Eşya+Servisi">Beyaz Eşya Servisi</a></li>
+              <li><a href="/hizmet.html?service=Buzdolabı">Buzdolabı</a></li>
+              <li><a href="/hizmet.html?service=Çamaşır+Makinesi">Çamaşır Makinesi</a></li>
+              <li><a href="/hizmet.html?service=Bulaşık+Makinesi">Bulaşık Makinesi</a></li>
+              <li><a href="/hizmet.html?service=Fırın">Fırın</a></li>
+              <li><a href="/hizmet.html?service=Klima">Klima</a></li>
+              <li><a href="/hizmet.html?service=Kombi">Kombi</a></li>
+              <li><a href="/hizmet.html?service=Televizyon">Televizyon</a></li>
             </ul>
-          </nav>
-        </td>
-      </tr>
-    </table>
+          </li>
+          <li><a href="/hakkimizda.html">Hakkımızda</a></li>
+          <li><a href="/iletisim.html">İletişim</a></li>
+          <li><a href="/gizlilik.html">Gizlilik Politikası</a></li>
+          <li><a href="/kvkk.html">KVKK</a></li>
+        </ul>
+      </nav>
+      <a class="phone-link-dynamic" href="tel:+905555555555">📞 Hemen Ara: 0555 555 55 55</a>
+    </div>
   </header>
-
-  <table width="100%">
-    <tr>
-      <td align="right">
-        <a class="phone-link-dynamic" href="tel:+905555555555">📞 Hemen Ara: 0555 555 55 55</a>
-      </td>
-    </tr>
-  </table>
 
   <div class="content">
     <h1>Hakkımızda</h1>
