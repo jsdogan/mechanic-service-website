@@ -23,17 +23,30 @@
     main { padding: 1em; max-width: 800px; margin: auto; }
     .footer-note { font-size: 0.85em; color: #777; margin-top: 2em; }
     .phone-link { display: block; margin-top: 10px; font-weight: bold; color: green; }
-
-    .phone-link {
-  background-color: green;
-  color: white;
-  padding: 10px 15px;
-  border-radius: 5px;
-  font-size: 1.1em;
-  display: inline-block;
-  text-decoration: none;
-}
-</style>
+    .service-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      justify-content: center;
+      margin: 32px 0;
+    }
+    .service-button {
+      background: #00796b;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      padding: 16px 28px;
+      font-size: 1.1em;
+      font-weight: bold;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background 0.2s;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    }
+    .service-button:hover {
+      background: #004d40;
+    }
+  </style>
 
 <style>
   nav ul li ul {
@@ -164,6 +177,39 @@
   <main>
     <h1>Hoş geldiniz</h1>
     <p>Tamircim olarak garantisi bitmiş cihazlara servis hizmeti sunuyoruz.</p>
+    <div class="service-buttons">
+      <a class="service-button" href="hizmet.html?service=Beyaz+Eşya+Servisi">Beyaz Eşya Servisi</a>
+      <a class="service-button" href="hizmet.html?service=Buzdolabı">Buzdolabı</a>
+      <a class="service-button" href="hizmet.html?service=Çamaşır+Makinesi">Çamaşır Makinesi</a>
+      <a class="service-button" href="hizmet.html?service=Bulaşık+Makinesi">Bulaşık Makinesi</a>
+      <a class="service-button" href="hizmet.html?service=Fırın">Fırın</a>
+      <a class="service-button" href="hizmet.html?service=Klima">Klima</a>
+      <a class="service-button" href="hizmet.html?service=Kombi">Kombi</a>
+      <a class="service-button" href="hizmet.html?service=Televizyon">Televizyon</a>
+    </div>
+    <div class="main-info-text" style="margin-top:32px;">
+      <h2>Beyaz Eşyalarınız İçin Güvenilir Çözümler: Bakım ve Onarımda Uzman Desteği</h2>
+      <p>Günümüz modern yaşamında beyaz eşyalar, konforun ve işlevselliğin temel yapı taşlarından biri haline gelmiştir. Buzdolabından çamaşır makinesine, bulaşık makinesinden fırına kadar pek çok cihaz, zaman kazandırarak hayatı kolaylaştırmakta ve hijyen standartlarını yükseltmektedir. Ancak bu cihazların uzun ömürlü ve verimli çalışabilmesi için düzenli bakım ve zamanında müdahale büyük önem taşır.</p>
+      <h3>Neden Beyaz Eşya Bakımı Önemlidir?</h3>
+      <p>Beyaz eşyalar, yalnızca evlerde değil; otel, restoran, hastane gibi birçok alanda aktif olarak kullanılmaktadır. Günlük kullanımın yoğunluğu, zamanla yıpranmaya ve performans düşüşüne neden olabilir. Bu noktada, önleyici bakım ve doğru onarım uygulamaları, hem cihazların ömrünü uzatır hem de yüksek tamir maliyetlerinin önüne geçer.</p>
+      <h3>Hangi Hizmetleri Sunuyoruz?</h3>
+      <ul>
+        <li><strong>Periyodik Bakım Hizmetleri:</strong> Cihazlarınızın düzenli kontrol ve temizliğiyle arıza oluşumunu en aza indiriyoruz.</li>
+        <li><strong>Arıza Tespiti ve Onarım:</strong> Buzdolabı soğutmuyor, çamaşır makinesi su almıyor ya da fırın ısınmıyor mu? Uzman teknik ekibimizle hızlı ve güvenilir çözümler sunuyoruz.</li>
+        <li><strong>Parça Değişimi ve Montaj:</strong> Uyumlu ve kaliteli yedek parçalarla, cihazınızın ilk günkü performansına dönmesini sağlıyoruz.</li>
+      </ul>
+      <h3>Neden Profesyonel Müdahale?</h3>
+      <p>Beyaz eşya arızalarında kullanıcıların kendi başına müdahalesi, çoğu zaman sorunu büyütebilir. Elektrik ve gazla çalışan cihazlarda en küçük hata dahi ciddi güvenlik riski oluşturabilir. Deneyimli teknisyenlerimiz, gerekli ekipman ve bilgiyle sorunu kaynağından çözerek kalıcı sonuçlar elde etmenizi sağlar.</p>
+      <h3>Dikkat Edilmesi Gerekenler</h3>
+      <ul>
+        <li>Kullanım kılavuzlarını mutlaka okuyun.</li>
+        <li>Temizlikte yoğun kimyasal kullanımından kaçının.</li>
+        <li>Cihazları kapasite üstünde çalıştırmayın.</li>
+        <li>Periyodik bakım işlemlerini ihmal etmeyin.</li>
+      </ul>
+      <h3>Enerji Tasarrufu ve Çevre Duyarlılığı</h3>
+      <p>Yeni nesil enerji verimli cihazlar hem doğaya saygılı hem de bütçeniz için avantajlıdır. Eski modellerin yenilenmesi ya da profesyonel geri dönüşüm süreçlerine dahil edilmesi, çevresel sürdürülebilirlik açısından büyük katkı sağlar.</p>
+    </div>
         <p>
           Tamircim, beyaz eşya ve elektronik cihazlarınız için güvenilir ve hızlı servis hizmeti sunar.
           Yalnızca garantisi sona ermiş ürünlerle ilgileniyor, yetkili servis olmadan da kaliteli çözümler sunuyoruz.
@@ -178,8 +224,8 @@
         <p>
           Tüm servis süreçlerimiz şeffaf ve uygun fiyatlıdır. Servis talebi oluşturmak için hemen bizimle iletişime geçin ya da aşağıdan arayın.
         </p>
-      
-      
+      <h3> Müşteri Memnuniyeti Önceliğimizdir</h3>
+      <p> Bizi tercih eden kullanıcılar sadece arızalarını değil, aynı zamanda güvenilir hizmet arayışlarını da bize emanet etmektedir. Bu nedenle her müdahalemizi titizlikle gerçekleştiriyor, yapılan her işlemde açıklayıcı bilgi sunarak kullanıcılarımızı bilgilendiriyoruz. Amacımız sadece arızayı gidermek değil; aynı zamanda sürdürülebilir ve güvenli kullanım sağlamaktır.</p>
       
   </main>
   <section>
@@ -202,6 +248,31 @@
     <div>
       <strong>Caner Y.</strong><br>
       Uygun fiyat ve kaliteli hizmet, herkese tavsiye ederim.
+      <hr>
+    </div>
+    <div>
+      <strong>Burak S.</strong><br>
+      Ustalar çok ilgiliydi, arızamı hemen giderdiler.
+      <hr>
+    </div>
+    <div>
+      <strong>Fatma A.</strong><br>
+      Telefonla aradım, aynı gün servis geldi. Çok memnun kaldım.
+      <hr>
+    </div>
+    <div>
+      <strong>Serkan M.</strong><br>
+      Parça değişimi hızlı ve uygun fiyatlıydı.
+      <hr>
+    </div>
+    <div>
+      <strong>Gülşah T.</strong><br>
+      Kombi bakımı için başvurdum, çok profesyonellerdi.
+      <hr>
+    </div>
+    <div>
+      <strong>Yusuf E.</strong><br>
+      Buzdolabım için çözüm buldular, tekrar arayacağım.
       <hr>
     </div>
   </section>
