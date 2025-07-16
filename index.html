@@ -3,9 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ana Sayfa | Tamircim</title>
-  <meta name="description" content="Tamircim olarak beyaz eşya servisi, buzdolabı, çamaşır makinesi, bulaşık makinesi ve diğer hizmetlerde uzmanız. Garantisi olmayan cihazlarınıza bakım ve onarım hizmeti veriyoruz.">
-
+  <title>Uzman Beyaz Eşya Servisi | Tamircim</title>
+  <meta name="description" content="Tamircim, garantisi olmayan buzdolabı, çamaşır ve bulaşık makineleri için uzman bakım ve onarım servisi sunar. Hemen arayın!">
   <!-- SEO ve Sosyal Medya Meta Etiketleri -->
   <meta property="og:title" content="Tamircim - Beyaz Eşya Servisi">
   <meta property="og:description" content="Garantisi olmayan cihazlar için servis hizmeti">
@@ -579,10 +578,13 @@ body {
 <!-- END HEADER FLEXBOX -->
   
   
-  <main>
-    <h1>Hoş geldiniz</h1>
-    <p>Tamircim olarak garantisi bitmiş cihazlara servis hizmeti sunuyoruz.</p>
-    <div class="service-buttons">
+<main style="text-align: center; padding: 60px 20px; background: linear-gradient(to right, #006D77, #83C5BE); color: white;">
+  <h1 style="font-size: 3em; font-weight: bold; text-shadow: 2px 2px 6px rgba(0,0,0,0.3); margin-bottom: 20px;">
+    Hoş Geldiniz
+  </h1>
+  <p style="font-size: 1.3em; max-width: 600px; margin: 0 auto; line-height: 1.6;">
+    Tamircim olarak garantisi bitmiş cihazlara profesyonel ve hızlı servis hizmeti sunuyoruz.
+  </p>
       <a class="service-button" href="hizmet.html?service=Beyaz+Eşya+Servisi"><span class="icon">🛠️</span>Beyaz Eşya Servisi</a>
       <a class="service-button" href="hizmet.html?service=Buzdolabı"><span class="icon">🧊</span>Buzdolabı</a>
       <a class="service-button" href="hizmet.html?service=Çamaşır+Makinesi"><span class="icon">🧺</span>Çamaşır Makinesi</a>
@@ -696,14 +698,14 @@ body {
       <section class="footer-services">
         <h3>Hizmetlerimiz</h3>
         <ul>
-          <li>Beyaz Eşya Servisi</li>
-          <li>Buzdolabı Tamiri</li>
-          <li>Çamaşır Makinesi Servisi</li>
-          <li>Bulaşık Makinesi Servisi</li>
-          <li>Fırın Tamiri</li>
-          <li>Klima Bakımı</li>
-          <li>Kombi Servisi</li>
-          <li>Televizyon Tamiri</li>
+          <li><a href="/hizmet.html?service=Beyaz+Eşya+Servisi">Beyaz Eşya Servisi</a></li>
+          <li><a href="/hizmet.html?service=Buzdolabı">Buzdolabı</a></li>
+          <li><a href="/hizmet.html?service=Çamaşır+Makinesi">Çamaşır Makinesi</a></li>
+          <li><a href="/hizmet.html?service=Bulaşık+Makinesi">Bulaşık Makinesi</a></li>
+          <li><a href="/hizmet.html?service=Fırın">Fırın</a></li>
+          <li><a href="/hizmet.html?service=Klima">Klima</a></li>
+          <li><a href="/hizmet.html?service=Kombi">Kombi</a></li>
+          <li><a href="/hizmet.html?service=Televizyon">Televizyon</a></li>
         </ul>
       </section>
       <section class="footer-links">
@@ -784,6 +786,17 @@ body {
         color: #ffe082;
         text-decoration: underline;
       }
+      .footer-services a {
+       color: #fff;
+       text-decoration: none;
+       transition: color 0.2s;
+       font-weight: 500;
+       }
+
+       .footer-services a:hover {
+       color: #ffe082;
+       text-decoration: underline;
+       }
       .footer-socials-custom {
         display: flex;
         gap: 14px;
