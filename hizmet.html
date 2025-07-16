@@ -413,6 +413,67 @@ body {
     width: 80px;
   }
 }
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  background: rgba(255,255,255,0.13);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 1300;
+  margin-left: 8px;
+  transition: background 0.2s;
+}
+.hamburger span {
+  display: block;
+  width: 26px;
+  height: 3px;
+  margin: 4px 0;
+  background: #fff;
+  border-radius: 2px;
+  transition: all 0.3s cubic-bezier(.4,2,.3,1);
+}
+@media (max-width: 768px) {
+  .hamburger { display: flex; }
+  .main-nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: linear-gradient(90deg, #00796b 0%, #43cea2 100%);
+    box-shadow: 0 4px 16px rgba(67,206,162,0.10);
+    border-radius: 0 0 16px 16px;
+    padding: 0 0 12px 0;
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
+    z-index: 1200;
+    animation: fadeInMenu 0.25s;
+  }
+  .main-nav.nav-open {
+    display: flex;
+  }
+  .header-flex {
+    position: relative;
+  }
+}
+@keyframes fadeInMenu {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.hamburger.active span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
 </style>
 </head>
 <body>
@@ -421,7 +482,10 @@ body {
             <a href="/" class="logo-link">
               <img src="/apple-touch-icon.png" alt="Tamircim Logo" width="150">
             </a>
-            <nav class="main-nav">
+            <button class="hamburger" aria-label="Menüyü Aç/Kapat" aria-expanded="false" aria-controls="main-nav">
+              <span></span><span></span><span></span>
+            </button>
+            <nav class="main-nav" id="main-nav">
               <ul>
                 <li><a href="/">Ana Sayfa</a></li>
                 <li class="has-dropdown">
@@ -598,5 +662,28 @@ body {
     <p>Bu site, yalnızca garantisi olmayan cihazlara özel servis hizmeti sunar. Tamircim resmi yetkili servis değildir.</p>
     <p>© 2025 Tamircim | Mersin</p>
   </footer>
+  <script>
+    // Hamburger menu toggle script (ensure it runs after DOM is ready)
+    (function() {
+      var hamburger = document.querySelector('.hamburger');
+      var nav = document.querySelector('.main-nav');
+      if (hamburger && nav) {
+        hamburger.addEventListener('click', function(e) {
+          e.stopPropagation();
+          var open = nav.classList.toggle('nav-open');
+          hamburger.classList.toggle('active');
+          hamburger.setAttribute('aria-expanded', open);
+        });
+        // Optional: close menu when clicking outside
+        document.addEventListener('click', function(e) {
+          if (!nav.contains(e.target) && !hamburger.contains(e.target)) {
+            nav.classList.remove('nav-open');
+            hamburger.classList.remove('active');
+            hamburger.setAttribute('aria-expanded', false);
+          }
+        });
+      }
+    })();
+  </script>
 </body>
 </html>

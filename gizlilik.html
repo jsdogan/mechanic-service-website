@@ -14,166 +14,355 @@
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-  <style>
-    body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; padding: 0; background: #f8fafc; color: #222; }
-    header, footer { background: linear-gradient(90deg, #00796b 0%, #43cea2 100%); padding: 1em; text-align: center; color: #fff; }
-    nav a { margin: 0 10px; text-decoration: none; color: #fff; font-weight: 500; transition: color 0.2s; }
-    nav a:hover { color: #ffe082; }
-    main { padding: 1em; max-width: 900px; margin: auto; }
-    .footer-note { font-size: 0.85em; color: #e0e0e0; margin-top: 2em; }
- 
-    .main-info-text {
-      margin-top: 32px;
-      background: #fff;
-      border-radius: 12px;
-      box-shadow: 0 2px 12px rgba(67,206,162,0.07);
-      padding: 28px 24px;
-      color: #222;
-    }
-    .main-info-text h2, .main-info-text h3 {
-      color: #00796b;
-      margin-top: 0.7em;
-    }
-    .main-info-text ul { margin-left: 1.2em; }
-    /* Customer Reviews Section */
-    section h2 { color: #00796b; margin-bottom: 18px; }
-    .reviews-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 18px;
-      margin-bottom: 10px;
-    }
-    .review-card {
-      background: #fff;
-      border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(67,206,162,0.10);
-      padding: 18px 16px 14px 16px;
-      border-left: 5px solid #43cea2;
-      font-size: 1em;
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-      min-height: 110px;
-    }
-    .review-card strong {
-      color: #00796b;
-      font-size: 1.08em;
-      margin-bottom: 2px;
-    }
-    .review-card hr {
-      border: none;
-      border-top: 1px solid #e0e0e0;
-      margin: 8px 0 0 0;
-    }
-    /* Footer Socials */
-    .footer-socials {
-      margin: 18px 0 8px 0;
-      display: flex;
-      justify-content: center;
-      gap: 18px;
-    }
-    .footer-socials a {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 38px;
-      height: 38px;
-      border-radius: 50%;
-      background: #fff;
-      color: #00796b;
-      font-size: 1.3em;
-      text-decoration: none;
-      box-shadow: 0 1px 4px rgba(67,206,162,0.10);
-      transition: background 0.2s, color 0.2s;
-    }
-    .footer-socials a:hover {
-      background: #43cea2;
-      color: #fff;
-    }
-    .footer-socials a i {
-      color: #00796b !important;
-    }
-  </style>
-  <style>
-    nav ul li ul {
-      display: none;
-      position: absolute;
-      background: #43cea2;
-      padding: 0;
-      margin: 0;
-      list-style: none;
-    }
-    nav ul li:hover ul {
-      display: block;
-    }
-    nav ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-    nav ul li {
-      display: inline-block;
-      position: relative;
-      margin-right: 10px;
-    }
-    nav ul li a {
-      text-decoration: none;
-      padding: 8px 12px;
-      display: inline-block;
-    }
-    nav ul li ul li {
-      display: block;
-    }
-    nav ul li ul li a {
-      color: #fff !important;
-      background: transparent;
-      padding: 10px 18px;
-      font-weight: 500;
-      transition: background 0.2s, color 0.2s;
-    }
-    nav ul li ul li a:hover {
-      background: #00796b;
-      color: #ffe082 !important;
-    }
-    nav {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 8px;
-    }
-    nav ul {
-      display: flex;
-      gap: 0;
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-    nav ul li {
-      display: inline-block;
-      position: relative;
-      margin: 0 4px;
-    }
-    nav ul li a, nav > a {
-      display: inline-block;
-      padding: 10px 22px;
-      border-radius: 24px;
-      background: rgba(255,255,255,0.13);
-      color: #fff;
-      font-weight: 600;
-      font-size: 1.08em;
-      text-decoration: none;
-      box-shadow: 0 2px 8px rgba(67,206,162,0.10);
-      transition: background 0.2s, color 0.2s, box-shadow 0.2s;
-      border: 2px solid transparent;
-    }
-    nav ul li a:hover, nav > a:hover, nav ul li.active > a {
-      background: #fff;
-      color: #00796b;
-      border: 2px solid #43cea2;
-      box-shadow: 0 4px 16px rgba(67,206,162,0.18);
-    }
-  </style>
-  <style>
+  
+<style>
+  body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; padding: 0; background: #f8fafc; color: #222; }
+  header, footer { background: linear-gradient(90deg, #00796b 0%, #43cea2 100%); padding: 1em; text-align: center; color: #fff; }
+  nav a { margin: 0 10px; text-decoration: none; color: #fff; font-weight: 500; transition: color 0.2s; }
+  nav a:hover { color: #ffe082; }
+  main { padding: 1em; max-width: 900px; margin: auto; }
+  .footer-note { font-size: 0.85em; color: #e0e0e0; margin-top: 2em; }
+  .phone-link, .phone-link-dynamic {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #fff;
+    background: #2A9D8F;
+    border-radius: 5px;
+    padding: 10px 15px;
+    text-decoration: none;
+    transition: background 0.2s;
+  }
+  .phone-link:hover, .phone-link-dynamic:hover {
+    background: #21867a;
+  }
+  .main-info-text {
+    margin-top: 32px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(67,206,162,0.07);
+    padding: 28px 24px;
+    color: #222;
+  }
+  .main-info-text h2, .main-info-text h3 {
+    color: #00796b;
+    margin-top: 0.7em;
+  }
+  .main-info-text ul { margin-left: 1.2em; }
+  /* Customer Reviews Section */
+  section h2 { color: #00796b; margin-bottom: 18px; }
+  .reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 18px;
+    margin-bottom: 10px;
+  }
+  .review-card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(67,206,162,0.10);
+    padding: 18px 16px 14px 16px;
+    border-left: 5px solid #43cea2;
+    font-size: 1em;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    min-height: 110px;
+  }
+  .review-card strong {
+    color: #00796b;
+    font-size: 1.08em;
+    margin-bottom: 2px;
+  }
+  .review-card hr {
+    border: none;
+    border-top: 1px solid #e0e0e0;
+    margin: 8px 0 0 0;
+  }
+  /* Footer Socials */
+  .footer-socials {
+    margin: 18px 0 8px 0;
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+  }
+  .footer-socials a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: #fff;
+    color: #00796b;
+    font-size: 1.3em;
+    text-decoration: none;
+    box-shadow: 0 1px 4px rgba(67,206,162,0.10);
+    transition: background 0.2s, color 0.2s;
+  }
+  .footer-socials a:hover {
+    background: #43cea2;
+    color: #fff;
+  }
+  .footer-socials a i {
+    color: #00796b !important;
+  }
+</style>
+
+<style>
+nav ul li ul {
+  display: none;
+  position: absolute;
+  background: #43cea2;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+nav ul li:hover ul {
+  display: block;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  display: inline-block;
+  position: relative;
+  margin-right: 10px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  padding: 8px 12px;
+  display: inline-block;
+}
+
+nav ul li ul li {
+  display: block;
+}
+
+nav ul li ul li a {
+  color: #fff !important;
+  background: transparent;
+  padding: 10px 18px;
+  font-weight: 500;
+  transition: background 0.2s, color 0.2s;
+}
+nav ul li ul li a:hover {
+  background: #00796b;
+  color: #ffe082 !important;
+}
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+nav ul {
+  display: flex;
+  gap: 0;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+nav ul li {
+  display: inline-block;
+  position: relative;
+  margin: 0 4px;
+}
+nav ul li a, nav > a {
+  display: inline-block;
+  padding: 10px 22px;
+  border-radius: 24px;
+  background: rgba(255,255,255,0.13);
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.08em;
+  text-decoration: none;
+  box-shadow: 0 2px 8px rgba(67,206,162,0.10);
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+  border: 2px solid transparent;
+}
+nav ul li a:hover, nav > a:hover, nav ul li.active > a {
+  background: #fff;
+  color: #00796b;
+  border: 2px solid #43cea2;
+  box-shadow: 0 4px 16px rgba(67,206,162,0.18);
+}
+
+/* Telefon Butonu Modern ve Sağ Üstte */
+.phone-link-dynamic {
+  position: absolute;
+  top: 18px;
+  right: 32px;
+  z-index: 1200;
+  min-width: 0;
+  width: auto;
+  height: 48px;
+  padding: 0 22px;
+  font-size: 1.08em;
+  border-radius: 24px;
+  box-shadow: 0 2px 8px rgba(67,206,162,0.10);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+}
+@media (max-width: 700px) {
+  .phone-link-dynamic {
+    position: static;
+    display: block;
+    margin: 12px auto 0 auto;
+    right: unset;
+    top: unset;
+    width: 90%;
+    max-width: 340px;
+    font-size: 1em;
+  }
+}
+/* Header table için relative */
+header > table { position: relative; }
+
+/* HEADER FLEXBOX LAYOUT */
+.header-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  flex-wrap: wrap;
+}
+.logo-link { flex-shrink: 0; }
+.main-nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.main-nav ul li {
+  display: inline-block;
+  position: relative;
+  margin: 0 4px;
+}
+.main-nav ul li ul.dropdown {
+  display: none;
+  position: absolute;
+  background: #43cea2;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  z-index: 1002;
+  left: 0;
+  top: 100%;
+  min-width: 180px;
+  border-radius: 0 0 12px 12px;
+  box-shadow: 0 2px 8px rgba(67,206,162,0.10);
+}
+.main-nav ul li.has-dropdown:hover ul.dropdown {
+  display: block;
+}
+.main-nav ul li ul.dropdown li { display: block; }
+.main-nav ul li ul.dropdown li a {
+  color: #fff !important;
+  background: transparent;
+  padding: 10px 18px;
+  font-weight: 500;
+  transition: background 0.2s, color 0.2s;
+  border-radius: 0;
+}
+.main-nav ul li ul.dropdown li a:hover {
+  background: #00796b;
+  color: #ffe082 !important;
+}
+.phone-link-dynamic {
+  position: static;
+  min-width: 0;
+  width: auto;
+  height: 48px;
+  padding: 0 22px;
+  font-size: 1.08em;
+  border-radius: 24px;
+  box-shadow: 0 2px 8px rgba(67,206,162,0.10);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 0 0 16px;
+  white-space: nowrap;
+  max-width: 100%;
+}
+@media (max-width: 1024px) {
+  .header-flex { padding: 0 12px; }
+}
+@media (max-width: 768px) {
+  .header-flex {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+    padding: 0 6px;
+  }
+  .main-nav ul {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+  }
+  .main-nav ul li {
+    display: block;
+    margin: 0;
+  }
+  .main-nav ul li a, .main-nav > a {
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 18px;
+    margin-bottom: 4px;
+  }
+  .main-nav ul li ul.dropdown {
+    position: static;
+    min-width: 0;
+    box-shadow: none;
+    border-radius: 0 0 12px 12px;
+  }
+  .phone-link-dynamic {
+    margin: 10px 0 0 0;
+    width: 100%;
+    max-width: 340px;
+    font-size: 1em;
+    align-self: center;
+    justify-content: center;
+    white-space: normal;
+  }
+}
+/* SERVICE BUTTONS & REVIEWS GRID IMPROVEMENT */
+.service-buttons {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 16px;
+  justify-content: center;
+  margin: 32px 0 16px 0;
+}
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 18px;
+  margin-bottom: 10px;
+}
+@media (max-width: 768px) {
+  .service-buttons {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .reviews-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+}
 /* --- Enhanced Mobile Responsiveness --- */
 html, body {
   max-width: 100vw;
@@ -236,44 +425,102 @@ body {
     width: 80px;
   }
 }
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  background: rgba(255,255,255,0.13);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 1300;
+  margin-left: 8px;
+  transition: background 0.2s;
+}
+.hamburger span {
+  display: block;
+  width: 26px;
+  height: 3px;
+  margin: 4px 0;
+  background: #fff;
+  border-radius: 2px;
+  transition: all 0.3s cubic-bezier(.4,2,.3,1);
+}
+@media (max-width: 768px) {
+  .hamburger { display: flex; }
+  .main-nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: linear-gradient(90deg, #00796b 0%, #43cea2 100%);
+    box-shadow: 0 4px 16px rgba(67,206,162,0.10);
+    border-radius: 0 0 16px 16px;
+    padding: 0 0 12px 0;
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
+    z-index: 1200;
+    animation: fadeInMenu 0.25s;
+  }
+  .main-nav.nav-open {
+    display: flex;
+  }
+  .header-flex {
+    position: relative;
+  }
+}
+@keyframes fadeInMenu {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.hamburger.active span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
 </style>
  
 </head>
 <body>
   <header>
-    <table width="100%" style="position:relative;">
-      <tr>
-        <td align="left" style="vertical-align: middle;">
-          <a href="/">
-            <img src="/apple-touch-icon.png" alt="Tamircim Logo" width="150">
-          </a>
-        </td>
-        <td align="middle" style="vertical-align: middle;">
-          <nav>
-            <ul>
-              <li><a href="/">Ana Sayfa</a></li>
-              <li>
-                <a href="/hizmet.html?service=Hizmetlerimiz">Hizmetlerimiz</a>
-                <ul>
-                  <li><a href="/hizmet.html?service=Beyaz+Eşya+Servisi">Beyaz Eşya Servisi</a></li>
-                  <li><a href="/hizmet.html?service=Buzdolabı">Buzdolabı</a></li>
-                  <li><a href="/hizmet.html?service=Çamaşır+Makinesi">Çamaşır Makinesi</a></li>
-                  <li><a href="/hizmet.html?service=Bulaşık+Makinesi">Bulaşık Makinesi</a></li>
-                  <li><a href="/hizmet.html?service=Fırın">Fırın</a></li>
-                  <li><a href="/hizmet.html?service=Klima">Klima</a></li>
-                  <li><a href="/hizmet.html?service=Kombi">Kombi</a></li>
-                  <li><a href="/hizmet.html?service=Televizyon">Televizyon</a></li>
-                </ul>
-              </li>
-              <li><a href="/hakkimizda.html">Hakkımızda</a></li>
-              <li><a href="/iletisim.html">İletişim</a></li>
-              <li><a href="/gizlilik.html">Gizlilik Politikası</a></li>
-              <li><a href="/kvkk.html">KVKK</a></li>
+    <div class="header-flex">
+      <a href="/" class="logo-link">
+        <img src="/apple-touch-icon.png" alt="Tamircim Logo" width="150">
+      </a>
+      <button class="hamburger" aria-label="Menüyü Aç/Kapat" aria-expanded="false" aria-controls="main-nav">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="main-nav" id="main-nav">
+        <ul>
+          <li><a href="/">Ana Sayfa</a></li>
+          <li class="has-dropdown">
+            <a href="/hizmet.html?service=Hizmetlerimiz">Hizmetlerimiz</a>
+            <ul class="dropdown">
+              <li><a href="/hizmet.html?service=Beyaz+Eşya+Servisi">Beyaz Eşya Servisi</a></li>
+              <li><a href="/hizmet.html?service=Buzdolabı">Buzdolabı</a></li>
+              <li><a href="/hizmet.html?service=Çamaşır+Makinesi">Çamaşır Makinesi</a></li>
+              <li><a href="/hizmet.html?service=Bulaşık+Makinesi">Bulaşık Makinesi</a></li>
+              <li><a href="/hizmet.html?service=Fırın">Fırın</a></li>
+              <li><a href="/hizmet.html?service=Klima">Klima</a></li>
+              <li><a href="/hizmet.html?service=Kombi">Kombi</a></li>
+              <li><a href="/hizmet.html?service=Televizyon">Televizyon</a></li>
             </ul>
-          </nav>
-        </td>
-      </tr>
-    </table>
+          </li>
+          <li><a href="/hakkimizda.html">Hakkımızda</a></li>
+          <li><a href="/iletisim.html">İletişim</a></li>
+          <li><a href="/gizlilik.html">Gizlilik Politikası</a></li>
+          <li><a href="/kvkk.html">KVKK</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
   <main>
@@ -356,13 +603,13 @@ body {
       <a id="footer-instagram" href="#" target="_blank" aria-label="Instagram"><i class="fa fa-instagram"></i></a>
       <a id="footer-twitter" href="#" target="_blank" aria-label="Twitter"><i class="fa fa-twitter"></i></a>
     </div>
-    <p>Bu site, yalnızca garantisi olmayan cihazlara özel servis hizmeti sunar. Tamircim resmi yetkili servis değildir.</p>
+    <p>Bu site, yalnızca garantisi olmayan cihazlara özel servis hizmeti sunar. işletmemiz resmi yetkili servis değildir.</p>
     <p>© 2025 Tamircim | Mersin</p>
   </footer>
   <script src="config.js"></script>
   <script>
     if (window.siteConfig) {
-      document.title = window.siteConfig.pageTitle || ('Gizlilik Politikası | ' + window.siteConfig.companyName);
+      document.title = window.siteConfig.pageTitle || ('Gizlilik | ' + window.siteConfig.companyName);
       var metaDesc = document.querySelector('meta[name="description"]');
       if (metaDesc && window.siteConfig.pageDescription) metaDesc.setAttribute('content', window.siteConfig.pageDescription);
       var ogTitle = document.querySelector('meta[property="og:title"]');
@@ -375,6 +622,24 @@ body {
       if (ogUrl && window.siteConfig.ogUrl) ogUrl.setAttribute('content', window.siteConfig.ogUrl);
       var ogImage = document.querySelector('meta[property="og:image"]');
       if (ogImage && window.siteConfig.ogImage) ogImage.setAttribute('content', window.siteConfig.ogImage);
+      // Dynamic company info in Firma Bilgileri
+      var nameEls = document.querySelectorAll('.company-name');
+      nameEls.forEach(function(el) { el.textContent = window.siteConfig.companyName; });
+      var taxEls = document.querySelectorAll('.company-tax');
+      taxEls.forEach(function(el) { el.textContent = window.siteConfig.taxNumber; });
+      var addrEls = document.querySelectorAll('.company-address');
+      addrEls.forEach(function(el) { el.textContent = window.siteConfig.address; });
+      var phoneEls = document.querySelectorAll('.company-phone');
+      phoneEls.forEach(function(el) {
+        el.textContent = window.siteConfig.phoneNumber;
+        if (el.tagName === 'A') el.setAttribute('href', 'tel:' + window.siteConfig.phoneNumber);
+      });
+      // Dynamic phone button at the top
+      var phoneBtn = document.querySelector('.phone-link-dynamic');
+      if (phoneBtn) {
+        phoneBtn.setAttribute('href', 'tel:' + window.siteConfig.phoneNumber);
+        phoneBtn.textContent = '📞 Hemen Ara: ' + window.siteConfig.phoneNumber;
+      }
       // Socials dynamic links
       var email = window.siteConfig.email || "info@tamircim.com";
       var username = email.split('@')[0];
@@ -383,5 +648,24 @@ body {
       document.getElementById('footer-twitter').href = 'https://twitter.com/' + username;
     }
   </script>
+  <script>
+document.addEventListener('DOMContentLoaded', function() {
+  var hamburger = document.querySelector('.hamburger');
+  var nav = document.querySelector('.main-nav');
+  hamburger.addEventListener('click', function() {
+    var open = nav.classList.toggle('nav-open');
+    hamburger.classList.toggle('active');
+    hamburger.setAttribute('aria-expanded', open);
+  });
+  // Optional: close menu when clicking outside
+  document.addEventListener('click', function(e) {
+    if (!nav.contains(e.target) && !hamburger.contains(e.target)) {
+      nav.classList.remove('nav-open');
+      hamburger.classList.remove('active');
+      hamburger.setAttribute('aria-expanded', false);
+    }
+  });
+});
+</script>
 </body>
 </html>
