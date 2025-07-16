@@ -574,8 +574,6 @@ body {
           </li>
           <li><a href="/hakkimizda.html">Hakkımızda</a></li>
           <li><a href="/iletisim.html">İletişim</a></li>
-          <li><a href="/gizlilik.html">Gizlilik Politikası</a></li>
-          <li><a href="/kvkk.html">KVKK</a></li>
         </ul>
       </nav>
       <a class="phone-link-dynamic" href="tel:+905555555555">📞 Hemen Ara: 0555 555 55 55</a>
@@ -660,22 +658,189 @@ body {
       </div>
     </div>
   </section>
-  <footer>
-    <nav>
-      <a href="/">Ana Sayfa</a>
-      <a href="/hizmet">Hizmetlerimiz</a>
-      <a href="/hakkimizda">Hakkımızda</a>
-      <a href="/iletisim">İletişim</a>
-      <a href="/gizlilik">Gizlilik Politikası</a>
-      <a href="/kvkk">KVKK</a>
-    </nav>
-    <div class="footer-socials">
-      <a id="footer-facebook" href="#" target="_blank" aria-label="Facebook"><i class="fa fa-facebook"></i></a>
-      <a id="footer-instagram" href="#" target="_blank" aria-label="Instagram"><i class="fa fa-instagram"></i></a>
-      <a id="footer-twitter" href="#" target="_blank" aria-label="Twitter"><i class="fa fa-twitter"></i></a>
+  <footer class="site-footer-custom">
+    <div class="footer-container-custom">
+      <section class="footer-contact">
+        <h3>Contact</h3>
+        <address>
+          <div>Örnek Mah. Örnek Sk. No:1 D:2, Örnek İlçe/İstanbul</div>
+          <div><a href="tel:+905551112233">+90 (555) 111 22 33</a></div>
+          <div><a href="mailto:info@servisweb.com">info@servisweb.com</a></div>
+        </address>
+      </section>
+      <section class="footer-services">
+        <h3>Hizmetlerimiz</h3>
+        <ul>
+          <li>Beyaz Eşya Servisi</li>
+          <li>Buzdolabı Tamiri</li>
+          <li>Çamaşır Makinesi Servisi</li>
+          <li>Bulaşık Makinesi Servisi</li>
+          <li>Fırın Tamiri</li>
+          <li>Klima Bakımı</li>
+          <li>Kombi Servisi</li>
+          <li>Televizyon Tamiri</li>
+        </ul>
+      </section>
+      <section class="footer-links">
+        <h3>Hızlı Linkler</h3>
+        <ul>
+          <li><a href="/">Ana Sayfa</a></li>
+          <li><a href="/hakkimizda.html">Hakkımızda</a></li>
+          <li><a href="/iletisim.html">İletişim</a></li>
+          <li><a href="/gizlilik.html">Gizlilik Politikası</a></li>
+          <li><a href="/kvkk.html">KVKK</a></li>
+        </ul>
+      </section>
+      <section class="footer-socials-custom">
+        <a href="#" aria-label="Facebook" target="_blank"><i class="fa fa-facebook"></i></a>
+        <a href="#" aria-label="Instagram" target="_blank"><i class="fa fa-instagram"></i></a>
+        <a href="#" aria-label="Twitter" target="_blank"><i class="fa fa-twitter"></i></a>
+      </section>
     </div>
-    <p>Bu site, yalnızca garantisi olmayan cihazlara özel servis hizmeti sunar. Tamircim resmi yetkili servis değildir.</p>
-    <p>© 2025 Tamircim | Mersin</p>
+    <div class="footer-bottom-custom">© 2025 ServisWeb. Tüm hakları saklıdır.</div>
+    <style>
+      .site-footer-custom {
+        background: linear-gradient(90deg, #00796b 0%, #43cea2 100%);
+        color: #fff;
+        padding: 32px 0 0 0;
+        font-size: 1em;
+        margin-top: 48px;
+      }
+      .footer-container-custom {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 32px;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 24px;
+      }
+      .footer-container-custom > section {
+        flex: 1 1 180px;
+        min-width: 180px;
+        margin-bottom: 18px;
+      }
+      .footer-contact h3, .footer-services h3, .footer-links h3 {
+        font-size: 1.13em;
+        margin-bottom: 10px;
+        color: #ffe082;
+        letter-spacing: 0.01em;
+      }
+      .footer-contact address {
+        font-style: normal;
+        font-size: 1em;
+        line-height: 1.6;
+      }
+      .footer-contact a {
+        color: #fff;
+        text-decoration: underline;
+        word-break: break-all;
+        display: block;
+        margin-bottom: 4px;
+        font-weight: 500;
+      }
+      .footer-services ul, .footer-links ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      .footer-services li, .footer-links li {
+        margin-bottom: 7px;
+        font-size: 1em;
+      }
+      .footer-links a {
+        color: #fff;
+        text-decoration: none;
+        transition: color 0.2s;
+        font-weight: 500;
+      }
+      .footer-links a:hover {
+        color: #ffe082;
+        text-decoration: underline;
+      }
+      .footer-socials-custom {
+        display: flex;
+        gap: 14px;
+        margin-top: 6px;
+        align-items: center;
+        justify-content: flex-start;
+      }
+      .footer-socials-custom a {
+        width: 38px;
+        height: 38px;
+        border-radius: 50%;
+        background: #fff;
+        color: #00796b;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.3em;
+        box-shadow: 0 1px 4px rgba(67,206,162,0.10);
+        transition: background 0.2s, color 0.2s;
+        text-decoration: none;
+      }
+      .footer-socials-custom a:hover {
+        background: #43cea2;
+        color: #fff;
+      }
+      .footer-bottom-custom {
+        text-align: center;
+        font-size: 0.98em;
+        color: #e0e0e0;
+        padding: 12px 0 8px 0;
+        margin-top: 0;
+        background: none;
+      }
+      @media (max-width: 1024px) {
+        .footer-container-custom {
+          gap: 18px;
+          padding: 0 8px;
+        }
+      }
+      @media (max-width: 768px) {
+        .footer-container-custom {
+          flex-direction: column;
+          align-items: stretch;
+          gap: 0;
+          padding: 0 4vw;
+        }
+        .footer-container-custom > section {
+          margin-bottom: 18px;
+          min-width: 0;
+        }
+        .footer-socials-custom {
+          justify-content: flex-start;
+          margin-bottom: 8px;
+        }
+        .footer-bottom-custom {
+          font-size: 0.95em;
+          padding: 10px 0 6px 0;
+        }
+      }
+      @media (max-width: 480px) {
+        .site-footer-custom {
+          padding: 18px 0 0 0;
+          font-size: 0.98em;
+        }
+        .footer-container-custom {
+          padding: 0 2vw;
+        }
+        .footer-contact h3, .footer-services h3, .footer-links h3 {
+          font-size: 1em;
+        }
+        .footer-socials-custom a {
+          width: 32px;
+          height: 32px;
+          font-size: 1.1em;
+        }
+      }
+      @media (max-width: 350px) {
+        .site-footer-custom {
+          font-size: 0.95em;
+        }
+      }
+    </style>
   </footer>
   <script src="config.js"></script>
   <script>
