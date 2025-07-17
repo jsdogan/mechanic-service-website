@@ -17,7 +17,11 @@
   <link rel="icon" href="/favicon.ico" type="image/x-icon">
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- Font Awesome optimize edilmiş yükleme -->
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </noscript>
 
   <style>
     body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; padding: 0; background: #f8fafc; color: #222; }
@@ -1118,7 +1122,7 @@ body {
   </p>
 
   <p>
-    Klima ve kombi gibi iklimlendirme cihazları da bu süreçte özel ilgi gerektirir. Hem konfor hem de enerji tasarrufu açısından profesyonel bakım şarttır. Yapılan araştırmalara göre kullanıcıların %65’i düzenli bakım yapılan cihazların daha uzun ömürlü olduğunu belirtmektedir.
+    Klima ve kombi gibi iklimlendirme cihazları da bu süreçte özel ilgi gerektirir. Hem konfor hem de enerji tasarrufu açısından profesyonel bakım şarttır. Yapılan araştırmalara göre kullanıcıların %65'i düzenli bakım yapılan cihazların daha uzun ömürlü olduğunu belirtmektedir.
   </p>
       <h3>Neden Beyaz Eşya Bakımı Önemlidir?</h3>
       <p>Beyaz eşyalar, yalnızca evlerde değil; otel, restoran, hastane gibi birçok alanda aktif olarak kullanılmaktadır. Günlük kullanımın yoğunluğu, zamanla yıpranmaya ve performans düşüşüne neden olabilir. Bu noktada, önleyici bakım ve doğru onarım uygulamaları, hem cihazların ömrünü uzatır hem de yüksek tamir maliyetlerinin önüne geçer.</p>
@@ -1146,7 +1150,7 @@ body {
           <article class="faq-article">
             <h3>Buzdolabı Arızaları ve Çözüm Yolları</h3>
             <p>Günümüzde sık karşılaşılan sorunlardan biri, buzdolaplarının arızalanmasıdır. Buzdolapları, gıda ve içeceklerin taze kalmasını sağlar. Arızalarda soğutmama, ses yapma, su sızdırma gibi belirtiler olabilir. Bunların nedenlerini anlamak için sıcaklık ayarlarını, hava akışını, motor seslerini ve drenaj kanallarını kontrol etmelisiniz.</p>
-            <p>Örneğin; termostat ya da motor arızaları en yaygın sorunlardandır. Araştırmalara göre buzdolabı sorunlarının %50’si bu bileşenlerden kaynaklanmaktadır. Düzenli bakım yapılmazsa cihazın ömrü kısalır. Gerekli durumlarda profesyonel teknik servis desteği alınmalıdır.</p>
+            <p>Örneğin; termostat ya da motor arızaları en yaygın sorunlardandır. Araştırmalara göre buzdolabı sorunlarının %50'si bu bileşenlerden kaynaklanmaktadır. Düzenli bakım yapılmazsa cihazın ömrü kısalır. Gerekli durumlarda profesyonel teknik servis desteği alınmalıdır.</p>
           </article>
       
           <article class="faq-article">
@@ -1162,7 +1166,7 @@ body {
       
           <article class="faq-article">
             <h3>Bulaşık Makinesi Neden Su Akıtıyor?</h3>
-            <p>Su akıtan bulaşık makinelerinde genellikle hortum gevşekliği, conta aşınması veya filtre tıkanıklığı söz konusudur. Kullanıcıların %35’i bu tür problemlerle karşılaşmaktadır. Sorunu tespit edip gerektiğinde teknik servisle iletişime geçmek gerekir.</p>
+            <p>Su akıtan bulaşık makinelerinde genellikle hortum gevşekliği, conta aşınması veya filtre tıkanıklığı söz konusudur. Kullanıcıların %35'i bu tür problemlerle karşılaşmaktadır. Sorunu tespit edip gerektiğinde teknik servisle iletişime geçmek gerekir.</p>
             <ul>
               <li>Hortumlar sağlam mı?</li>
               <li>Kapak lastiği aşınmış mı?</li>
@@ -1290,9 +1294,20 @@ body {
         </ul>
       </section>
       <section class="footer-socials-custom">
-        <a href="#" aria-label="Facebook" target="_blank"><i class="fa fa-facebook"></i></a>
-        <a href="#" aria-label="Instagram" target="_blank"><i class="fa fa-instagram"></i></a>
-        <a href="#" aria-label="Twitter" target="_blank"><i class="fa fa-twitter"></i></a>
+        <!-- Font Awesome kaldırıldı, SVG ikonlar eklendi -->
+        <!-- Facebook SVG -->
+        <a href="#" aria-label="Facebook" target="_blank" style="vertical-align:middle;">
+          <svg width="20" height="20" viewBox="0 0 320 512" fill="#1877f3" style="vertical-align:middle;"><path d="M279.14 288l14.22-92.66h-88.91V127.89c0-25.35 12.42-50.06 52.24-50.06H293V6.26S259.5 0 225.36 0c-73.22 0-121.09 44.38-121.09 124.72v70.62H22.89V288h81.38v224h100.2V288z"/></svg>
+        </a>
+        <!-- Instagram SVG -->
+        <a href="#" aria-label="Instagram" target="_blank" style="vertical-align:middle;">
+          <svg width="20" height="20" viewBox="0 0 448 512" fill="#e4405f" style="vertical-align:middle;"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9 114.9-51.3 114.9-114.9S287.7 141 224.1 141zm0 186c-39.5 0-71.5-32-71.5-71.5s32-71.5 71.5-71.5 71.5 32 71.5 71.5-32 71.5-71.5 71.5zm146.4-194.3c0 14.9-12 26.9-26.9 26.9s-26.9-12-26.9-26.9 12-26.9 26.9-26.9 26.9 12 26.9 26.9zm76.1 27.2c-1.7-35.3-9.9-66.7-36.2-92.1S388.6 1.7 353.3 0C317.7-1.7 282.3-1.7 246.7 0c-35.3 1.7-66.7 9.9-92.1 36.2S1.7 123.4 0 158.7C-1.7 194.3-1.7 229.7 0 265.3c1.7 35.3 9.9 66.7 36.2 92.1s56.8 34.5 92.1 36.2c35.6 1.7 71 1.7 106.6 0 35.3-1.7 66.7-9.9 92.1-36.2s34.5-56.8 36.2-92.1c1.7-35.6 1.7-71 0-106.6zM398.8 388c-7.8 19.6-22.9 34.7-42.5 42.5-29.4 11.7-99.2 9-132.3 9s-102.9 2.6-132.3-9c-19.6-7.8-34.7-22.9-42.5-42.5-11.7-29.4-9-99.2-9-132.3s-2.6-102.9 9-132.3c7.8-19.6 22.9-34.7 42.5-42.5 29.4-11.7 99.2-9 132.3-9s102.9-2.6 132.3 9c19.6 7.8 34.7 22.9 42.5 42.5 11.7 29.4 9 99.2 9 132.3s2.6 102.9-9 132.3z"/></svg>
+        </a>
+        <!-- Twitter SVG -->
+        <a href="#" aria-label="Twitter" target="_blank" style="vertical-align:middle;">
+          <svg width="20" height="20" viewBox="0 0 512 512" fill="#1da1f2" style="vertical-align:middle;"><path d="M459.4 151.7c.32 4.54.32 9.1.32 13.66 0 138.72-105.58 298.56-298.56 298.56-59.5 0-114.68-17.22-161.14-47.11 8.44.97 16.87 1.44 25.81 1.44 49.06 0 94.19-16.63 132.3-44.84-46.13-.97-84.8-31.18-98.1-72.77 6.5.97 13 .97 19.81.97 9.1 0 18.21-1.3 26.78-3.63-48.08-9.75-84.14-51.98-84.14-102.98v-1.3c14.08 7.83 30.21 12.67 47.43 13.32-28.3-18.87-46.78-51.01-46.78-87.39 0-19.49 5.2-37.36 14.29-52.95 51.65 63.3 129.3 104.72 216.5 109.15-1.62-7.83-2.6-15.98-2.6-24.13 0-58.72 47.43-106.15 106.15-106.15 30.5 0 58.15 12.67 77.43 33.14 24.13-4.54 46.78-13.66 67.13-25.81-7.83 24.45-24.45 44.84-46.13 57.76 21.36-2.27 41.83-8.21 60.67-16.63-14.29 21.04-32.36 39.59-53.25 54.25z"/></svg>
+        </a>
+        <!-- Diğer Font Awesome ikonlarını (ör: iletişim formu, hakkımızda) SVG ile değiştirmek için ilgili dosyalarda da aynı şekilde değişiklik yapılacak. -->
       </section>
     </div>
     <div class="footer-bottom-custom">© 2025 ServisWeb. Tüm hakları saklıdır.</div>
@@ -1451,7 +1466,7 @@ body {
       }
     </style>
   </footer>
-  <script src="config.js"></script>
+  <script src="config.js" defer></script>
   <script>
     if (window.siteConfig) {
       // Dynamic <title>
