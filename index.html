@@ -21,7 +21,7 @@
 
   <style>
     body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; padding: 0; background: #f8fafc; color: #222; }
-    header, footer { background: linear-gradient(90deg, #00796b 0%, #43cea2 100%); padding: 1em; text-align: center; color: #fff; }
+    header, footer { background: linear-gradient(90deg, #00796b 0%, #43cea2 100%); padding: 1em; text-align: center; color: #fff; min-height: 80px; padding-bottom: 35px; }
     nav a { margin: 0 10px; text-decoration: none; color: #fff; font-weight: 500; transition: color 0.2s; }
     nav a:hover { color: #ffe082; }
     main { padding: 1em; max-width: 900px; margin: auto; }
@@ -261,6 +261,8 @@
   margin: 0 auto;
   position: relative;
   flex-wrap: wrap;
+  min-height: 75px;
+  padding-bottom: 18px;
 }
 .logo-link { flex-shrink: 0; }
 .main-nav ul {
@@ -271,6 +273,7 @@
   padding: 0;
   margin: 0;
 }
+
 .main-nav ul li {
   display: inline-block;
   position: relative;
@@ -330,7 +333,12 @@
     flex-direction: column;
     align-items: stretch;
     gap: 10px;
-    padding: 0 6px;
+    padding: 0 6px 8px 6px;
+    min-height: 0;
+  }
+  header {
+    min-height: 0;
+    padding-bottom: 10px;
   }
   .main-nav ul {
     flex-direction: column;
@@ -470,6 +478,7 @@
     margin-bottom: 8px;
   }
 }
+
 </style>
 
 <style>
@@ -535,68 +544,80 @@ body {
     width: 80px;
   }
 }
-.hamburger {
-  display: none;
-  flex-direction: column;
-  justify-content: center;
+
+.logo-link {
+  display: flex;
   align-items: center;
-  width: 44px;
-  height: 44px;
-  background: rgba(255,255,255,0.13);
-  border: none;
-  border-radius: 50%;
-  cursor: pointer;
-  z-index: 1300;
-  margin-left: 8px;
-  transition: background 0.2s;
-}
-.hamburger span {
-  display: block;
-  width: 26px;
-  height: 3px;
-  margin: 4px 0;
-  background: #fff;
-  border-radius: 2px;
-  transition: all 0.3s cubic-bezier(.4,2,.3,1);
-}
-@media (max-width: 768px) {
-  .hamburger { display: flex; }
-  .main-nav {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    background: linear-gradient(90deg, #00796b 0%, #43cea2 100%);
-    box-shadow: 0 4px 16px rgba(67,206,162,0.10);
-    border-radius: 0 0 16px 16px;
-    padding: 0 0 12px 0;
-    display: none;
-    flex-direction: column;
-    align-items: stretch;
-    z-index: 1200;
-    animation: fadeInMenu 0.25s;
-  }
-  .main-nav.nav-open {
-    display: flex;
-  }
-  .header-flex {
-    position: relative;
-  }
-}
-@keyframes fadeInMenu {
-  from { opacity: 0; transform: translateY(-10px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-.hamburger.active span:nth-child(1) {
-  transform: translateY(7px) rotate(45deg);
-}
-.hamburger.active span:nth-child(2) {
-  opacity: 0;
-}
-.hamburger.active span:nth-child(3) {
-  transform: translateY(-7px) rotate(-45deg);
+  gap: 10px;
+  text-decoration: none;
 }
 
+.logo-tech {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #fff;
+  font-family: 'Segoe UI', 'Roboto', sans-serif;
+  white-space: nowrap;
+}
+
+.header-flex {
+  position: relative;
+}
+
+.phone-link-dynamic {
+  position: absolute;
+  top: 90px; /* veya 100px de deneyebilirsiniz */
+  right: 16px;
+  transform: translateY(-40%);
+  z-index: 10;
+  margin: 0;
+  flex: none;
+}
+
+@media (max-width: 768px) {
+  .header-flex {
+    position: static;
+    min-height: unset;
+  }
+  .phone-link-dynamic {
+    position: static;
+    transform: none;
+    margin: 10px auto 0 auto;
+    width: 100%;
+    max-width: 340px;
+    font-size: 1em;
+    align-self: center;
+    justify-content: center;
+    white-space: normal;
+    order: 3;
+    right: unset;
+    top: unset;
+  }
+}
+
+.logo-link img {
+  width: 90px !important;
+  height: 90px !important;
+  max-width: 100%;
+  border-radius: 0 !important;
+  object-fit: unset !important;
+}
+@media (max-width: 768px) {
+  .logo-link img {
+    width: 60px !important;
+    height: 60px !important;
+    max-width: 22vw;
+  }
+  .logo-link {
+    gap: 6px !important;
+  }
+}
+
+@media (min-width: 769px) {
+  .phone-link-dynamic {
+    margin-top: 10px !important;
+  }
+}
 
 </style>
 
@@ -634,7 +655,8 @@ body {
 <header>
   <div class="header-flex">
     <a href="/" class="logo-link">
-      <img src="/apple-touch-icon.png" alt="Tamircim Logo" width="150">
+      <img src="/apple-touch-icon.png" alt="Tamircim Logo" width="60" height="60">
+      <span class="logo-tech">Teknik Servis</span>
     </a>
     <button class="hamburger" aria-label="Menüyü Aç/Kapat" aria-expanded="false" aria-controls="main-nav">
       <span></span><span></span><span></span>
@@ -657,32 +679,425 @@ body {
         </li>
         <li><a href="/hakkimizda.html">Hakkımızda</a></li>
         <li><a href="/iletisim.html">İletişim</a></li>
-        
       </ul>
     </nav>
     <a class="phone-link-dynamic" href="tel:+905555555555">📞 Hemen Ara: 0555 555 55 55</a>
   </div>
 </header>
+<style>
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    background: rgba(255,255,255,0.13);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-left: 8px;
+    transition: background 0.2s;
+  }
+  .hamburger span {
+    display: block;
+    width: 26px;
+    height: 3px;
+    margin: 4px 0;
+    background: #fff;
+    border-radius: 2px;
+    transition: all 0.3s cubic-bezier(.4,2,.3,1);
+  }
+  @media (max-width: 768px) {
+    .hamburger { display: flex; margin-left: auto; }
+    .main-nav {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background: linear-gradient(90deg, #00796b 0%, #43cea2 100%);
+      box-shadow: 0 4px 16px rgba(67,206,162,0.10);
+      border-radius: 0 0 16px 16px;
+      padding: 0 0 12px 0;
+      display: none;
+      flex-direction: column;
+      align-items: stretch;
+      z-index: 1200;
+      animation: fadeInMenu 0.25s;
+    }
+    .main-nav.open { display: flex; }
+    .header-flex { position: relative; }
+  }
+  .hamburger.active span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .hamburger.active span:nth-child(2) { opacity: 0; }
+  .hamburger.active span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+  @keyframes fadeInMenu {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+</style>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var hamburger = document.querySelector('.hamburger');
+    var nav = document.querySelector('.main-nav');
+    if (hamburger && nav) {
+      hamburger.addEventListener('click', function(e) {
+        e.stopPropagation();
+        hamburger.classList.toggle('active');
+        nav.classList.toggle('open');
+        hamburger.setAttribute('aria-expanded', nav.classList.contains('open'));
+      });
+      document.addEventListener('click', function(e) {
+        if (!nav.contains(e.target) && !hamburger.contains(e.target)) {
+          nav.classList.remove('open');
+          hamburger.classList.remove('active');
+          hamburger.setAttribute('aria-expanded', false);
+        }
+      });
+    }
+  });
+</script>
 <!-- END HEADER FLEXBOX -->
   
   
-<main style="text-align: center; padding: 60px 20px; background: linear-gradient(to right, #006D77, #83C5BE); color: white;">
-  <h1 style="font-size: 3em; font-weight: bold; text-shadow: 2px 2px 6px rgba(0,0,0,0.3); margin-bottom: 20px;">
-    Hoş Geldiniz
-  </h1>
-  <p style="font-size: 1.3em; max-width: 600px; margin: 0 auto; line-height: 1.6;">
-    Tamircim olarak garantisi bitmiş cihazlara profesyonel ve hızlı servis hizmeti sunuyoruz.
-  </p>
-      <a class="service-button" href="hizmet.html?service=Beyaz+Eşya+Servisi"><span class="icon">🛠️</span>Beyaz Eşya Servisi</a>
-      <a class="service-button" href="hizmet.html?service=Buzdolabı"><span class="icon">🧊</span>Buzdolabı</a>
-      <a class="service-button" href="hizmet.html?service=Çamaşır+Makinesi"><span class="icon">🧺</span>Çamaşır Makinesi</a>
-      <a class="service-button" href="hizmet.html?service=Bulaşık+Makinesi"><span class="icon">🍽️</span>Bulaşık Makinesi</a>
-      <a class="service-button" href="hizmet.html?service=Fırın"><span class="icon">🔥</span>Fırın</a>
-      <a class="service-button" href="hizmet.html?service=Klima"><span class="icon">❄️</span>Klima</a>
-      <a class="service-button" href="hizmet.html?service=Kombi"><span class="icon">♨️</span>Kombi</a>
-      <a class="service-button" href="hizmet.html?service=Televizyon"><span class="icon">📺</span>Televizyon</a>
+<main style="text-align: center; padding: 0 20px; background: linear-gradient(to right, #006D77, #83C5BE); color: white;">
+  <section class="hero">
+    <div class="hero-inner">
+      <h1 class="hero-title">Beyaz Eşya <span class="hero-highlight">- Teknik Destek</span></h1>
+      <p class="hero-intro">Garantisi bitmiş beyaz eşyalarınız için hızlı, güvenilir ve profesyonel teknik servis desteği. Uzman ekibimizle Mersin genelinde yerinde çözüm sunuyoruz.</p>
+      <a href="#" class="hero-btn">Hemen Ara</a>
     </div>
-    <div class="main-info-text" style="margin-top:32px;">
+  </section>
+  <section class="services-section" id="services">
+    <h2 class="services-title">Hizmetlerimiz</h2>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon">🛠️</div>
+        <div class="service-title">Beyaz Eşya Servisi</div>
+        <div class="service-desc">Tüm marka ve model beyaz eşyalarınız için hızlı ve güvenilir servis. Uzman ekibimizle yerinde çözüm sunuyoruz.</div>
+        <a class="service-btn" href="/hizmet.html?service=Beyaz+E%C5%9Fya+Servisi">Detaylı Bilgi</a>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🧊</div>
+        <div class="service-title">Buzdolabı</div>
+        <div class="service-desc">Soğutmayan, ses yapan veya su akıtan buzdolapları için uzman onarım ve bakım hizmeti.</div>
+        <a class="service-btn" href="/hizmet.html?service=Buzdolab%C4%B1">Detaylı Bilgi</a>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🧺</div>
+        <div class="service-title">Çamaşır Makinesi</div>
+        <div class="service-desc">Çalışmayan, su almayan veya sıkmayan makineler için hızlı ve etkili çözüm.</div>
+        <a class="service-btn" href="/hizmet.html?service=%C3%87ama%C5%9F%C4%B1r+Makinesi">Detaylı Bilgi</a>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🍽️</div>
+        <div class="service-title">Bulaşık Makinesi</div>
+        <div class="service-desc">Su akıtan, yıkamayan veya ses yapan makineler için profesyonel servis.</div>
+        <a class="service-btn" href="/hizmet.html?service=Bula%C5%9F%C4%B1k+Makinesi">Detaylı Bilgi</a>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🔥</div>
+        <div class="service-title">Fırın</div>
+        <div class="service-desc">Isıtmayan veya düzensiz çalışan fırınlar için tamir ve periyodik bakım.</div>
+        <a class="service-btn" href="/hizmet.html?service=F%C4%B1r%C4%B1n">Detaylı Bilgi</a>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">❄️</div>
+        <div class="service-title">Klima</div>
+        <div class="service-desc">Klima bakımı, gaz dolumu ve arıza onarımı profesyonel ekiple.</div>
+        <a class="service-btn" href="/hizmet.html?service=Klima">Detaylı Bilgi</a>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">♨️</div>
+        <div class="service-title">Kombi</div>
+        <div class="service-desc">Kombi bakımı, petek temizliği ve arıza tespiti için güvenilir hizmet.</div>
+        <a class="service-btn" href="/hizmet.html?service=Kombi">Detaylı Bilgi</a>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">📺</div>
+        <div class="service-title">Televizyon</div>
+        <div class="service-desc">Görüntü gelmeyen veya açılmayan TV'ler için hızlı ve garantili servis.</div>
+        <a class="service-btn" href="/hizmet.html?service=Televizyon">Detaylı Bilgi</a>
+      </div>
+    </div>
+  </section>
+  <style>
+    /* HERO SECTION IMPROVEMENTS */
+    .hero {
+      background: linear-gradient(120deg, #00796b 0%, #43cea2 100%);
+      color: #fff;
+      text-align: center;
+      padding: 56px 0 36px 0;
+      min-height: 220px;
+      width: 100vw;
+      margin-left: calc(-50vw + 50%);
+      margin-right: calc(-50vw + 50%);
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      animation: fadeInHero 1.2s cubic-bezier(.4,2,.3,1);
+    }
+    .hero-inner {
+      max-width: 700px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .hero-title {
+      font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+      font-size: 2.2em;
+      font-weight: 700;
+      margin-bottom: 12px;
+      letter-spacing: -1px;
+      line-height: 1.1;
+      text-shadow: 0 2px 12px rgba(0,0,0,0.08);
+      animation: fadeInDown 1s cubic-bezier(.4,2,.3,1);
+    }
+    .hero-desc {
+      font-size: 1.08em;
+      max-width: 520px;
+      margin: 0 auto 22px auto;
+      line-height: 1.6;
+      font-weight: 400;
+      letter-spacing: 0.01em;
+      opacity: 0.97;
+      animation: fadeInUp 1.2s cubic-bezier(.4,2,.3,1);
+    }
+    .hero-btn {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 14px 36px;
+      background: linear-gradient(90deg, #ffe082 0%, #43cea2 100%);
+      color: #00796b;
+      border: none;
+      border-radius: 28px;
+      font-size: 1.13em;
+      font-weight: 700;
+      box-shadow: 0 2px 12px rgba(67,206,162,0.13);
+      cursor: pointer;
+      transition: background 0.2s, color 0.2s, box-shadow 0.2s, transform 0.2s;
+      letter-spacing: 0.01em;
+      text-decoration: none;
+      outline: none;
+    }
+    .hero-btn:hover, .hero-btn:focus {
+      background: #fff;
+      color: #00796b;
+      border: 2px solid #43cea2;
+      box-shadow: 0 4px 16px rgba(67,206,162,0.18);
+      transform: scale(1.04);
+    }
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeInHero {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    @media (max-width: 600px) {
+      .hero { padding: 18px 0 10px 0; min-height: 100px; }
+      .hero-title { font-size: 1.2em; }
+      .hero-desc { font-size: 0.97em; }
+      .hero-btn { font-size: 0.98em; padding: 10px 16px; }
+    }
+    /* HİZMETLERİMİZ SECTION */
+    .services-section {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 32px 8px 18px 8px;
+    }
+    .services-title {
+      text-align: center;
+      color: #00796b;
+      font-size: 1.5em;
+      font-weight: 700;
+      margin-bottom: 18px;
+      letter-spacing: -0.5px;
+      font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+      position: relative;
+    }
+    .services-title:after {
+      content: '';
+      display: block;
+      width: 60px;
+      height: 3px;
+      background: linear-gradient(90deg, #00796b 0%, #43cea2 100%);
+      margin: 12px auto 0 auto;
+      border-radius: 2px;
+      opacity: 0.7;
+    }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 22px;
+    }
+    @media (max-width: 1000px) {
+      .services-grid { grid-template-columns: repeat(2, 1fr); gap: 14px; }
+    }
+    @media (max-width: 600px) {
+      .services-grid { grid-template-columns: 1fr; gap: 8px; }
+      .services-title { font-size: 1.08em; margin-bottom: 10px; }
+      .services-title:after { width: 36px; height: 2px; margin-top: 7px; }
+    }
+    .service-card {
+      background: #fff;
+      border-radius: 14px;
+      box-shadow: 0 2px 10px rgba(67,206,162,0.10);
+      padding: 18px 10px 12px 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      transition: box-shadow 0.2s, transform 0.2s;
+      cursor: pointer;
+      border: 1.1px solid #e0f2f1;
+      min-height: 140px;
+      position: relative;
+      overflow: hidden;
+    }
+    .service-card:hover {
+      box-shadow: 0 8px 32px rgba(67,206,162,0.18);
+      transform: translateY(-2px) scale(1.015);
+      border-color: #43cea2;
+    }
+    .service-icon {
+      font-size: 1.5em;
+      margin-bottom: 7px;
+      color: #43cea2;
+      background: #e0f7fa;
+      border-radius: 50%;
+      width: 32px;
+      height: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 2px 8px rgba(67,206,162,0.10);
+    }
+    .service-title {
+      font-size: 1em;
+      font-weight: 700;
+      color: #00796b;
+      margin-bottom: 5px;
+      font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+    }
+    .service-desc {
+      font-size: 0.95em;
+      color: #444;
+      line-height: 1.5;
+      margin-bottom: 10px;
+      min-height: 18px;
+    }
+    .service-btn {
+      display: inline-block;
+      padding: 7px 14px;
+      background: linear-gradient(90deg, #00796b 0%, #43cea2 100%);
+      color: #fff;
+      border: none;
+      border-radius: 16px;
+      font-size: 0.97em;
+      font-weight: 600;
+      box-shadow: 0 2px 8px rgba(67,206,162,0.10);
+      cursor: pointer;
+      transition: background 0.2s, color 0.2s, box-shadow 0.2s, transform 0.2s;
+      margin-top: auto;
+      letter-spacing: 0.01em;
+      text-decoration: none;
+    }
+    .service-card:hover .service-btn {
+      background: #fff;
+      color: #00796b;
+      border: 2px solid #43cea2;
+      box-shadow: 0 4px 16px rgba(67,206,162,0.18);
+      transform: scale(1.04);
+    }
+    @media (max-width: 600px) {
+      .service-card { padding: 8px 2px 6px 2px; min-height: 80px; }
+      .service-icon { font-size: 1em; width: 22px; height: 22px; margin-bottom: 3px; }
+      .service-title { font-size: 0.97em; }
+      .service-desc { font-size: 0.93em; min-height: 10px; }
+      .service-btn { font-size: 0.93em; padding: 6px 8px; }
+    }
+    .logo-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+
+.logo-tech {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #fff;
+  font-family: 'Segoe UI', 'Roboto', sans-serif;
+  white-space: nowrap;
+}
+
+  </style>
+
+<style>
+  .main-info-text {
+    margin-top: 32px;
+    padding: 28px 24px;
+    color: #222;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(67,206,162,0.07);
+    text-align: left;
+  }
+  .main-info-text p,
+  .main-info-text ul,
+  .main-info-text ol {
+    text-align: left;
+    margin-left: 0;
+    padding-left: 0;
+  }
+  .main-info-text ul,
+  .main-info-text ol {
+    list-style-position: inside;
+    margin-bottom: 24px;
+  }
+  .main-info-text li {
+    text-align: left;
+    margin-left: 0;
+    padding-left: 0;
+  }
+</style>
+
+<div class="main-info-text">
+  <h2>Beyaz Eşyada Güvenilir Teknik Destek</h2>
+  <p>Beyaz eşyalarınızda karşılaştığınız tüm arızalarda, uzman ekibimizle hızlı ve kalıcı çözümler sunuyoruz. Mersin genelinde yerinde servis ve profesyonel bakım hizmeti veriyoruz.</p>
+  <p>Her marka ve model için; buzdolabı, çamaşır makinesi, bulaşık makinesi, fırın, klima, kombi ve televizyon gibi cihazlarda güvenle yanınızdayız.</p>
+  <ul>
+    <li><strong>Hızlı Müdahale:</strong> Aynı gün servis imkanı.</li>
+    <li><strong>Şeffaf Fiyat:</strong> Sürprizsiz, uygun fiyat politikası.</li>
+    <li><strong>Garanti:</strong> Yapılan işçilikte garanti güvencesi.</li>
+    <li><strong>Orijinal Yedek Parça:</strong> Tüm değişimlerde kaliteli parça kullanımı.</li>
+    <li><strong>7/24 Destek:</strong> İhtiyacınız olduğunda ulaşabileceğiniz servis hattı.</li>
+  </ul>
+  <h3 style="margin-top:32px;">Neden Profesyonel Servis?</h3>
+  <p>Deneyimli teknisyenlerimiz, arızaları hızlıca tespit eder ve güvenli şekilde onarır. Kendi başınıza yapılan müdahaleler, cihazda daha büyük sorunlara yol açabilir. Uzman desteğiyle hem zamandan hem maliyetten tasarruf edin.</p>
+  <h3>Periyodik Bakımın Önemi</h3>
+  <p>Düzenli bakım yapılan cihazlar daha uzun ömürlü olur ve enerji tasarrufu sağlar. Özellikle klima ve kombi gibi cihazlarda, periyodik kontrol konforunuzu artırır.</p>
+  <h3>Hizmetlerimiz</h3>
+  <ul>
+    <li><strong>Bakım & Onarım:</strong> Tüm beyaz eşya ve elektronik cihazlar için.</li>
+    <li><strong>Arıza Tespiti:</strong> Hızlı ve doğru teşhis.</li>
+    <li><strong>Parça Değişimi:</strong> Orijinal ve garantili yedek parça.</li>
+    <li><strong>Montaj & Kurulum:</strong> Yeni cihazlarınız için profesyonel kurulum.</li>
+  </ul>
+  <h3>Müşteri Memnuniyeti</h3>
+  <p>Her işlemde şeffaf bilgi, güler yüzlü hizmet ve kalıcı çözüm sunuyoruz. Tamircim olarak önceliğimiz, cihazlarınızın güvenli ve verimli çalışmasını sağlamaktır.</p>
+</div>
+
+  <div class="main-info-text" style="margin-top:32px;">
       <h2>Beyaz Eşyalarınız İçin Güvenilir Çözümler</h2>
   
   <p> Beyaz eşyalar, günlük yaşamımızın vazgeçilmez parçalarıdır. Buzdolabı, çamaşır makinesi ve bulaşık makinesi gibi cihazlar, ev işlerini kolaylaştırır ve süreklilik arz eden bir destek sağlar. Ancak buzdolabının soğutmaması veya çamaşır makinesinin çalışmaması durumunda hayatımız zorlaşır. Beyaz eşya tamir servisi, bu sorunlara etkili çözümler sunar. Ev aletleri teknik destek hizmeti, arızalı cihazlarınızı hızlıca onarır ve tekrardan verimli çalışmasını sağlar.
@@ -1070,28 +1485,19 @@ body {
       document.getElementById('footer-twitter').href = 'https://twitter.com/' + username;
     }
   </script>
+
   <script>
-    // Hamburger menu toggle script (ensure it runs after DOM is ready)
-    (function() {
-      var hamburger = document.querySelector('.hamburger');
-      var nav = document.querySelector('.main-nav');
-      if (hamburger && nav) {
-        hamburger.addEventListener('click', function(e) {
-          e.stopPropagation();
-          var open = nav.classList.toggle('nav-open');
-          hamburger.classList.toggle('active');
-          hamburger.setAttribute('aria-expanded', open);
-        });
-        // Optional: close menu when clicking outside
-        document.addEventListener('click', function(e) {
-          if (!nav.contains(e.target) && !hamburger.contains(e.target)) {
-            nav.classList.remove('nav-open');
-            hamburger.classList.remove('active');
-            hamburger.setAttribute('aria-expanded', false);
-          }
-        });
-      }
-    })();
-  </script>
+window.addEventListener('DOMContentLoaded', function() {
+  // HERO BUTTON: Set phone number dynamically from config.js
+  function setHeroPhoneButton() {
+    var phoneBtn = document.querySelector('.hero-btn');
+    if (!phoneBtn) return;
+    var phone = (window.siteConfig && window.siteConfig.phoneNumber) ? window.siteConfig.phoneNumber : '+90 534 213 12 11';
+    phoneBtn.textContent = 'Hemen Ara: ' + phone;
+    phoneBtn.setAttribute('href', 'tel:' + phone.replace(/\s+/g, ''));
+  }
+  setHeroPhoneButton();
+});
+</script>
 </body>
 </html>
