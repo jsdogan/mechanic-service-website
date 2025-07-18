@@ -17,7 +17,19 @@
   <link rel="icon" href="/favicon.ico" type="image/x-icon">
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   
- 
+  <script>
+    window.siteConfig = {
+      companyName: "Tamircim Teknoloji Hizmetleri Ltd. Şti.",
+      taxNumber: "1234567890",
+      address: "Mersin, Türkiye",
+      phoneNumber: "+90534 213 12 11",
+  email: "info@tamircim.com"
+    };
+  
+    document.addEventListener('DOMContentLoaded', () => {
+      document.getElementById("phone").textContent = window.siteConfig.phoneNumber;
+    });
+  </script>
 
   <style>
     body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; padding: 0; background: #f8fafc; color: #222; }
@@ -1156,7 +1168,7 @@ white-space: nowrap;
         <li><a href="/iletisim.html">İletişim</a></li>
       </ul>
     </nav>
-    <a class="phone-link-dynamic" href="tel:+905555555555">📞 Hemen Ara: 0555 555 55 55</a>
+    <a class="phone-link-dynamic" href="tel:+905555555555">📞 Hemen Ara: +90534 213</a>
   </div>
 </header>
 
