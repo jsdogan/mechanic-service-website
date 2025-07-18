@@ -828,91 +828,95 @@ body {
 </style>
 <style>
   /* HERO SECTION IMPROVEMENTS */
+  /* HERO SECTION - Optimized (No animations) */
+.hero {
+  background: linear-gradient(120deg, #00796b 0%, #43cea2 100%);
+  color: #fff;
+  text-align: center;
+  padding: 56px 0 36px 0;
+  min-height: 220px;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-inner {
+  max-width: 700px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero-title {
+  font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+  font-size: 2.2em;
+  font-weight: 700;
+  margin-bottom: 12px;
+  letter-spacing: -1px;
+  line-height: 1.1;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+.hero-desc {
+  font-size: 1.08em;
+  max-width: 520px;
+  margin: 0 auto 22px auto;
+  line-height: 1.6;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  opacity: 0.97;
+}
+
+.hero-btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 14px 36px;
+  background: linear-gradient(90deg, #ffe082 0%, #43cea2 100%);
+  color: #00796b;
+  border: none;
+  border-radius: 28px;
+  font-size: 1.13em;
+  font-weight: 700;
+  box-shadow: 0 2px 12px rgba(67, 206, 162, 0.13);
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s, transform 0.2s;
+  letter-spacing: 0.01em;
+  text-decoration: none;
+  outline: none;
+}
+
+.hero-btn:hover,
+.hero-btn:focus {
+  background: #fff;
+  color: #00796b;
+  border: 2px solid #43cea2;
+  box-shadow: 0 4px 16px rgba(67, 206, 162, 0.18);
+  transform: scale(1.04);
+}
+
+@media (max-width: 600px) {
   .hero {
-    background: linear-gradient(120deg, #00796b 0%, #43cea2 100%);
-    color: #fff;
-    text-align: center;
-    padding: 56px 0 36px 0;
-    min-height: 220px;
-    width: 100vw;
-    margin-left: calc(-50vw + 50%);
-    margin-right: calc(-50vw + 50%);
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    animation: fadeInHero 1.2s cubic-bezier(.4,2,.3,1);
-  }
-  .hero-inner {
-    max-width: 700px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    padding: 18px 0 10px 0;
+    min-height: 100px;
   }
   .hero-title {
-    font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
-    font-size: 2.2em;
-    font-weight: 700;
-    margin-bottom: 12px;
-    letter-spacing: -1px;
-    line-height: 1.1;
-    text-shadow: 0 2px 12px rgba(0,0,0,0.08);
-    animation: fadeInDown 1s cubic-bezier(.4,2,.3,1);
+    font-size: 1.2em;
   }
   .hero-desc {
-    font-size: 1.08em;
-    max-width: 520px;
-    margin: 0 auto 22px auto;
-    line-height: 1.6;
-    font-weight: 400;
-    letter-spacing: 0.01em;
-    opacity: 0.97;
-    animation: fadeInUp 1.2s cubic-bezier(.4,2,.3,1);
+    font-size: 0.97em;
   }
   .hero-btn {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 14px 36px;
-    background: linear-gradient(90deg, #ffe082 0%, #43cea2 100%);
-    color: #00796b;
-    border: none;
-    border-radius: 28px;
-    font-size: 1.13em;
-    font-weight: 700;
-    box-shadow: 0 2px 12px rgba(67,206,162,0.13);
-    cursor: pointer;
-    transition: background 0.2s, color 0.2s, box-shadow 0.2s, transform 0.2s;
-    letter-spacing: 0.01em;
-    text-decoration: none;
-    outline: none;
+    font-size: 0.98em;
+    padding: 10px 16px;
   }
-  .hero-btn:hover, .hero-btn:focus {
-    background: #fff;
-    color: #00796b;
-    border: 2px solid #43cea2;
-    box-shadow: 0 4px 16px rgba(67,206,162,0.18);
-    transform: scale(1.04);
-  }
-  @keyframes fadeInDown {
-    from { opacity: 0; transform: translateY(-40px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-  @keyframes fadeInUp {
-    from { opacity: 0; transform: translateY(40px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-  @keyframes fadeInHero {
-    from { opacity: 0; }
-    to { opacity: 1; }
-  }
-  @media (max-width: 600px) {
-    .hero { padding: 18px 0 10px 0; min-height: 100px; }
-    .hero-title { font-size: 1.2em; }
-    .hero-desc { font-size: 0.97em; }
-    .hero-btn { font-size: 0.98em; padding: 10px 16px; }
-  }
+}
+
   /* HİZMETLERİMİZ SECTION */
   .services-section {
     max-width: 1200px;
