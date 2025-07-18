@@ -211,8 +211,8 @@ nav ul li a:hover, nav > a:hover, nav ul li.active > a {
   box-shadow: 0 4px 16px rgba(67,206,162,0.18);
 }
 
-/* HEADER FLEXBOX LAYOUT */
-.header-flex {
+ /* HEADER FLEXBOX LAYOUT */
+ .header-flex {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -221,6 +221,8 @@ nav ul li a:hover, nav > a:hover, nav ul li.active > a {
   margin: 0 auto;
   position: relative;
   flex-wrap: wrap;
+  min-height: 75px;
+  padding-bottom: 18px;
 }
 .logo-link { flex-shrink: 0; }
 .main-nav ul {
@@ -231,6 +233,7 @@ nav ul li a:hover, nav > a:hover, nav ul li.active > a {
   padding: 0;
   margin: 0;
 }
+
 .main-nav ul li {
   display: inline-block;
   position: relative;
@@ -287,10 +290,15 @@ nav ul li a:hover, nav > a:hover, nav ul li.active > a {
 }
 @media (max-width: 768px) {
   .header-flex {
-    flex-direction: column;
+    flex-direction: row;
     align-items: stretch;
     gap: 10px;
-    padding: 0 6px;
+    padding: 0 6px 8px 6px;
+    min-height: 0;
+  }
+  header {
+    min-height: 0;
+    padding-bottom: 10px;
   }
   .main-nav ul {
     flex-direction: column;
@@ -535,7 +543,7 @@ nav a:hover { color: #ffe082; }
     gap: 6px !important;
   }
   .header-flex {
-    flex-direction: column;
+    flex-direction: row;
     align-items: stretch;
     gap: 10px;
     padding: 0 6px 8px 6px;
@@ -652,38 +660,40 @@ nav a:hover { color: #ffe082; }
 </script>
 </head>
 <body>
-    <header>
-        <div class="header-flex">
-            <a href="/" class="logo-link">
-              <img src="/apple-touch-icon.png" alt="Tamircim Logo" width="72" height="72">
-              <span class="logo-tech">Teknik Servis</span>
-            </a>
-            <button class="hamburger" aria-label="Menüyü Aç/Kapat" aria-expanded="false" aria-controls="main-nav">
-              <span></span><span></span><span></span>
-            </button>
-            <nav class="main-nav" id="main-nav">
-              <ul>
-                <li><a href="/">Ana Sayfa</a></li>
-                <li class="has-dropdown">
-                  <a href="/hizmet.html?service=Hizmetlerimiz">Hizmetlerimiz</a>
-                  <ul class="dropdown">
-                    <li><a href="/hizmet.html?service=Beyaz+Eşya+Servisi">Beyaz Eşya Servisi</a></li>
-                    <li><a href="/hizmet.html?service=Buzdolabı">Buzdolabı</a></li>
-                    <li><a href="/hizmet.html?service=Çamaşır+Makinesi">Çamaşır Makinesi</a></li>
-                    <li><a href="/hizmet.html?service=Bulaşık+Makinesi">Bulaşık Makinesi</a></li>
-                    <li><a href="/hizmet.html?service=Fırın">Fırın</a></li>
-                    <li><a href="/hizmet.html?service=Klima">Klima</a></li>
-                    <li><a href="/hizmet.html?service=Kombi">Kombi</a></li>
-                    <li><a href="/hizmet.html?service=Televizyon">Televizyon</a></li>
-                  </ul>
-                </li>
-                <li><a href="/hakkimizda.html">Hakkımızda</a></li>
-                <li><a href="/iletisim.html">İletişim</a></li>
-              </ul>
-            </nav>
-            <a class="phone-link-dynamic" href="tel:+905555555555">📞 Hemen Ara: 0555 555 55 55</a>
-          </div>
-      </header>
+  <header>
+    <div class="header-flex">
+      <a href="/" class="logo-link">
+        <img src="/apple-touch-icon.png" alt="Tamircim Logo" width="72" height="72">
+        <span class="logo-tech">Teknik Servis</span>
+      </a>
+      
+      <button class="hamburger" aria-label="Menüyü Aç/Kapat" aria-expanded="false" aria-controls="main-nav">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="main-nav" id="main-nav">
+        <ul>
+          <li><a href="/">Ana Sayfa</a></li>
+          <li class="has-dropdown">
+            <a href="/hizmet.html?service=Hizmetlerimiz">Hizmetlerimiz</a>
+            <ul class="dropdown">
+              <li><a href="/hizmet.html?service=Beyaz+Eşya+Servisi">Beyaz Eşya Servisi</a></li>
+              <li><a href="/hizmet.html?service=Buzdolabı">Buzdolabı</a></li>
+              <li><a href="/hizmet.html?service=Çamaşır+Makinesi">Çamaşır Makinesi</a></li>
+              <li><a href="/hizmet.html?service=Bulaşık+Makinesi">Bulaşık Makinesi</a></li>
+              <li><a href="/hizmet.html?service=Fırın">Fırın</a></li>
+              <li><a href="/hizmet.html?service=Klima">Klima</a></li>
+              <li><a href="/hizmet.html?service=Kombi">Kombi</a></li>
+              <li><a href="/hizmet.html?service=Televizyon">Televizyon</a></li>
+            </ul>
+          </li>
+          <li><a href="/hakkimizda.html">Hakkımızda</a></li>
+          <li><a href="/iletisim.html">İletişim</a></li>
+          
+        </ul>
+      </nav>
+      <a class="phone-link-dynamic" href="tel:+905555555555">📞 Hemen Ara: 0555 555 55 55</a>
+    </div>
+  </header>
     
 
   <center>

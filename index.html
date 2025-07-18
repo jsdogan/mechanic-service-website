@@ -330,7 +330,7 @@
 }
 @media (max-width: 768px) {
   .header-flex {
-    flex-direction: column;
+    flex-direction: row;
     align-items: stretch;
     gap: 10px;
     padding: 0 6px 8px 6px;
@@ -532,6 +532,18 @@ body {
     height: 32px;
     font-size: 1.1em;
   }
+  .footer-note-custom {
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 0.85em;
+  color: #ccc;
+  padding: 12px 8px 4px 8px;
+  box-sizing: border-box;
+  line-height: 1.4;
+}
+
   main {
     padding: 0.5em;
   }
@@ -826,6 +838,7 @@ body {
     }
   }
 </style>
+
 <style>
   /* HERO SECTION IMPROVEMENTS */
   /* HERO SECTION - Optimized (No animations) */
@@ -1117,10 +1130,12 @@ white-space: nowrap;
     <a href="/" class="logo-link">
       <img src="/apple-touch-icon.png" alt="Tamircim Logo" width="60" height="60">
       <span class="logo-tech">Teknik Servis</span>
+    
     </a>
     <button class="hamburger" aria-label="Menüyü Aç/Kapat" aria-expanded="false" aria-controls="main-nav">
       <span></span><span></span><span></span>
     </button>
+   
     <nav class="main-nav" id="main-nav">
       <ul>
         <li><a href="/">Ana Sayfa</a></li>
@@ -1423,9 +1438,10 @@ white-space: nowrap;
         <address>
           <div>Örnek Mah. Örnek Sk. No:1 D:2, Örnek İlçe/İstanbul</div>
           <div><a href="tel:+905551112233">+90 (555) 111 22 33</a></div>
-          <div><a href="mailto:info@servisweb.com">info@servisweb.com</a></div>
+          <div><a href="mailto:info@servisweb.com">info@servisweb.com</a></div> 
         </address>
       </section>
+  
       <section class="footer-services">
         <h3>Hizmetlerimiz</h3>
         <ul>
@@ -1439,6 +1455,7 @@ white-space: nowrap;
           <li><a href="/hizmet.html?service=Televizyon">Televizyon</a></li>
         </ul>
       </section>
+  
       <section class="footer-links">
         <h3>Hızlı Linkler</h3>
         <ul>
@@ -1449,27 +1466,42 @@ white-space: nowrap;
           <li><a href="/kvkk.html">KVKK</a></li>
         </ul>
       </section>
+  
       <section class="footer-socials-custom">
-        <!-- Font Awesome kaldırıldı, SVG ikonlar eklendi -->
-        <!-- Facebook SVG -->
-        <a href="#" aria-label="Facebook" target="_blank" style="vertical-align:middle;">
-          <svg width="20" height="20" viewBox="0 0 320 512" fill="#1877f3" style="vertical-align:middle;"><path d="M279.14 288l14.22-92.66h-88.91V127.89c0-25.35 12.42-50.06 52.24-50.06H293V6.26S259.5 0 225.36 0c-73.22 0-121.09 44.38-121.09 124.72v70.62H22.89V288h81.38v224h100.2V288z"/></svg>
+        <!-- Facebook -->
+        <a href="#" aria-label="Facebook" target="_blank">
+          <svg width="20" height="20" viewBox="0 0 320 512" fill="#1877f3">
+            <path d="M279.14 288l14.22-92.66h-88.91V127.89c0-25.35 12.42-50.06 52.24-50.06H293V6.26S259.5 0 225.36 0c-73.22 0-121.09 44.38-121.09 124.72v70.62H22.89V288h81.38v224h100.2V288z"/>
+          </svg>
         </a>
-        <!-- Instagram SVG -->
-        <a href="#" aria-label="Instagram" target="_blank" style="vertical-align:middle;">
-          <svg width="20" height="20" viewBox="0 0 448 512" fill="#e4405f" style="vertical-align:middle;"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9 114.9-51.3 114.9-114.9S287.7 141 224.1 141zm0 186c-39.5 0-71.5-32-71.5-71.5s32-71.5 71.5-71.5 71.5 32 71.5 71.5-32 71.5-71.5 71.5zm146.4-194.3c0 14.9-12 26.9-26.9 26.9s-26.9-12-26.9-26.9 12-26.9 26.9-26.9 26.9 12 26.9 26.9zm76.1 27.2c-1.7-35.3-9.9-66.7-36.2-92.1S388.6 1.7 353.3 0C317.7-1.7 282.3-1.7 246.7 0c-35.3 1.7-66.7 9.9-92.1 36.2S1.7 123.4 0 158.7C-1.7 194.3-1.7 229.7 0 265.3c1.7 35.3 9.9 66.7 36.2 92.1s56.8 34.5 92.1 36.2c35.6 1.7 71 1.7 106.6 0 35.3-1.7 66.7-9.9 92.1-36.2s34.5-56.8 36.2-92.1c1.7-35.6 1.7-71 0-106.6zM398.8 388c-7.8 19.6-22.9 34.7-42.5 42.5-29.4 11.7-99.2 9-132.3 9s-102.9 2.6-132.3-9c-19.6-7.8-34.7-22.9-42.5-42.5-11.7-29.4-9-99.2-9-132.3s-2.6-102.9 9-132.3c7.8-19.6 22.9-34.7 42.5-42.5 29.4-11.7 99.2-9 132.3-9s102.9-2.6 132.3 9c19.6 7.8 34.7 22.9 42.5 42.5 11.7 29.4 9 99.2 9 132.3s2.6 102.9-9 132.3z"/></svg>
+        <!-- Instagram -->
+        <a href="#" aria-label="Instagram" target="_blank">
+          <svg width="20" height="20" viewBox="0 0 448 512" fill="#e4405f">
+            <path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9 114.9-51.3 114.9-114.9S287.7 141 224.1 141zm0 186c-39.5 0-71.5-32-71.5-71.5s32-71.5 71.5-71.5 71.5 32 71.5 71.5-32 71.5-71.5 71.5zm146.4-194.3c0 14.9-12 26.9-26.9 26.9s-26.9-12-26.9-26.9 12-26.9 26.9-26.9 26.9 12 26.9 26.9zm76.1 27.2c-1.7-35.3-9.9-66.7-36.2-92.1S388.6 1.7 353.3 0C317.7-1.7 282.3-1.7 246.7 0c-35.3 1.7-66.7 9.9-92.1 36.2S1.7 123.4 0 158.7C-1.7 194.3-1.7 229.7 0 265.3c1.7 35.3 9.9 66.7 36.2 92.1s56.8 34.5 92.1 36.2c35.6 1.7 71 1.7 106.6 0 35.3-1.7 66.7-9.9 92.1-36.2s34.5-56.8 36.2-92.1c1.7-35.6 1.7-71 0-106.6zM398.8 388c-7.8 19.6-22.9 34.7-42.5 42.5-29.4 11.7-99.2 9-132.3 9s-102.9 2.6-132.3-9c-19.6-7.8-34.7-22.9-42.5-42.5-11.7-29.4-9-99.2-9-132.3s-2.6-102.9 9-132.3c7.8-19.6 22.9-34.7 42.5-42.5 29.4-11.7 99.2-9 132.3-9s102.9-2.6 132.3 9c19.6 7.8 34.7 22.9 42.5 42.5 11.7 29.4 9 99.2 9 132.3s2.6 102.9-9 132.3z"/>
+          </svg>
         </a>
-        <!-- Twitter SVG -->
-        <a href="#" aria-label="Twitter" target="_blank" style="vertical-align:middle;">
-          <svg width="20" height="20" viewBox="0 0 512 512" fill="#1da1f2" style="vertical-align:middle;"><path d="M459.4 151.7c.32 4.54.32 9.1.32 13.66 0 138.72-105.58 298.56-298.56 298.56-59.5 0-114.68-17.22-161.14-47.11 8.44.97 16.87 1.44 25.81 1.44 49.06 0 94.19-16.63 132.3-44.84-46.13-.97-84.8-31.18-98.1-72.77 6.5.97 13 .97 19.81.97 9.1 0 18.21-1.3 26.78-3.63-48.08-9.75-84.14-51.98-84.14-102.98v-1.3c14.08 7.83 30.21 12.67 47.43 13.32-28.3-18.87-46.78-51.01-46.78-87.39 0-19.49 5.2-37.36 14.29-52.95 51.65 63.3 129.3 104.72 216.5 109.15-1.62-7.83-2.6-15.98-2.6-24.13 0-58.72 47.43-106.15 106.15-106.15 30.5 0 58.15 12.67 77.43 33.14 24.13-4.54 46.78-13.66 67.13-25.81-7.83 24.45-24.45 44.84-46.13 57.76 21.36-2.27 41.83-8.21 60.67-16.63-14.29 21.04-32.36 39.59-53.25 54.25z"/></svg>
+        <!-- Twitter -->
+        <a href="#" aria-label="Twitter" target="_blank">
+          <svg width="20" height="20" viewBox="0 0 512 512" fill="#1da1f2">
+            <path d="M459.4 151.7c.32 4.54.32 9.1.32 13.66 0 138.72-105.58 298.56-298.56 298.56-59.5 0-114.68-17.22-161.14-47.11 8.44.97 16.87 1.44 25.81 1.44 49.06 0 94.19-16.63 132.3-44.84-46.13-.97-84.8-31.18-98.1-72.77 6.5.97 13 .97 19.81.97 9.1 0 18.21-1.3 26.78-3.63-48.08-9.75-84.14-51.98-84.14-102.98v-1.3c14.08 7.83 30.21 12.67 47.43 13.32-28.3-18.87-46.78-51.01-46.78-87.39 0-19.49 5.2-37.36 14.29-52.95 51.65 63.3 129.3 104.72 216.5 109.15-1.62-7.83-2.6-15.98-2.6-24.13 0-58.72 47.43-106.15 106.15-106.15 30.5 0 58.15 12.67 77.43 33.14 24.13-4.54 46.78-13.66 67.13-25.81-7.83 24.45-24.45 44.84-46.13 57.76 21.36-2.27 41.83-8.21 60.67-16.63-14.29 21.04-32.36 39.59-53.25 54.25z"/>
+          </svg>
         </a>
-        <!-- Diğer Font Awesome ikonlarını (ör: iletişim formu, hakkımızda) SVG ile değiştirmek için ilgili dosyalarda da aynı şekilde değişiklik yapılacak. -->
       </section>
     </div>
-    <div class="footer-bottom-custom">© 2025 ServisWeb. Tüm hakları saklıdır.</div>
-    
+  
+    <div class="footer-note-custom">
+      <small>
+        Üretici veya <span style="font-weight:600;">yetkili servis değildir.</span>
+        Garantisi olmayan cihazlara hizmet verilmektedir.
+      </small>
+    </div>
+  
+    <div class="footer-bottom-custom">
+      © 2025 ServisWeb. Tüm hakları saklıdır.
+    </div>
   </footer>
-  <script src="config.js" defer></script>
+  
+  <script src="config.js"></script>
   <script>
     if (window.siteConfig) {
       // Dynamic <title>
@@ -1477,6 +1509,13 @@ white-space: nowrap;
       // Dynamic og:title
       var ogTitle = document.querySelector('meta[property="og:title"]');
       if (ogTitle) ogTitle.setAttribute('content', window.siteConfig.companyName);
+      //Dynamic phone number
+      var phoneBtn = document.querySelector('.phone-link-dynamic');
+      if (phoneBtn) {
+        phoneBtn.setAttribute('href', 'tel:' + window.siteConfig.phoneNumber);
+        phoneBtn.textContent = '📞 Hemen Ara: ' + window.siteConfig.phoneNumber;
+      }
+      
       // Dynamic company info in Firma Bilgileri
       var nameEls = document.querySelectorAll('.company-name');
       nameEls.forEach(function(el) { el.textContent = window.siteConfig.companyName; });
@@ -1485,10 +1524,12 @@ white-space: nowrap;
       var addrEls = document.querySelectorAll('.company-address');
       addrEls.forEach(function(el) { el.textContent = window.siteConfig.address; });
       var phoneEls = document.querySelectorAll('.company-phone');
+      
       phoneEls.forEach(function(el) {
         el.textContent = window.siteConfig.phoneNumber;
         if (el.tagName === 'A') el.setAttribute('href', 'tel:' + window.siteConfig.phoneNumber);
       });
+      
       // Dynamic phone number for call-to-action links
       var phoneLinks = document.querySelectorAll('a[href^="tel:"]');
       phoneLinks.forEach(function(link) {
