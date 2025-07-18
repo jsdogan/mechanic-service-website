@@ -698,7 +698,7 @@ nav a:hover { color: #ffe082; }
     const service = params.get("service");
 
     const içerikler = {
-      "Hizmetlerimiz": "Hoşgeldiniz",
+      "Hizmetlerimiz": "İşletmemiz, garantisi bitmiş beyaz eşyalarınız için uzman teknik servis hizmeti sunar. \nAmacımız, arızalanan cihazlarınızı en kısa sürede tekrar çalışır hale getirerek evinizdeki konforu korumaktır.",
       "Beyaz Eşya Servisi": "Farklı markalardan garantisi bitmiş beyaz eşyalarınız için bakım, arıza tespiti ve onarım hizmeti sunuyoruz.",
       "Buzdolabı": "\nSoğutmayan, ses yapan, buzlanan veya su akıtan buzdolaplarınız için uzman servis hizmeti sunuyoruz. \n Marka fark etmeksizin buzdolabınızın arızasını yerinde tespit edip, en kısa sürede onarım işlemini gerçekleştiriyoruz. \nGıda güvenliğinizin risk altına girmemesi için, hızlı müdahale ilkemizle çalışıyoruz. \nTermostat, fan motoru, gaz kaçağı gibi teknik sorunlarda da güvenle destek alabilirsiniz..",
       "Çamaşır Makinesi": "Su almama, sıkmama, tambur dönmeme veya aşırı ses gibi arızalarda çamaşır makineniz için profesyonel çözümler sunmaktayız. \nCihazınızın performansını düşüren sorunlara yerinde müdahale ediyor, gerekirse orijinal yedek parça değişimiyle kalıcı çözümler sağlıyoruz. \nPeriyodik bakım, filtre temizliği ve deterjan bölmesi kontrolleri de hizmetimiz dahilindedir.",
@@ -749,16 +749,195 @@ nav a:hover { color: #ffe082; }
   </script>
 
   <main>
+    <section class="services-section" id="services">
+        <div class="services-grid">
+          <div class="service-card">
+            <div class="service-icon">🛠️</div>
+            <div class="service-title">Beyaz Eşya Servisi</div>
+            <div class="service-desc">Tüm marka ve model beyaz eşyalarınız için hızlı ve güvenilir servis. Uzman ekibimizle yerinde çözüm sunuyoruz.</div>
+            <a class="service-btn" href="/hizmet.html?service=Beyaz+E%C5%9Fya+Servisi">Detaylı Bilgi</a>
+          </div>
+          <div class="service-card">
+            <div class="service-icon">🧊</div>
+            <div class="service-title">Buzdolabı</div>
+            <div class="service-desc">Soğutmayan, ses yapan veya su akıtan buzdolapları için uzman onarım ve bakım hizmeti.</div>
+            <a class="service-btn" href="/hizmet.html?service=Buzdolab%C4%B1">Detaylı Bilgi</a>
+          </div>
+          <div class="service-card">
+            <div class="service-icon">🧺</div>
+            <div class="service-title">Çamaşır Makinesi</div>
+            <div class="service-desc">Çalışmayan, su almayan veya sıkmayan makineler için hızlı ve etkili çözüm.</div>
+            <a class="service-btn" href="/hizmet.html?service=%C3%87ama%C5%9F%C4%B1r+Makinesi">Detaylı Bilgi</a>
+          </div>
+          <div class="service-card">
+            <div class="service-icon">🍽️</div>
+            <div class="service-title">Bulaşık Makinesi</div>
+            <div class="service-desc">Su akıtan, yıkamayan veya ses yapan makineler için profesyonel servis.</div>
+            <a class="service-btn" href="/hizmet.html?service=Bula%C5%9F%C4%B1k+Makinesi">Detaylı Bilgi</a>
+          </div>
+          <div class="service-card">
+            <div class="service-icon">🔥</div>
+            <div class="service-title">Fırın</div>
+            <div class="service-desc">Isıtmayan veya düzensiz çalışan fırınlar için tamir ve periyodik bakım.</div>
+            <a class="service-btn" href="/hizmet.html?service=F%C4%B1r%C4%B1n">Detaylı Bilgi</a>
+          </div>
+          <div class="service-card">
+            <div class="service-icon">❄️</div>
+            <div class="service-title">Klima</div>
+            <div class="service-desc">Klima bakımı, gaz dolumu ve arıza onarımı profesyonel ekiple.</div>
+            <a class="service-btn" href="/hizmet.html?service=Klima">Detaylı Bilgi</a>
+          </div>
+          <div class="service-card">
+            <div class="service-icon">♨️</div>
+            <div class="service-title">Kombi</div>
+            <div class="service-desc">Kombi bakımı, petek temizliği ve arıza tespiti için güvenilir hizmet.</div>
+            <a class="service-btn" href="/hizmet.html?service=Kombi">Detaylı Bilgi</a>
+          </div>
+          <div class="service-card">
+            <div class="service-icon">📺</div>
+            <div class="service-title">Televizyon</div>
+            <div class="service-desc">Görüntü gelmeyen veya açılmayan TV'ler için hızlı ve garantili servis.</div>
+            <a class="service-btn" href="/hizmet.html?service=Televizyon">Detaylı Bilgi</a>
+          </div>
+        </div>
+      </section>
+    <style>.services-section {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 32px 8px 18px 8px;
+      }
+      .services-title {
+        text-align: center;
+        color: #00796b;
+        font-size: 1.5em;
+        font-weight: 700;
+        margin-bottom: 18px;
+        letter-spacing: -0.5px;
+        font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+        position: relative;
+      }
+      .services-title:after {
+        content: '';
+        display: block;
+        width: 60px;
+        height: 3px;
+        background: linear-gradient(90deg, #00796b 0%, #43cea2 100%);
+        margin: 12px auto 0 auto;
+        border-radius: 2px;
+        opacity: 0.7;
+      }
+      .services-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 22px;
+      }
+      @media (max-width: 1000px) {
+        .services-grid { grid-template-columns: repeat(2, 1fr); gap: 14px; }
+      }
+      @media (max-width: 600px) {
+        .services-grid { grid-template-columns: 1fr; gap: 8px; }
+        .services-title { font-size: 1.08em; margin-bottom: 10px; }
+        .services-title:after { width: 36px; height: 2px; margin-top: 7px; }
+      }
+      .service-card {
+        background: #fff;
+        border-radius: 14px;
+        box-shadow: 0 2px 10px rgba(67,206,162,0.10);
+        padding: 18px 10px 12px 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        transition: box-shadow 0.2s, transform 0.2s;
+        cursor: pointer;
+        border: 1.1px solid #e0f2f1;
+        min-height: 140px;
+        position: relative;
+        overflow: hidden;
+      }
+      .service-card:hover {
+        box-shadow: 0 8px 32px rgba(67,206,162,0.18);
+        transform: translateY(-2px) scale(1.015);
+        border-color: #43cea2;
+      }
+      .service-icon {
+        font-size: 1.5em;
+        margin-bottom: 7px;
+        color: #43cea2;
+        background: #e0f7fa;
+        border-radius: 50%;
+        width: 32px;
+        height: 32px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 2px 8px rgba(67,206,162,0.10);
+      }
+      .service-title {
+        font-size: 1em;
+        font-weight: 700;
+        color: #00796b;
+        margin-bottom: 5px;
+        font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+      }
+      .service-desc {
+        font-size: 0.95em;
+        color: #444;
+        line-height: 1.5;
+        margin-bottom: 10px;
+        min-height: 18px;
+      }
+      .service-btn {
+        display: inline-block;
+        padding: 7px 14px;
+        background: linear-gradient(90deg, #00796b 0%, #43cea2 100%);
+        color: #fff;
+        border: none;
+        border-radius: 16px;
+        font-size: 0.97em;
+        font-weight: 600;
+        box-shadow: 0 2px 8px rgba(67,206,162,0.10);
+        cursor: pointer;
+        transition: background 0.2s, color 0.2s, box-shadow 0.2s, transform 0.2s;
+        margin-top: auto;
+        letter-spacing: 0.01em;
+        text-decoration: none;
+      }
+      .service-card:hover .service-btn {
+        background: #fff;
+        color: #00796b;
+        border: 2px solid #43cea2;
+        box-shadow: 0 4px 16px rgba(67,206,162,0.18);
+        transform: scale(1.04);
+      }
+      @media (max-width: 600px) {
+        .service-card { padding: 8px 2px 6px 2px; min-height: 80px; }
+        .service-icon { font-size: 1em; width: 22px; height: 22px; margin-bottom: 3px; }
+        .service-title { font-size: 0.97em; }
+        .service-desc { font-size: 0.93em; min-height: 10px; }
+        .service-btn { font-size: 0.93em; padding: 6px 8px; }
+      }
+      .logo-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    }
     
+    .logo-tech {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #fff;
+    font-family: 'Segoe UI', 'Roboto', sans-serif;
+    white-space: nowrap;
+    }
+    
+    </style>
+    <section class="makale-bolumu">
+        <article class="makale-kart">
     <p>İşletmemiz, garantisi bitmiş beyaz eşyalarınız için uzman teknik servis hizmeti sunar. Amacımız, arızalanan cihazlarınızı en kısa sürede tekrar çalışır hale getirerek evinizdeki konforu korumaktır.
 
         <p>Sunmuş olduğumuz başlıca hizmetler:</p>
-        
-        <p>Günümüzde, elektronik ev aletlerinde karşılaşılan arızalar, günlük yaşamı zora sokar. Özellikle buzdolabı, çamaşır makinesi, bulaşık makinesi gibi cihazlar, kullanıcılar için büyük önem taşır. Bu nedenle, bu cihazların bakımı ve onarımı konusunda güvenilir bir elektronik ev aletleri servisi ile çalışmak gereklidir. Size göstereceğim bu tekniklerle bu alanda nasıl güvenilir bir hizmet alacağınızı anlayacaksınız. Servis hizmetleri sayesinde aletlerinizin ömrünü uzatabilir ve performansını artırabilirsiniz.
-
-          Beyaz eşyalarınızın tamiri için seçtiğiniz servis, deneyimli ve uzman personel ile çalışmalıdır. Uzman teknisyenler, arızanın kaynağını hızla tespit eder ve etkili çözümler sunar. Elektronik ev aletleri servisi süreçlerinde deneyim oldukça değerlidir. Ayrıca, bu hizmetlerin sağladığı bazı faydalar şunlardır: Hızlı Hizmet: Tecrübeli teknisyenler hızlı onarım süreçleri sunar. Uygun Fiyatlar: Rekabetçi fiyatlarla kaliteli hizmet alırsınız.Güvenilir Destek: Hizmet sonrası destek ile sorunlar anında çözülür.Yedek Parça Temini: Gerekli parçalar kolaylıkla temin edilir. Garanti: Yapılan işçilik genellikle garanti kapsamındadır. Bu unsurlar, elektronik ev aletleri servisi seçerken dikkat etmeniz gereken önemli kriterlerdir. Cihazlarınızı güvende tutmak için düzenli bakım ve zamanında tamir işlemlerini ihmal etmemeniz gerekmektedir.
-          
-          Kombinasyona ve iklimlendirmeye yönelik cihazlar, bu süreçte ayrı bir öneme sahiptir. Özellikle klima ve kombi gibi ürünler, hem enerji tasarrufu sağlar hem de konforlu bir yaşam alanı yaratır. Bu nedenle, bu ürünlerin tamiri için profesyonel destek almak gerekmektedir. Yapılan araştırmalara göre, kullanıcıların %65'i düzenli bakım yaptıran cihazların daha uzun ömürlü olduğunu belirtmektedir. Bu nedenle, beyaz eşyalarınızın düzenli bakımı için güvenilir bir servis ile çalışmalısınız. Beyaz eşya teknik servis web sitesi içeriği için beyaz eşya servisi buzdolabı, çamaşır makinesi, bulaşık makinesi, fırın, klima, kombi, televizyon başlıkları altında bilgilendirici, tamir ve servis hakkında bilgi içeren metinler hazırlamanız mümkündür.</p>
         <p> Beyaz Eşya Servisi: Buzdolabı, çamaşır ve bulaşık makineleri gibi cihazlar için bakım ve onarım.</p>
         
         <p>Klima Servisi: Soğutmayan ya da ses yapan klimalar için temizlik ve arıza giderme hizmeti.</p>
@@ -767,116 +946,124 @@ nav a:hover { color: #ffe082; }
         
         Fırın, Ocak, Televizyon gibi cihazlar: Elektronik ya da elektrikli ev aletleri için yerinde veya atölye destekli teknik çözümler.
         
+        <p>Günümüzde, elektronik ev aletlerinde karşılaşılan arızalar, günlük yaşamı zora sokar. Özellikle buzdolabı, çamaşır makinesi, bulaşık makinesi gibi cihazlar, kullanıcılar için büyük önem taşır. Bu nedenle, bu cihazların bakımı ve onarımı konusunda güvenilir bir elektronik ev aletleri servisi ile çalışmak gereklidir. Size göstereceğim bu tekniklerle bu alanda nasıl güvenilir bir hizmet alacağınızı anlayacaksınız. Servis hizmetleri sayesinde aletlerinizin ömrünü uzatabilir ve performansını artırabilirsiniz.
+
+          Beyaz eşyalarınızın tamiri için seçtiğiniz servis, deneyimli ve uzman personel ile çalışmalıdır. Uzman teknisyenler, arızanın kaynağını hızla tespit eder ve etkili çözümler sunar. Elektronik ev aletleri servisi süreçlerinde deneyim oldukça değerlidir. Ayrıca, bu hizmetlerin sağladığı bazı faydalar şunlardır: Hızlı Hizmet: Tecrübeli teknisyenler hızlı onarım süreçleri sunar. Uygun Fiyatlar: Rekabetçi fiyatlarla kaliteli hizmet alırsınız.Güvenilir Destek: Hizmet sonrası destek ile sorunlar anında çözülür.Yedek Parça Temini: Gerekli parçalar kolaylıkla temin edilir. Garanti: Yapılan işçilik genellikle garanti kapsamındadır. Bu unsurlar, elektronik ev aletleri servisi seçerken dikkat etmeniz gereken önemli kriterlerdir. Cihazlarınızı güvende tutmak için düzenli bakım ve zamanında tamir işlemlerini ihmal etmemeniz gerekmektedir.
+          
+          Kombinasyona ve iklimlendirmeye yönelik cihazlar, bu süreçte ayrı bir öneme sahiptir. Özellikle klima ve kombi gibi ürünler, hem enerji tasarrufu sağlar hem de konforlu bir yaşam alanı yaratır. Bu nedenle, bu ürünlerin tamiri için profesyonel destek almak gerekmektedir. Yapılan araştırmalara göre, kullanıcıların %65'i düzenli bakım yaptıran cihazların daha uzun ömürlü olduğunu belirtmektedir. Bu nedenle, beyaz eşyalarınızın düzenli bakımı için güvenilir bir servis ile çalışmalısınız. Beyaz eşya teknik servis web sitesi içeriği için beyaz eşya servisi buzdolabı, çamaşır makinesi, bulaşık makinesi, fırın, klima, kombi, televizyon başlıkları altında bilgilendirici, tamir ve servis hakkında bilgi içeren metinler hazırlamanız mümkündür.</p>
+      
+    </article>
+</section>
         
         <p>Günlük hayatın vazgeçilmez parçaları haline gelen beyaz eşyalar ve ev cihazları, zaman zaman arıza verebilir ya da bakım ihtiyacı doğurabilir. İşte tam bu noktada, profesyonel teknik servis hizmetlerimizle yanınızdayız. Alanında deneyimli ekibimizle, arızalı cihazlarınıza yerinde ve güvenilir müdahalelerde bulunuyor; hızlı ve kalıcı çözümler sunuyoruz. Aşağıda detaylarını görebileceğiniz hizmet alanlarımızla, beyaz eşyadan kombiye, klimadan televizyona kadar geniş bir yelpazede destek sağlıyoruz.</p>
         
-        <article style="margin-bottom: 40px;">
-          <h3><strong>Buzdolabı Servisi Hangi Durumlarda Gerekli</strong></h3>
-          <p>Buzdolabı, mutfakların vazgeçilmez parçalarından biridir. Birçok kişi bu cihazın her daim çalışmasını bekler. Ancak bazen beklenmedik arızalar meydana gelebilir. Size göstereceğim bu bilgilerin, buzdolabı servisinin ne zaman gerekli olduğunu anlamanıza yardımcı olacağını düşünüyorum. Buzdolabı arızaları, genellikle birkaç belirti aracılığıyla kendini gösterir. Bu durumlar arasında gürültü yapma, soğutma sorunları veya dondurucu kısmının düzgün çalışmaması yer alır. Bu gibi sorunlar sık karşılaşılan arızalardandır. Bunların göz ardı edilmesi, daha ciddi sorunlara yol açabilir.
-
-            Gelişen teknoloji, ev aletlerinin bakımında da önemli bir yere sahiptir. Dolayısıyla, günümüzde buzdolabı arızaları için alınacak önlemler önemlidir. Buzdolabındaki sorunları önceden keşfetmek, daha büyük problemlerin önüne geçer. Arıza belirtilerini gözlemlemek, tamir sürecini kolaylaştırır. Örneğin, çoğu kullanıcının fark etmediği buzlanma problemi, aslında bir soğutma arızası göstergesi olabilir. Çünkü böyle bir durum, buzdolabının çalışma verimliliğini düşürür. Araştırmalara göre, kullanıcıların %65'i bu tür arızaları gözden kaçırıyor. Bunun sonucunda ciddi tamir ihtiyaçları ortaya çıkabiliyor.</p>
-        </article>
-
-        <article style="margin-bottom: 40px;">
-          <h3><strong>Çamaşır Makinesi Servisi İhtiyaçları</strong></h3>
-          <p>Evlerde sıkça kullandığımız çamaşır makineleri, zamanla arıza çıkarabilir. Siz de çamaşır makinenizde gürültü, su sızdırma veya tuşların çalışmaması gibi sorunlarla karşılaşabilirsiniz. Bu durumda, doğru bir çamaşır makinesi servisi ile hızlı ve etkili çözümler almanız mümkündür. Beyaz eşya teknik servis websitesi içeriği için beyaz eşya servisi buzdolabı, çamaşır makinesi, bulaşık makinesi, fırın, klima, kombi, televizyon başlıkları altında bilgilendirici, tamir ve servis hakkında bilgi içeren metinler hazırlanmaktadır. Böylece, ihtiyaç duyduğunuz her şey elinizin altında olur. Doğru teknik servis seçimi, arızaların hızlıca giderilmesini ve makinelerinizin uzun ömürlü olmasını sağlar.</p>
-        </article>
-
-        <article style="margin-bottom: 40px;">
-          <h3><strong>Bulaşık Makinesi Servisi Seçenekleri</strong></h3>
-          <p>Bulaşık makineleri, mutfaktaki en önemli beyaz eşyalardan biridir. Bu cihazlar, yemek sonrası zaman kazanmanı sağlar. Böylece sen de başka işlerle ilgilenebilirsin. Ancak bulaşık makinelerinde zamanla bazı problemler ortaya çıkabilir. İşte bu noktada, beyaz eşya teknik servis websitesi içeriği için beyaz eşya servisi devreye girer. Profesyonel bir servis, sorunları hızlı ve etkili bir şekilde çözer. Bulaşık makineni tekrar sorunsuz bir şekilde kullanmana olanak tanır. Ayrıca, düzenli bakım ile cihazının ömrünü uzatabilirsin.
-
-          Bulaşık makineni servis için bıraktığında dikkat etmen gereken bazı noktalar vardır. İlk olarak, servis seçimini iyi yapmalısın. Uzman personelin olduğu bir işletmeyi tercih et. Ayrıca, servis sonrası garanti sunan firmalar güvenilir birkaç seçenek arasında öne çıkar. Unutmaman gereken bir diğer husus da çağrı merkezi desteğidir. Aldığın hizmetin kalitesini etkileyen bu durum, ihtiyaç anında hızlı çözüm sunar. Hizmet alırken karşılaşacağın avantajlar şunlardır:</p>
-          <ul> 
-          <li> Uzman teknik ekip, cihaz sorunlarını anında tespit eder.</li>
-            
-          <li>  Yerinde servis hizmeti, zaman ve enerji tasarrufu sağlar.</li>
-            
-          <li>  Hızlı arıza onarımları ile makineni kısa zamanda kullanabilirsin.</li>
-            
-          <li> Parça değişimlerinde orijinal malzeme kullanılması önem taşır.</li>
-          </ul>
-           <p> Sonuç olarak, akıllıca bir seçim yaparak bulaşık makineni güvenle bırakmalısın. Aldığın hizmetin kalitesi, senin deneyimini doğrudan etkiler. Cihazını güvenilir bir beyaz eşya tamir servisine emanet ettiğinde, sorunsuz bir şekilde mutfağında kullanmaya devam edersin. Bu sayede hem zaman kazanırsın hem de daha az stres yaşarsın.</p>
-        </article>
-
-        <article style="margin-bottom: 40px;">
-          <h3><strong>Fırın Servisi ve Onarımında Dikkat Edilmesi Gerekenler</strong></h3>
-          <p>Fırınlar, mutfakta en çok kullanılan beyaz eşyalardan biridir. Bu nedenle, düzgün çalışması büyük önem taşır. Doğru bakım ve düzenli kontroller, fırınınızın ömrünü uzatır. İlk olarak, fırınınızın elektrik bağlantısını kontrol edin. Kablosunda aşınma veya temassızlık olmamalıdır. Ayrıca, fırın içindeki ısı yayıcı noktaların temiz olmasına dikkat etmelisiniz. Bunun yanı sıra, ocak yüzeyinin de düzenli olarak temizlenmesi gerekir. Herhangi bir kir veya kalıntı, fırının verimli çalışmasını engelleyebilir. Temizlik sırasında doğru ürünler kullanmak önemlidir, çünkü aşındırıcı kimyasallar zarar verebilir. Senin için fırın servisinde dikkat edilmesi gereken birçok nokta bulunuyor.
-
-            Sonuç olarak, fırınınızın bakımını düzenli yaparak uzun ömürlü olmasını sağlayabilirsiniz. Özellikle, bilgili ve deneyimli bir beyaz eşya teknik servisi ile çalışmak hamlelerinizi güçlendirir. Günümüzde kullanıcıların %60'ı, beyaz eşya tamir servisi konusunda profesyonel destek almayı tercih ediyor. Bu, hizmet almanın önemini gösteriyor. Fırın onarımında, elektrik ve katman kontrolleri şarttır. İyi bir servis bu noktada yardımcı olur.
-  
-            Fırın servisi ve onarımı sırasında göz önünde bulundurulması gereken bazı önemli unsurlar şunlardır:</p>
+        <section class="makale-bolumu">
+          <article class="makale-kart">
+            <h2>Buzdolabı Servisi Hangi Durumlarda Gerekli</h2>
+            <hr>
+            <p>Buzdolabı, mutfakların vazgeçilmez parçalarından biridir. Birçok kişi bu cihazın her daim çalışmasını bekler. Ancak bazen beklenmedik arızalar meydana gelebilir. Size göstereceğim bu bilgilerin, buzdolabı servisinin ne zaman gerekli olduğunu anlamanıza yardımcı olacağını düşünüyorum. Buzdolabı arızaları, genellikle birkaç belirti aracılığıyla kendini gösterir. Bu durumlar arasında gürültü yapma, soğutma sorunları veya dondurucu kısmının düzgün çalışmaması yer alır. Bu gibi sorunlar sık karşılaşılan arızalardandır. Bunların göz ardı edilmesi, daha ciddi sorunlara yol açabilir.</p>
+            <p>Gelişen teknoloji, ev aletlerinin bakımında da önemli bir yere sahiptir. Dolayısıyla, günümüzde buzdolabı arızaları için alınacak önlemler önemlidir. Buzdolabındaki sorunları önceden keşfetmek, daha büyük problemlerin önüne geçer. Arıza belirtilerini gözlemlemek, tamir sürecini kolaylaştırır. Örneğin, çoğu kullanıcının fark etmediği buzlanma problemi, aslında bir soğutma arızası göstergesi olabilir. Çünkü böyle bir durum, buzdolabının çalışma verimliliğini düşürür. Araştırmalara göre, kullanıcıların %65'i bu tür arızaları gözden kaçırıyor. Bunun sonucunda ciddi tamir ihtiyaçları ortaya çıkabiliyor.</p>
+          </article>
+          <article class="makale-kart">
+            <h2>Çamaşır Makinesi Servisi İhtiyaçları</h2>
+            <hr>
+            <p>Evlerde sıkça kullandığımız çamaşır makineleri, zamanla arıza çıkarabilir. Siz de çamaşır makinenizde gürültü, su sızdırma veya tuşların çalışmaması gibi sorunlarla karşılaşabilirsiniz. Bu durumda, doğru bir çamaşır makinesi servisi ile hızlı ve etkili çözümler almanız mümkündür. Beyaz eşya teknik servis websitesi içeriği için beyaz eşya servisi buzdolabı, çamaşır makinesi, bulaşık makinesi, fırın, klima, kombi, televizyon başlıkları altında bilgilendirici, tamir ve servis hakkında bilgi içeren metinler hazırlanmaktadır. Böylece, ihtiyaç duyduğunuz her şey elinizin altında olur. Doğru teknik servis seçimi, arızaların hızlıca giderilmesini ve makinelerinizin uzun ömürlü olmasını sağlar.</p>
+          </article>
+          <article class="makale-kart">
+            <h2>Bulaşık Makinesi Servisi Seçenekleri</h2>
+            <hr>
+            <p>Bulaşık makineleri, mutfaktaki en önemli beyaz eşyalardan biridir. Bu cihazlar, yemek sonrası zaman kazanmanı sağlar. Böylece sen de başka işlerle ilgilenebilirsin. Ancak bulaşık makinelerinde zamanla bazı problemler ortaya çıkabilir. İşte bu noktada, beyaz eşya teknik servis websitesi içeriği için beyaz eşya servisi devreye girer. Profesyonel bir servis, sorunları hızlı ve etkili bir şekilde çözer. Bulaşık makineni tekrar sorunsuz bir şekilde kullanmana olanak tanır. Ayrıca, düzenli bakım ile cihazının ömrünü uzatabilirsin.</p>
+            <ul>
+              <li>Uzman teknik ekip, cihaz sorunlarını anında tespit eder.</li>
+              <li>Yerinde servis hizmeti, zaman ve enerji tasarrufu sağlar.</li>
+              <li>Hızlı arıza onarımları ile makineni kısa zamanda kullanabilirsin.</li>
+              <li>Parça değişimlerinde orijinal malzeme kullanılması önem taşır.</li>
+            </ul>
+            <p>Sonuç olarak, akıllıca bir seçim yaparak bulaşık makineni güvenle bırakmalısın. Aldığın hizmetin kalitesi, senin deneyimini doğrudan etkiler. Cihazını güvenilir bir beyaz eşya tamir servisine emanet ettiğinde, sorunsuz bir şekilde mutfağında kullanmaya devam edersin. Bu sayede hem zaman kazanırsın hem de daha az stres yaşarsın.</p>
+          </article>
+          <article class="makale-kart">
+            <h2>Fırın Servisi ve Onarımında Dikkat Edilmesi Gerekenler</h2>
+            <hr>
+            <p>Fırınlar, mutfakta en çok kullanılan beyaz eşyalardan biridir. Bu nedenle, düzgün çalışması büyük önem taşır. Doğru bakım ve düzenli kontroller, fırınınızın ömrünü uzatır. İlk olarak, fırınınızın elektrik bağlantısını kontrol edin. Kablosunda aşınma veya temassızlık olmamalıdır. Ayrıca, fırın içindeki ısı yayıcı noktaların temiz olmasına dikkat etmelisiniz. Bunun yanı sıra, ocak yüzeyinin de düzenli olarak temizlenmesi gerekir. Herhangi bir kir veya kalıntı, fırının verimli çalışmasını engelleyebilir. Temizlik sırasında doğru ürünler kullanmak önemlidir, çünkü aşındırıcı kimyasallar zarar verebilir. Senin için fırın servisinde dikkat edilmesi gereken birçok nokta bulunuyor.</p>
             <ul>
               <li>Güvenli kullanım: Senin için fırın, güvenli bir şekilde çalışmalıdır.</li>
-
-              <li> Düzenli periyodik bakımlar: Her yıl en az bir kez fırınları kontrol ettir.</li>
-              
-              <li> Profesyonel destek: Beyaz eşya teknik servisinizden destek almak yararlıdır.</li>
-              
+              <li>Düzenli periyodik bakımlar: Her yıl en az bir kez fırınları kontrol ettir.</li>
+              <li>Profesyonel destek: Beyaz eşya teknik servisinizden destek almak yararlıdır.</li>
               <li>Yedek parça garantisi: Kullanılan yedek parçaların garantili olması önemlidir.</li>
-              
-              <li> Temizlik yöntemleri: Doğru temizlik için etkili yöntemlere odaklan.</li>
+              <li>Temizlik yöntemleri: Doğru temizlik için etkili yöntemlere odaklan.</li>
             </ul>
-            <p>Bu unsurlara dikkat ettiğinde, fırınında olası arızaların önüne geçebilirsin. Dolayısıyla, fırın, mutfağındaki önemli yardımcın olarak avantaj sağlar.
-               Günlük yaşamında fırın tamiri ve servisi için doğru yönlendirmeleri takip et. Bu sayede sağlıklı ve güvenli bir mutfak deneyimi yaşamış olursun.</p>
-        </article>
-        <article style="margin-bottom: 40px;">
-          <h3><strong>Klima Servisi Fiyatları Ne Kadar</strong></h3>
-          <p>Ev aletlerini doğru şekilde bakım yapmak, hem uzun ömürlü kullanım sağlar hem de arızaların önüne geçer. Klima servisi, yaz aylarının vazgeçilmez bir parçası haline geldi. Bu nedenle, kullanıcıların aklındaki soru klima servis fiyatlarının ne kadar olduğudur. Klima servisi için belirlenen fiyatlar, birçok faktöre bağlı olarak değişkenlik gösterir. Öncelikle servis sağlamanın kalitesi, kullanılan yedek parçalar ve işçilik masrafları fiyat üzerinde etkili olur. Kaliteli malzemelerle yapılan onarımlar, genelde uzun süreli çözümler sunar. Ek olarak, servisin sunduğu garanti süresi de fiyatları etkileyen unsurlardan biridir. Daha geniş bir perspektiften bakacak olursak, klima bakım ve onarım maliyetlerini etkileyen diğer unsurlar arasında cihazın tipi, yaşı ve arızanın ciddiyeti de bulunur.
-
-            Hizmet sağlayıcılar genellikle, klima servis fiyatlarını aşağıdaki şekilde belirler:.</p>
-
-            <ul>
-              <li>İlk muayene ücreti: Cihazın durumunu kontrol ederken çeşitli analizler yapar.</li>
-
-              <li>  Yedek parça maliyetleri: Arızalı olan parçaların değiştirilmesi sonucunda eklenir.</li>
-              
-              <li> İşçilik bedeli: Bakım ve onarım süresi boyunca ilave edilen ücretlerden oluşur.</li>
-              
-              <li> Garanti süresi: Bazı firmalar, yapılacak onarımlarda garanti süresi sunar.</li>
-              
-              </li>Ek hizmetler: Ücretsiz kontroller, filtre temizleme gibi ilave hizmetler bulunabilir.</li>
-            </ul>
-            <p>Bu durum, tamir ve bakım işlemlerinin, genel olarak farklı fiyat aralıklarında sunulmasına neden olur. Yaklaşık olarak, bir klima servisi için fiyatlar 150 TL ile 600 TL arasında değişir. Ancak, tam rakamların net olarak belirtilebilmesi için her insanın ihtiyacına göre değerlendirilmelidir. Aynı zamanda, ev aletleri teknik destek almak istediğinizde, beyaz eşya servisleriyle de iletişime geçmeniz akıllıca olur. Böylece, daha detaylı bilgi edinirsiniz ve bekletmeden onarım sürecine geçmek için fırsat yaratmış olursunuz.
-            </p>
+            <p>Bu unsurlara dikkat ettiğinde, fırınında olası arızaların önüne geçebilirsin. Dolayısıyla, fırın, mutfağındaki önemli yardımcın olarak avantaj sağlar. Günlük yaşamında fırın tamiri ve servisi için doğru yönlendirmeleri takip et. Bu sayede sağlıklı ve güvenli bir mutfak deneyimi yaşamış olursun.</p>
           </article>
-            <article style="margin-bottom: 40px;">
-              <h3><strong>Kombi Servisi Ne Zaman Çağrılmalı</strong></h3>
-              <p>Kombilerin düzgün çalışması, evde ısının stabil kalması açısından oldukça önemlidir. Zamanında yapılan bakımlar, cihazın ömrünü uzatır. Bu nedenle, sorunlar anlamadan önce önlem almak gerekir. Eğer kombinizin çalışmasında bir aksaklık gözlemliyorsanız mutlaka bir teknik destek almanız gerekecektir. Cihazınızın düzensiz çalışması durumunda, evde soğuma meydana gelebilir. Bu tür sorunlar, daha büyük arızaların habercisi olabilir. Eğer cihazınız aşırı ses çıkarıyorsa veya sıcak su akışı düzenli değilse, hemen bir servis çağırmalısınız.
-
-                Kombinin bakım zamanları, üretici firmaların önerdiği takvim doğrultusunda olmalıdır. Bunun yanı sıra, günlük kullanım sırasında karşılaşabileceğiniz bazı belirtiler de vardır. Bu belirtiler arasında şunlar yer alır:</p>
-
-                <ul> <li>Su sızıntısı: Su sızıntısı, genellikle bir kırık veya sızdıran parça anlamına gelir. </li>
-
-                  <li>  Aşırı ses çıkartma: Normalden daha fazla ses, bir parçanın bozulduğunun göstergesi olabilir. </li>
-                  
-                  <li> Yanlış sıcaklık: Cihazın vermesi gereken sıcaklıkta tutarsızlık, arızanın bir belirtisi sayılır. </li>
-                  
-                  <li> Dijital ekran arızası: Ekranda hata kodlarının görünmesi, hemen müdahale edilmesini gerektirir. </li>
-                </li></ul>
-                <p>Eğer bu durumlardan bir veya birkaçını gözlemlerseniz, Beyaz Eşya Teknik Servis Websitesi İçeriği için Beyaz Eşya Servisi Buzdolabı, Çamaşır Makinesi, Bulaşık Makinesi, Fırın, Klima, Kombi, Televizyon Başlıkları Altında Bilgilendirici, Tamir Ve Servis Hakkında Bilgi İçeren Metinler Hazırlan. firmalarına başvurmalısınız. Günümüzde, kullanıcıların %25'i hizmet alırken, zamanında müdahalelerin önemini anlamaktadır. Bu gibi nedenlerle, karşılaşacağınız tüm sorunlar için zamanında teknik destek almak oldukça önemlidir. Unutmayın ki, erken müdahale her zaman daha ekonomik çözümler sunar.</p>
-            </article>
-
-            <article style="margin-bottom: 40px;">
-              <h3><strong>Televizyon Servisi ve Tamir Süreci</strong></h3>
-              <p>Televizyon arızaları her zaman can sıkıcı bir durumdur. Günümüzde televizyonlar evin önemli bir parçasıdır. Bunun yanı sıra, cihazın düzgün çalışması için zaman zaman bakım gerektirir. Arızalar meydana geldiğinde, doğru hizmeti almak kritik hale gelir. İşte bu noktada, televizyon servisi büyük bir önem kazanır. Size, bu süreçte neler yapmanız gerektiğini anlatacağım. Televizyon servisi, cihazın tüm işlevlerini geri kazanmasını sağlar.
-
-                Televizyon tamir süreci genellikle belirli adımlardan oluşur. Öncelikle, kullanıcılar arızayı net bir şekilde tanımak zorundadır. Bu aşamadan sonra, tamir konusunda uzman bir teknisyenle iletişime geçmek gerekir. Cihazın durumunu değerlendirirken, aşağıdaki maddelere dikkat etmek faydalı olacaktır:</p>
-                <ul>
-                  <li>Arıza Tespiti: Cihazın sorunu net bir şekilde tanımlanır.</li>
-
-                    <li>Yedek Parça Kullanımı: Gerekli yedek parçaların kalitesi önemlidir.</li>
-
-                      <li> Zaman Yönetimi: Tamir sürecinin ne kadar süreceği önceden belirlenmelidir.</li>
-
-                        <li>Garanti Süresi: Yapılan işlemler sonrasında garanti süreleri hakkında bilgi sahibi olunmalıdır.</li>
-
-                          <li> Müşteri Memnuniyeti: Tamir sürecinde kullanıcıların geri bildirimlerine önem verilmelidir.</li>
-                  
-                </ul>
-           <p>Bu adımlar, televizyon servisinin etkinliğini artırır. Sonuç olarak, televizyon tamiri ve servisi düzenli bakımlarla birlikte, uzun süre sağlıklı bir şekilde çalışmasını sağlar. Kullanıcılar, iyi bir destek aldıktan sonra sorunun çözülmesinden büyük oranda memnun kalır. Unutmayın, kaliteli bir beyaz eşya tamir servisi, uzun vadede cihazın performansını korur.</p> 
-          </article>
-    
+        </section>
+        <style>
+        .makale-bolumu {
+          max-width: 900px;
+          margin: 48px auto 32px auto;
+          padding: 0 12px;
+          display: flex;
+          flex-direction: column;
+          gap: 32px;
+        }
+        .makale-kart {
+          background: #fff;
+          border-radius: 18px;
+          box-shadow: 0 4px 24px rgba(67,206,162,0.10);
+          padding: 32px 28px 24px 28px;
+          display: flex;
+          flex-direction: column;
+          gap: 16px;
+          border-left: 6px solid #43cea2;
+          transition: box-shadow 0.2s, transform 0.2s;
+        }
+        .makale-kart:hover {
+          box-shadow: 0 8px 32px rgba(67,206,162,0.18);
+          transform: translateY(-2px) scale(1.015);
+        }
+        .makale-kart h2 {
+          color: #00796b;
+          font-size: 1.25em;
+          margin: 0 0 8px 0;
+          font-weight: 700;
+          font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+        }
+        .makale-kart hr {
+          border: none;
+          border-top: 2px solid #e0e0e0;
+          margin: 0 0 18px 0;
+        }
+        .makale-kart p {
+          color: #222;
+          font-size: 1.08em;
+          line-height: 1.7;
+          margin: 0 0 10px 0;
+        }
+        .makale-kart ul {
+          margin: 0 0 10px 18px;
+          padding: 0;
+          color: #222;
+          font-size: 1em;
+        }
+        .makale-kart ul li {
+          margin-bottom: 6px;
+          line-height: 1.6;
+          list-style: disc inside;
+        }
+        @media (max-width: 600px) {
+          .makale-bolumu {
+            padding: 0 2vw;
+            gap: 18px;
+          }
+          .makale-kart {
+            padding: 16px 8px 12px 12px;
+            border-radius: 10px;
+            gap: 10px;
+          }
+          .makale-kart h2 {
+            font-size: 1.08em;
+            margin-bottom: 6px;
+          }
+        }
+        </style>
     
   </main>
 
@@ -1132,3 +1319,68 @@ nav a:hover { color: #ffe082; }
   
 </body>
 </html>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Tamircim",
+  "telephone": "+90 555 111 22 33",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Örnek Mah. Örnek Sk. No:1 D:2",
+    "addressLocality": "İstanbul",
+    "addressCountry": "TR"
+  },
+  "url": "https://tamircim.netlify.app",
+  "image": "/apple-touch-icon.png",
+  "logo": "/apple-touch-icon.png",
+  "openingHours": "Mo-Sa 09:00-18:00",
+  "description": "Beyaz eşya teknik servis hizmeti - buzdolabı, çamaşır makinesi, bulaşık makinesi, kombi, klima ve daha fazlası için uzman onarım."
+}
+</script>
+<script type="application/ld+json">
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Buzdolabı Servisi Hangi Durumlarda Gerekli",
+    "articleBody": "Buzdolabı, mutfakların vazgeçilmez parçalarından biridir. Birçok kişi bu cihazın her daim çalışmasını bekler. Ancak bazen beklenmedik arızalar meydana gelebilir. Size göstereceğim bu bilgilerin, buzdolabı servisinin ne zaman gerekli olduğunu anlamanıza yardımcı olacağını düşünüyorum. Buzdolabı arızaları, genellikle birkaç belirti aracılığıyla kendini gösterir. Bu durumlar arasında gürültü yapma, soğutma sorunları veya dondurucu kısmının düzgün çalışmaması yer alır. Bu gibi sorunlar sık karşılaşılan arızalardandır. Bunların göz ardı edilmesi, daha ciddi sorunlara yol açabilir. Gelişen teknoloji, ev aletlerinin bakımında da önemli bir yere sahiptir. Dolayısıyla, günümüzde buzdolabı arızaları için alınacak önlemler önemlidir. Buzdolabındaki sorunları önceden keşfetmek, daha büyük problemlerin önüne geçer. Arıza belirtilerini gözlemlemek, tamir sürecini kolaylaştırır. Örneğin, çoğu kullanıcının fark etmediği buzlanma problemi, aslında bir soğutma arızası göstergesi olabilir. Çünkü böyle bir durum, buzdolabının çalışma verimliliğini düşürür. Araştırmalara göre, kullanıcıların %65'i bu tür arızaları gözden kaçırıyor. Bunun sonucunda ciddi tamir ihtiyaçları ortaya çıkabiliyor.",
+    "author": {"@type": "Organization", "name": "Tamircim"},
+    "publisher": {"@type": "Organization", "name": "Tamircim"},
+    "datePublished": "2024-06-01",
+    "mainEntityOfPage": {"@type": "WebPage", "@id": "https://tamircim.netlify.app"}
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Çamaşır Makinesi Servisi İhtiyaçları",
+    "articleBody": "Evlerde sıkça kullandığımız çamaşır makineleri, zamanla arıza çıkarabilir. Siz de çamaşır makinenizde gürültü, su sızdırma veya tuşların çalışmaması gibi sorunlarla karşılaşabilirsiniz. Bu durumda, doğru bir çamaşır makinesi servisi ile hızlı ve etkili çözümler almanız mümkündür. Beyaz eşya teknik servis websitesi içeriği için beyaz eşya servisi buzdolabı, çamaşır makinesi, bulaşık makinesi, fırın, klima, kombi, televizyon başlıkları altında bilgilendirici, tamir ve servis hakkında bilgi içeren metinler hazırlanmaktadır. Böylece, ihtiyaç duyduğunuz her şey elinizin altında olur. Doğru teknik servis seçimi, arızaların hızlıca giderilmesini ve makinelerinizin uzun ömürlü olmasını sağlar.",
+    "author": {"@type": "Organization", "name": "Tamircim"},
+    "publisher": {"@type": "Organization", "name": "Tamircim"},
+    "datePublished": "2024-06-01",
+    "mainEntityOfPage": {"@type": "WebPage", "@id": "https://tamircim.netlify.app"}
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Bulaşık Makinesi Servisi Seçenekleri",
+    "articleBody": "Bulaşık makineleri, mutfaktaki en önemli beyaz eşyalardan biridir. Bu cihazlar, yemek sonrası zaman kazanmanı sağlar. Böylece sen de başka işlerle ilgilenebilirsin. Ancak bulaşık makinelerinde zamanla bazı problemler ortaya çıkabilir. İşte bu noktada, beyaz eşya teknik servis websitesi içeriği için beyaz eşya servisi devreye girer. Profesyonel bir servis, sorunları hızlı ve etkili bir şekilde çözer. Bulaşık makineni tekrar sorunsuz bir şekilde kullanmana olanak tanır. Ayrıca, düzenli bakım ile cihazının ömrünü uzatabilirsin. Bulaşık makineni servis için bıraktığında dikkat etmen gereken bazı noktalar vardır. İlk olarak, servis seçimini iyi yapmalısın. Uzman personelin olduğu bir işletmeyi tercih et. Ayrıca, servis sonrası garanti sunan firmalar güvenilir birkaç seçenek arasında öne çıkar. Unutmaman gereken bir diğer husus da çağrı merkezi desteğidir. Aldığın hizmetin kalitesini etkileyen bu durum, ihtiyaç anında hızlı çözüm sunar. Hizmet alırken karşılaşacağın avantajlar şunlardır: Uzman teknik ekip, cihaz sorunlarını anında tespit eder. Yerinde servis hizmeti, zaman ve enerji tasarrufu sağlar. Hızlı arıza onarımları ile makineni kısa zamanda kullanabilirsin. Parça değişimlerinde orijinal malzeme kullanılması önem taşır. Sonuç olarak, akıllıca bir seçim yaparak bulaşık makineni güvenle bırakmalısın. Aldığın hizmetin kalitesi, senin deneyimini doğrudan etkiler. Cihazını güvenilir bir beyaz eşya tamir servisine emanet ettiğinde, sorunsuz bir şekilde mutfağında kullanmaya devam edersin. Bu sayede hem zaman kazanırsın hem de daha az stres yaşarsın.",
+    "author": {"@type": "Organization", "name": "Tamircim"},
+    "publisher": {"@type": "Organization", "name": "Tamircim"},
+    "datePublished": "2024-06-01",
+    "mainEntityOfPage": {"@type": "WebPage", "@id": "https://tamircim.netlify.app"}
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Fırın Servisi ve Onarımında Dikkat Edilmesi Gerekenler",
+    "articleBody": "Fırınlar, mutfakta en çok kullanılan beyaz eşyalardan biridir. Bu nedenle, düzgün çalışması büyük önem taşır. Doğru bakım ve düzenli kontroller, fırınınızın ömrünü uzatır. İlk olarak, fırınınızın elektrik bağlantısını kontrol edin. Kablosunda aşınma veya temassızlık olmamalıdır. Ayrıca, fırın içindeki ısı yayıcı noktaların temiz olmasına dikkat etmelisiniz. Bunun yanı sıra, ocak yüzeyinin de düzenli olarak temizlenmesi gerekir. Herhangi bir kir veya kalıntı, fırının verimli çalışmasını engelleyebilir. Temizlik sırasında doğru ürünler kullanmak önemlidir, çünkü aşındırıcı kimyasallar zarar verebilir. Senin için fırın servisinde dikkat edilmesi gereken birçok nokta bulunuyor. Sonuç olarak, fırınınızın bakımını düzenli yaparak uzun ömürlü olmasını sağlayabilirsiniz. Özellikle, bilgili ve deneyimli bir beyaz eşya teknik servisi ile çalışmak hamlelerinizi güçlendirir. Günümüzde kullanıcıların %60'ı, beyaz eşya tamir servisi konusunda profesyonel destek almayı tercih ediyor. Bu, hizmet almanın önemini gösteriyor. Fırın onarımında, elektrik ve katman kontrolleri şarttır. İyi bir servis bu noktada yardımcı olur. Fırın servisi ve onarımı sırasında göz önünde bulundurulması gereken bazı önemli unsurlar şunlardır: Güvenli kullanım: Senin için fırın, güvenli bir şekilde çalışmalıdır. Düzenli periyodik bakımlar: Her yıl en az bir kez fırınları kontrol ettir. Profesyonel destek: Beyaz eşya teknik servisinizden destek almak yararlıdır. Yedek parça garantisi: Kullanılan yedek parçaların garantili olması önemlidir. Temizlik yöntemleri: Doğru temizlik için etkili yöntemlere odaklan. Bu unsurlara dikkat ettiğinde, fırınında olası arızaların önüne geçebilirsin. Dolayısıyla, fırın, mutfağındaki önemli yardımcın olarak avantaj sağlar. Günlük yaşamında fırın tamiri ve servisi için doğru yönlendirmeleri takip et. Bu sayede sağlıklı ve güvenli bir mutfak deneyimi yaşamış olursun.",
+    "author": {"@type": "Organization", "name": "Tamircim"},
+    "publisher": {"@type": "Organization", "name": "Tamircim"},
+    "datePublished": "2024-06-01",
+    "mainEntityOfPage": {"@type": "WebPage", "@id": "https://tamircim.netlify.app"}
+  }
+]
+</script>
+
