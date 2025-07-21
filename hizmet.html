@@ -720,13 +720,23 @@ nav a:hover { color: #ffe082; }
     };
 
     // Yönlendirme: Eğer service parametresi yoksa veya yanlışsa, Hizmetlerimiz'e yönlendir
-    if (!service || !içerikler[service]) {
-      window.location.replace("/hizmet.html?service=Hizmetlerimiz");
-    } else {
-      document.title = `${service} | Tamircim`;
-      document.getElementById("hizmet-baslik").innerText = service;
-      document.getElementById("service-content").innerText = içerikler[service];
-    }
+    if (!service) {
+  // Hiçbir parametre yoksa varsayılan olarak Hizmetlerimiz göster
+  document.title = `Hizmetlerimiz | Tamircim`;
+  document.getElementById("hizmet-baslik").innerText = "Hizmetlerimiz";
+  document.getElementById("service-content").innerText = içerikler["Hizmetlerimiz"];
+} else {
+  // Parametre varsa, başlık olarak onu göster
+  document.title = `${service} | Tamircim`;
+  document.getElementById("hizmet-baslik").innerText = service;
+
+  // Eğer içerikte varsa göster, yoksa "içerik bulunamadı" yaz
+  if (içerikler[service]) {
+    document.getElementById("service-content").innerText = içerikler[service];
+  } else {
+    document.getElementById("service-content").innerText = "Bu hizmet hakkında içerik bulunamadı.";
+  }
+}
   </script>
 
   <script>
