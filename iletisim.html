@@ -58,6 +58,7 @@
       justify-content: center;
       margin: 32px 0 16px 0;
     }
+    
     .service-button {
       background: #fff;
       color: #00796b;
@@ -600,36 +601,233 @@ body {
   </div>
 </header>
 <!-- END HEADER FLEXBOX -->
-  <main>
-    <h1 align="center">İletişim</h1>
-    <p align="center"><strong>Servis talepleriniz ve sorularınız için bize ulaşın.</strong></p>
-    <form class="contact-form-modern" method="post" action="#">
-      <div class="form-row">
-        <div class="form-group-modern">
-          <!-- Kullanıcı ikonu -->
-<label for="name"><svg width="16" height="16" viewBox="0 0 448 512" fill="#00796b" style="vertical-align:middle;"><path d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm89.6 32h-16.7c-22.2 10.2-46.9 16-72.9 16s-50.7-5.8-72.9-16h-16.7C60.2 288 0 348.2 0 422.4V464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48v-41.6c0-74.2-60.2-134.4-134.4-134.4z"/></svg> Adınız Soyadınız</label>
-          <input type="text" id="name" name="name" required>
-        </div>
-        <div class="form-group-modern">
-          <!-- E-posta ikonu -->
-<label for="email"><svg width="16" height="16" viewBox="0 0 512 512" fill="#00796b" style="vertical-align:middle;"><path d="M502.3 190.8L327.4 338.3c-15.9 13.2-39.8 13.2-55.7 0L9.7 190.8C3.9 186.2 0 178.7 0 170.6V48c0-26.5 21.5-48 48-48h416c26.5 0 48 21.5 48 48v122.6c0 8.1-3.9 15.6-9.7 20.2zM464 64H48v.5l208 172.7L464 64.5V64zm48 106.6v246.8c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V170.6l218.7 181.2c27.6 22.8 68.6 22.8 96.2 0L512 170.6z"/></svg> E-posta Adresiniz</label>
-          <input type="email" id="email" name="email" required>
-        </div>
+<main>
+  <section class="company-contact-box">
+  </section>
+  <section class="about-company-card">
+    <h2>Firma Bilgileri</h2>
+    <div class="company-info-grid">
+      <div class="company-info-item">
+        <span class="label">Firma Adı</span>
+        <span class="value company-name"></span>
       </div>
-      <div class="form-row">
-        <div class="form-group-modern">
-          <!-- Telefon ikonu -->
-<label for="phone"><svg width="16" height="16" viewBox="0 0 512 512" fill="#00796b" style="vertical-align:middle;"><path d="M511.7 387.3l-23.2-104c-2.6-11.7-13.1-19.3-24.8-17.7l-104 23.2c-11.7 2.6-19.3 13.1-17.7 24.8l7.1 31.8c-36.2 19.6-77.2 19.6-113.4 0l7.1-31.8c1.6-11.7-6-22.2-17.7-24.8l-104-23.2c-11.7-2.6-22.2 6-24.8 17.7l-23.2 104c-2.6 11.7 6 22.2 17.7 24.8l31.8 7.1c19.6 36.2 19.6 77.2 0 113.4l-31.8 7.1c-11.7 2.6-19.3 13.1-17.7 24.8l23.2 104c2.6 11.7 13.1 19.3 24.8 17.7l104-23.2c11.7-2.6 19.3-13.1 17.7-24.8l-7.1-31.8c36.2-19.6 77.2-19.6 113.4 0l-7.1 31.8c-1.6 11.7 6 22.2 17.7 24.8l104 23.2c11.7 2.6 22.2-6 24.8-17.7l23.2-104c2.6-11.7-6-22.2-17.7-24.8l-31.8-7.1c-19.6-36.2-19.6-77.2 0-113.4l31.8-7.1c11.7-2.6 19.3-13.1 17.7-24.8z"/></svg> Telefon Numaranız</label>
-          <input type="tel" id="phone" name="phone">
-        </div>
-        <div class="form-group-modern">
-          <!-- Mesaj ikonu -->
-<label for="message"><svg width="16" height="16" viewBox="0 0 512 512" fill="#00796b" style="vertical-align:middle;"><path d="M502.3 190.8L327.4 338.3c-15.9 13.2-39.8 13.2-55.7 0L9.7 190.8C3.9 186.2 0 178.7 0 170.6V48c0-26.5 21.5-48 48-48h416c26.5 0 48 21.5 48 48v122.6c0 8.1-3.9 15.6-9.7 20.2zM464 64H48v.5l208 172.7L464 64.5V64zm48 106.6v246.8c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V170.6l218.7 181.2c27.6 22.8 68.6 22.8 96.2 0L512 170.6z"/></svg> Mesajınız</label>
-          <textarea id="message" name="message" rows="4" required></textarea>
-        </div>
+      <div class="company-info-item">
+        <span class="label">Vergi No</span>
+        <span class="value company-tax"></span>
       </div>
-      <button class="form-submit-modern" type="submit"><svg width="16" height="16" viewBox="0 0 512 512" fill="#43cea2" style="vertical-align:middle;"><path d="M476 3.5L12.1 270.6c-16.7 9.7-15.5 34.5 2 42.2l111.7 48.1 48.1 111.7c7.7 17.5 32.5 18.7 42.2 2L508.5 36c8.2-14.2-6.2-28.6-20.5-20.5zM154.6 357.4l-35.7-82.8 193.5-193.5 82.8 35.7-240.6 240.6z"/></svg> Gönder</button>
-    </form>
+      <div class="company-info-item">
+        <span class="label">Adres</span>
+        <span class="value company-address"></span>
+      </div>
+      <div class="company-info-item">
+        <span class="label">Telefon</span>
+        <a class="value company-phone"></a>
+      </div>
+    </div>
+  </section>
+  
+  <style>
+    .about-main {
+      background: #fff;
+      border-radius: 18px;
+      box-shadow: 0 2px 16px rgba(67,206,162,0.08);
+      padding: 38px 28px 32px 28px;
+      margin: 36px auto 0 auto;
+      max-width: 820px;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      color: #222;
+    }
+    .about-intro h1 {
+      color: #00796b;
+      font-size: 2.2em;
+      margin-bottom: 0.3em;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+    }
+    .about-lead {
+      font-size: 1.18em;
+      color: #222;
+      margin-bottom: 0.7em;
+      line-height: 1.6;
+    }
+    .about-intro p {
+      margin-bottom: 0.7em;
+      line-height: 1.7;
+      font-size: 1.05em;
+    }
+    .about-note {
+      background: #e0f7fa;
+      color: #00796b;
+      border-left: 5px solid #43cea2;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin: 18px 0 0 0;
+      font-size: 1em;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .about-note i {
+      font-size: 1.3em;
+      margin-right: 6px;
+    }
+    .highlight {
+      color: #43cea2;
+      font-weight: 600;
+    }
+    .about-company-card {
+      margin: 38px 0 0 0;
+      background: #f8fafc;
+      border-radius: 14px;
+      box-shadow: 0 1px 8px rgba(67,206,162,0.07);
+      padding: 28px 22px 18px 22px;
+    }
+    .about-company-card h2 {
+      color: #00796b;
+      font-size: 1.3em;
+      margin-bottom: 18px;
+      font-weight: 700;
+    }
+    .company-info-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px 32px;
+    }
+    .company-info-item {
+      display: flex;
+      flex-direction: column;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 1px 4px rgba(67,206,162,0.06);
+      padding: 14px 16px 10px 16px;
+      min-width: 0;
+    }
+    .company-info-item .label {
+      color: #43cea2;
+      font-size: 0.98em;
+      font-weight: 600;
+      margin-bottom: 2px;
+      letter-spacing: 0.01em;
+    }
+    .company-info-item .value, .company-info-item a.value {
+      color: #222;
+      font-size: 1.08em;
+      font-weight: 500;
+      text-decoration: none;
+      word-break: break-all;
+    }
+    .company-info-item a.value:hover {
+      color: #00796b;
+      text-decoration: underline;
+    }
+    .about-values {
+      margin: 38px 0 0 0;
+    }
+    .about-values h2 {
+      color: #00796b;
+      font-size: 1.18em;
+      margin-bottom: 12px;
+      font-weight: 700;
+    }
+    .about-values-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px 24px;
+    }
+    .about-values-list li {
+      font-size: 1.05em;
+      color: #222;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .about-values-list i {
+      color: #43cea2;
+      font-size: 1.1em;
+    }
+    .about-reviews {
+      margin: 44px 0 0 0;
+    }
+    .about-reviews h2 {
+      color: #00796b;
+      font-size: 1.18em;
+      margin-bottom: 18px;
+      font-weight: 700;
+    }
+    @media (max-width: 700px) {
+      .about-main {
+        padding: 18px 4vw 18px 4vw;
+        margin: 18px 0 0 0;
+      }
+      .about-company-card {
+        padding: 18px 6vw 10px 6vw;
+      }
+      .company-info-grid {
+        grid-template-columns: 1fr;
+        gap: 12px 0;
+      }
+      .about-values-list {
+        grid-template-columns: 1fr;
+        gap: 8px 0;
+      }
+    }
+    @media (max-width: 480px) {
+      .about-main {
+        padding: 8px 2vw 8px 2vw;
+      }
+      .about-company-card {
+        padding: 10px 2vw 6px 2vw;
+      }
+    }
+  </style>
+
+<script src="config.js"></script>
+<script>
+  if (window.siteConfig) {
+    document.title = window.siteConfig.pageTitle || ('Hakkımızda | ' + window.siteConfig.companyName);
+    var metaDesc = document.querySelector('meta[name="description"]');
+    if (metaDesc && window.siteConfig.pageDescription) metaDesc.setAttribute('content', window.siteConfig.pageDescription);
+    var ogTitle = document.querySelector('meta[property="og:title"]');
+    if (ogTitle) ogTitle.setAttribute('content', window.siteConfig.ogTitle || window.siteConfig.companyName);
+    var ogDesc = document.querySelector('meta[property="og:description"]');
+    if (ogDesc && window.siteConfig.ogDescription) ogDesc.setAttribute('content', window.siteConfig.ogDescription);
+    var ogType = document.querySelector('meta[property="og:type"]');
+    if (ogType && window.siteConfig.ogType) ogType.setAttribute('content', window.siteConfig.ogType);
+    var ogUrl = document.querySelector('meta[property="og:url"]');
+    if (ogUrl && window.siteConfig.ogUrl) ogUrl.setAttribute('content', window.siteConfig.ogUrl);
+    var ogImage = document.querySelector('meta[property="og:image"]');
+    if (ogImage && window.siteConfig.ogImage) ogImage.setAttribute('content', window.siteConfig.ogImage);
+    // Dynamic company info in Firma Bilgileri
+    var nameEls = document.querySelectorAll('.company-name');
+    nameEls.forEach(function(el) { el.textContent = window.siteConfig.companyName; });
+    var taxEls = document.querySelectorAll('.company-tax');
+    taxEls.forEach(function(el) { el.textContent = window.siteConfig.taxNumber; });
+    var addrEls = document.querySelectorAll('.company-address');
+    addrEls.forEach(function(el) { el.textContent = window.siteConfig.address; });
+    var phoneEls = document.querySelectorAll('.company-phone');
+    phoneEls.forEach(function(el) {
+      el.textContent = window.siteConfig.phoneNumber;
+      if (el.tagName === 'A') el.setAttribute('href', 'tel:' + window.siteConfig.phoneNumber);
+    });
+    // Dynamic phone button at the top
+    var phoneBtn = document.querySelector('.phone-link-dynamic');
+    if (phoneBtn) {
+      phoneBtn.setAttribute('href', 'tel:' + window.siteConfig.phoneNumber);
+      phoneBtn.textContent = '📞 Hemen Ara: ' + window.siteConfig.phoneNumber;
+    }
+    // Socials dynamic links
+    var email = window.siteConfig.email || "info@tamircim.com";
+    var username = email.split('@')[0];
+    document.getElementById('footer-facebook').href = 'mailto:' + email;
+    document.getElementById('footer-instagram').href = 'https://instagram.com/' + username;
+    document.getElementById('footer-twitter').href = 'https://twitter.com/' + username;
+  }
+</script>
+
+    
     <style>
       .hamburger {
         display: none;
@@ -703,118 +901,7 @@ body {
         }
       });
     </script>
-    <style>
-      .contact-form-modern {
-        background: #fff;
-        border-radius: 18px;
-        box-shadow: 0 4px 24px rgba(67,206,162,0.13);
-        padding: 36px 32px 28px 32px;
-        max-width: 600px;
-        margin: 36px auto 32px auto;
-        display: flex;
-        flex-direction: column;
-        gap: 18px;
-      }
-      .form-row {
-        display: flex;
-        gap: 18px;
-      }
-      .form-group-modern {
-        flex: 1 1 0;
-        display: flex;
-        flex-direction: column;
-        gap: 8px;
-        position: relative;
-      }
-      .form-group-modern label {
-        font-weight: 600;
-        color: #00796b;
-        margin-bottom: 4px;
-        font-size: 1.05em;
-        display: flex;
-        align-items: center;
-        gap: 7px;
-      }
-      .form-group-modern input,
-      .form-group-modern textarea {
-        border: 1.5px solid #b2dfdb;
-        border-radius: 8px;
-        padding: 12px 14px 12px 38px;
-        font-size: 1.08em;
-        background: #f8fafc;
-        color: #222;
-        transition: border 0.2s, box-shadow 0.2s;
-        outline: none;
-        box-shadow: 0 1px 4px rgba(67,206,162,0.06);
-      }
-      .form-group-modern input:focus,
-      .form-group-modern textarea:focus {
-        border: 1.5px solid #43cea2;
-        background: #fff;
-        box-shadow: 0 2px 12px rgba(67,206,162,0.10);
-      }
-      .form-group-modern i.fa {
-        position: absolute;
-        left: 12px;
-        top: 50%;
-        transform: translateY(-50%);
-        color: #43cea2;
-        font-size: 1.1em;
-        pointer-events: none;
-      }
-      .form-group-modern input,
-      .form-group-modern textarea {
-        padding-left: 38px;
-      }
-      .form-group-modern {
-        position: relative;
-      }
-      .form-group-modern input[type="tel"]::-webkit-input-placeholder,
-      .form-group-modern input[type="email"]::-webkit-input-placeholder,
-      .form-group-modern input[type="text"]::-webkit-input-placeholder,
-      .form-group-modern textarea::-webkit-input-placeholder {
-        color: #b2dfdb;
-      }
-      .form-submit-modern {
-        background: linear-gradient(90deg, #00796b 0%, #43cea2 100%);
-        color: #fff;
-        border: none;
-        border-radius: 24px;
-        padding: 14px 36px;
-        font-size: 1.13em;
-        font-weight: 700;
-        box-shadow: 0 2px 12px rgba(67,206,162,0.13);
-        cursor: pointer;
-        transition: background 0.2s, color 0.2s, box-shadow 0.2s, transform 0.2s;
-        letter-spacing: 0.01em;
-        text-decoration: none;
-        outline: none;
-        margin-top: 10px;
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        justify-content: center;
-      }
-      .form-submit-modern:hover, .form-submit-modern:focus {
-        background: #fff;
-        color: #00796b;
-        border: 2px solid #43cea2;
-        box-shadow: 0 4px 16px rgba(67,206,162,0.18);
-        transform: scale(1.04);
-      }
-      @media (max-width: 700px) {
-        .contact-form-modern {
-          padding: 18px 6vw 14px 6vw;
-          max-width: 98vw;
-        }
-        .form-row {
-          flex-direction: column;
-          gap: 8px;
-        }
-      }
-    </style>
     <div class="contact-info">
-      <p><strong>Telefon:</strong> <a class="company-phone"></a></p>
       <p><strong>E-posta:</strong> <a class="company-email"></a></p>
       <p><strong>Adres:</strong> Mersin, Türkiye</p>
       <p>Çalışma Saatleri: 09:00 - 19:00 (Pazartesi - Cumartesi)</p>
@@ -860,8 +947,38 @@ body {
 <a href="#" aria-label="Twitter" target="_blank" style="vertical-align:middle;"><svg width="20" height="20" viewBox="0 0 512 512" fill="#1da1f2" style="vertical-align:middle;"><path d="M459.4 151.7c.32 4.54.32 9.1.32 13.66 0 138.72-105.58 298.56-298.56 298.56-59.5 0-114.68-17.22-161.14-47.11 8.44.97 16.87 1.44 25.81 1.44 49.06 0 94.19-16.63 132.3-44.84-46.13-.97-84.8-31.18-98.1-72.77 6.5.97 13 .97 19.81.97 9.1 0 18.21-1.3 26.78-3.63-48.08-9.75-84.14-51.98-84.14-102.98v-1.3c14.08 7.83 30.21 12.67 47.43 13.32-28.3-18.87-46.78-51.01-46.78-87.39 0-19.49 5.2-37.36 14.29-52.95 51.65 63.3 129.3 104.72 216.5 109.15-1.62-7.83-2.6-15.98-2.6-24.13 0-58.72 47.43-106.15 106.15-106.15 30.5 0 58.15 12.67 77.43 33.14 24.13-4.54 46.78-13.66 67.13-25.81-7.83 24.45-24.45 44.84-46.13 57.76 21.36-2.27 41.83-8.21 60.67-16.63-14.29 21.04-32.36 39.59-53.25 54.25z"/></svg></a>
       </section>
     </div>
-    <div class="footer-bottom-custom">© 2025 ServisWeb. Tüm hakları saklıdır.</div>
+    <div class="footer-note-custom">
+      <small>
+        Üretici veya <span style="font-weight:600;">yetkili servis değildir.</span>
+        Garantisi olmayan cihazlara hizmet verilmektedir.
+      </small>
+    </div>
+  
+    <div class="footer-bottom-custom">
+      © 2025 ServisWeb. Tüm hakları saklıdır.
+    </div>
     <style>
+  .footer-note-custom {
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 0.85em;
+  color: #ccc;
+  padding: 12px 8px 4px 8px;
+  box-sizing: border-box;
+  line-height: 1.4;
+}
+
+.footer-bottom-custom {
+    text-align: center;
+    font-size: 0.98em;
+    color: #e0e0e0;
+    padding: 12px 0 8px 0;
+    margin-top: 0;
+    background: none;
+  }
+
       .site-footer-custom {
         background: linear-gradient(90deg, #00796b 0%, #43cea2 100%);
         color: #fff;
