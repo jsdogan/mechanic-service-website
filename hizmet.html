@@ -719,13 +719,13 @@ nav a:hover { color: #ffe082; }
       "Televizyon": "Görüntü gitmesi, ses kaybı, ekran kırılması ya da sinyal problemleri gibi durumlarda, televizyon arızalarınızı uzman desteğiyle gideriyoruz.\n LED, LCD, OLED ve Smart TV modellerine özel teknik servis hizmeti sunuyoruz.\n Anakart, panel ve güç ünitesi gibi hassas bileşenlerde profesyonel müdahale ile güvenli onarım sağlıyoruz."
     };
 
-    if (service && içerikler[service]) {
+    // Yönlendirme: Eğer service parametresi yoksa veya yanlışsa, Hizmetlerimiz'e yönlendir
+    if (!service || !içerikler[service]) {
+      window.location.replace("/hizmet.html?service=Hizmetlerimiz");
+    } else {
       document.title = `${service} | Tamircim`;
       document.getElementById("hizmet-baslik").innerText = service;
       document.getElementById("service-content").innerText = içerikler[service];
-    } else {
-      document.getElementById("hizmet-baslik").innerText = "Hizmet Bulunamadı";
-      document.getElementById("service-content").innerText = "Geçersiz veya tanımlanmamış bir hizmet seçtiniz.";
     }
   </script>
 
@@ -1133,9 +1133,11 @@ nav a:hover { color: #ffe082; }
       <section class="footer-contact">
         <h3>Contact</h3>
         <address>
-          <div>Örnek Mah. Örnek Sk. No:1 D:2, Örnek İlçe/İstanbul</div>
-          <div><a href="tel:+905551112233">+90 (555) 111 22 33</a></div>
-          <div><a href="mailto:info@servisweb.com">info@servisweb.com</a></div>
+          <div>Örnek Mah. Örnek Sk.</div>
+          <div>  Örnek İlçe/İstanbulNo:1 D:2</div>
+           <div> Fax: +90 555 231 23 14</div>
+         <div><a href="tel:+905551112233">+90 (555) 111 22 33</a></div>
+         <div><a href="mailto:info@servisweb.com">info@servisweb.com</a></div> 
         </address>
       </section>
       <section class="footer-services">
