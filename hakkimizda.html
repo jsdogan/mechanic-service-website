@@ -154,6 +154,11 @@
       background: #43cea2;
       color: #fff;
     }
+    @media (max-width: 768px) {
+  .footer-socials-custom {
+    justify-content: center !important;
+  }
+}
     .footer-socials a i {
       color: #00796b !important;
     }
@@ -351,11 +356,12 @@
     margin-bottom: 4px;
   }
   .main-nav ul li ul.dropdown {
-    position: static;
-    min-width: 0;
-    box-shadow: none;
-    border-radius: 0 0 12px 12px;
-  }
+  position: static;
+  min-width: 0;
+  box-shadow: none;
+  border-radius: 0 0 12px 12px;
+  display: block !important;
+}
   .phone-link-dynamic {
     margin: 10px 0 0 0;
     width: 100%;
@@ -1049,8 +1055,8 @@ body {
   max-width: 700px;
   margin: 0 auto;
   text-align: center;
-  font-size: 0.85em;
-  color: #ccc;
+  font-size: 1.3em;
+  color: #fff;
   padding: 12px 8px 4px 8px;
   box-sizing: border-box;
   line-height: 1.4;
