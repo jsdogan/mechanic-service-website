@@ -367,12 +367,19 @@
     border-radius: 18px;
     margin-bottom: 4px;
   }
+  @media (max-width: 768px) {
   .main-nav ul li ul.dropdown {
-  position: static;
-  min-width: 0;
-  box-shadow: none;
-  border-radius: 0 0 12px 12px;
-  display: block !important;
+    position: static;
+    min-width: 0;
+    box-shadow: none;
+    border-radius: 0 0 12px 12px;
+    display: none; /* sadece script tetiklediğinde açılacak */
+  }
+
+  .main-nav ul li.open > ul.dropdown {
+    display: block; /* script burayı açar */
+  }
+}
 }
   .phone-link-dynamic {
     margin: 10px 0 0 0;
@@ -383,7 +390,7 @@
     justify-content: center;
     white-space: normal;
   }
-}
+
 /* SERVICE BUTTONS & REVIEWS GRID IMPROVEMENT */
 .service-buttons {
   display: grid;
@@ -1197,6 +1204,24 @@ white-space: nowrap;
         }
       });
     }
+        // Dropdown davranışı: ilk tık açar, ikinci tık yönlendirir
+        var dropdownParents = document.querySelectorAll('.main-nav ul li');
+
+dropdownParents.forEach(function(li) {
+  var dropdown = li.querySelector('ul.dropdown');
+  var link = li.querySelector('a');
+
+  if (dropdown && link) {
+    link.addEventListener('click', function(e) {
+      if (!li.classList.contains('open')) {
+        e.preventDefault(); // Sayfaya gitmesini engelle
+        li.classList.add('open'); // Sadece menüyü aç
+      } else {
+        li.classList.remove('open'); // Menü açıksa kapat, linke gitmesine izin ver
+      }
+    });
+  }
+});
   });
 </script>
 <!-- END HEADER FLEXBOX -->

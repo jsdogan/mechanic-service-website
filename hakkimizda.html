@@ -355,12 +355,18 @@
     border-radius: 18px;
     margin-bottom: 4px;
   }
+  @media (max-width: 768px) {
   .main-nav ul li ul.dropdown {
-  position: static;
-  min-width: 0;
-  box-shadow: none;
-  border-radius: 0 0 12px 12px;
-  display: block !important;
+    position: static;
+    min-width: 0;
+    box-shadow: none;
+    border-radius: 0 0 12px 12px;
+    display: none; /* sadece script tetiklediğinde açılacak */
+  }
+
+  .main-nav ul li.open > ul.dropdown {
+    display: block; /* script burayı açar */
+  }
 }
   .phone-link-dynamic {
     margin: 10px 0 0 0;
@@ -625,27 +631,45 @@ body {
       to { opacity: 1; transform: translateY(0); }
     }
   </style>
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      var hamburger = document.querySelector('.hamburger');
-      var nav = document.querySelector('.main-nav');
-      if (hamburger && nav) {
-        hamburger.addEventListener('click', function(e) {
-          e.stopPropagation();
-          hamburger.classList.toggle('active');
-          nav.classList.toggle('open');
-          hamburger.setAttribute('aria-expanded', nav.classList.contains('open'));
-        });
-        document.addEventListener('click', function(e) {
-          if (!nav.contains(e.target) && !hamburger.contains(e.target)) {
-            nav.classList.remove('open');
-            hamburger.classList.remove('active');
-            hamburger.setAttribute('aria-expanded', false);
-          }
-        });
+ <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var hamburger = document.querySelector('.hamburger');
+    var nav = document.querySelector('.main-nav');
+    if (hamburger && nav) {
+      hamburger.addEventListener('click', function(e) {
+        e.stopPropagation();
+        hamburger.classList.toggle('active');
+        nav.classList.toggle('open');
+        hamburger.setAttribute('aria-expanded', nav.classList.contains('open'));
+      });
+      document.addEventListener('click', function(e) {
+        if (!nav.contains(e.target) && !hamburger.contains(e.target)) {
+          nav.classList.remove('open');
+          hamburger.classList.remove('active');
+          hamburger.setAttribute('aria-expanded', false);
+        }
+      });
+    }
+        // Dropdown davranışı: ilk tık açar, ikinci tık yönlendirir
+        var dropdownParents = document.querySelectorAll('.main-nav ul li');
+
+dropdownParents.forEach(function(li) {
+  var dropdown = li.querySelector('ul.dropdown');
+  var link = li.querySelector('a');
+
+  if (dropdown && link) {
+    link.addEventListener('click', function(e) {
+      if (!li.classList.contains('open')) {
+        e.preventDefault(); // Sayfaya gitmesini engelle
+        li.classList.add('open'); // Sadece menüyü aç
+      } else {
+        li.classList.remove('open'); // Menü açıksa kapat, linke gitmesine izin ver
       }
     });
-  </script>
+  }
+});
+  });
+</script>
   
 </head>
 <body>
