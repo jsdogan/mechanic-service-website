@@ -1298,6 +1298,59 @@ dropdownParents.forEach(function(li) {
       document.getElementById('footer-twitter').href = 'https://twitter.com/' + username;
     }
   </script>
-  
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Tamircim",
+      "image": "https://tamircim.com/assets/social.jpg",
+      "@id": "https://tamircim.com",
+      "url": "https://tamircim.com",
+      "logo": "https://tamircim.com/apple-touch-icon.png",
+      "description": "Tamircim, garantisi bitmiş beyaz eşya, klima, kombi ve televizyon cihazları için teknik servis hizmeti sunar.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Firmanızın açık adresi buraya",
+        "addressLocality": "İlçe",
+        "addressRegion": "İl",
+        "postalCode": "Posta Kodu",
+        "addressCountry": "TR"
+      },
+      "telephone": "+90 555 555 55 55",
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday"
+          ],
+          "opens": "08:00",
+          "closes": "20:00"
+        }
+      ],
+      "priceRange": "₺₺",
+      "areaServed": {
+        "@type": "Place",
+        "address": {
+          "@type": "PostalAddress",
+          "addressRegion": "Türkiye"
+        }
+      },
+      "founder": {
+        "@type": "Person",
+        "name": "Kurucunun Adı"
+      },
+      "foundingDate": "2020",
+      "sameAs": [
+        "https://www.facebook.com/tamircim",
+        "https://www.instagram.com/tamircim",
+        "https://www.linkedin.com/company/tamircim"
+      ]
+    }
+    </script>
 </body>
 </html>
