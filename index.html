@@ -653,6 +653,24 @@ body {
 
 </style>
 <style>
+  .call-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #28a745;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 50px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  font-size: 16px;
+  z-index: 9999;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.call-button:hover {
+  background-color: #218838;
+}
   .hamburger {
     display: none;
     flex-direction: column;
@@ -1545,6 +1563,10 @@ dropdownParents.forEach(function(li) {
       © 2025 ServisWeb. Tüm hakları saklıdır.
     </div>
   </footer>
+  <!-- Sticky Call Action Button -->
+<a href="tel:+905342131212" class="call-button" title="Hemen Ara">
+  📞 Ara
+</a>
   
   <script src="config.js" defer></script>
   <script>
@@ -1602,6 +1624,13 @@ window.addEventListener('DOMContentLoaded', function() {
   }
   setHeroPhoneButton();
 });
+</script>
+<script>
+  const callBtn = document.querySelector('.call-button');
+  const phone = window.siteConfig?.phoneNumber?.replace(/\s+/g, '');
+  if (callBtn && phone) {
+    callBtn.href = `tel:${phone}`;
+  }
 </script>
 
   <script type="application/ld+json">
